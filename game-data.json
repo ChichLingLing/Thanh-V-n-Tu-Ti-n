@@ -1,0 +1,2837 @@
+{
+ "ghi_chu": "Toàn bộ dữ liệu cấu hình game Thanh Vân Tu Tiên Lục, trích từ mã game. Dùng để chỉnh sửa cân bằng hoặc làm máy chủ.",
+ "phien_ban": "1.1",
+ "tong_quan": {
+  "cap_toi_da": 100,
+  "kich_thuoc_the_gioi": 5200,
+  "canh_gioi": [
+   "Luyện Khí",
+   "Trúc Cơ",
+   "Kim Đan",
+   "Nguyên Anh",
+   "Hóa Thần",
+   "Luyện Hư",
+   "Hợp Thể",
+   "Đại Thừa",
+   "Độ Kiếp",
+   "Chân Tiên"
+  ]
+ },
+ "pham_chat_vat_pham": [
+  {
+   "n": "Phàm Phẩm",
+   "c": "#b9c0c8",
+   "m": 1
+  },
+  {
+   "n": "Linh Khí",
+   "c": "#6fe08a",
+   "m": 1.45
+  },
+  {
+   "n": "Pháp Bảo",
+   "c": "#5ab4ff",
+   "m": 2
+  },
+  {
+   "n": "Địa Bảo",
+   "c": "#c98bff",
+   "m": 2.8
+  },
+  {
+   "n": "Thiên Bảo",
+   "c": "#ffb040",
+   "m": 3.8
+  },
+  {
+   "n": "Tiên Khí",
+   "c": "#ff5a7a",
+   "m": 5.2
+  }
+ ],
+ "tien_to_vat_pham": [
+  [
+   ""
+  ],
+  [
+   "Thanh Phong ",
+   "Lục Ngọc ",
+   "Hàn Thiết "
+  ],
+  [
+   "Huyền Băng ",
+   "Xích Diễm ",
+   "Thanh Vân "
+  ],
+  [
+   "Tử Điện ",
+   "Cửu U ",
+   "Long Văn "
+  ],
+  [
+   "Thái Cổ ",
+   "Hồng Mông ",
+   "Thái Hư "
+  ],
+  [
+   "Hỗn Độn ",
+   "Tiên Thiên ",
+   "Thái Cực "
+  ]
+ ],
+ "ten_chi_so": {
+  "atk": "Công Kích",
+  "def": "Phòng Ngự",
+  "hp": "Sinh Lực",
+  "mp": "Linh Lực",
+  "crit": "Bạo Kích"
+ },
+ "ten_o_trang_bi": {
+  "weapon": "Vũ Khí",
+  "armor": "Đạo Bào",
+  "head": "Đạo Quan",
+  "charm": "Ngọc Bội"
+ },
+ "ten_goc_vat_pham": {
+  "weapon": {
+   "kiem": [
+    "Phi Kiếm",
+    "Trường Kiếm",
+    "Linh Kiếm"
+   ],
+   "phap": [
+    "Mộc Trượng",
+    "Phất Trần",
+    "Ngọc Địch"
+   ],
+   "the": [
+    "Quyền Sáo",
+    "Hộ Uyển",
+    "Chiến Quyền"
+   ],
+   "dan": [
+    "Đan Lô",
+    "Hồ Lô",
+    "Dược Đỉnh"
+   ]
+  },
+  "armor": [
+   "Đạo Bào",
+   "Thanh Y",
+   "Hộ Thể Giáp",
+   "Vân Y"
+  ],
+  "head": [
+   "Phát Quan",
+   "Ngọc Quan",
+   "Đạo Quan",
+   "Kim Quan"
+  ],
+  "charm": [
+   "Ngọc Bội",
+   "Linh Phù",
+   "Đan Châu",
+   "Hộ Thân Phù"
+  ]
+ },
+ "nguyen_to_mau": {
+  "Thanh Phong": [
+   "#9ff0c0",
+   "#2f9a62"
+  ],
+  "Lục Ngọc": [
+   "#6fe08a",
+   "#237a40"
+  ],
+  "Hàn Thiết": [
+   "#c4ceda",
+   "#5f6e82"
+  ],
+  "Huyền Băng": [
+   "#a8e4ff",
+   "#3a86cc"
+  ],
+  "Xích Diễm": [
+   "#ff9a6a",
+   "#c8301f"
+  ],
+  "Thanh Vân": [
+   "#d4e4ff",
+   "#5a7ac8"
+  ],
+  "Tử Điện": [
+   "#dab0ff",
+   "#7a30d0"
+  ],
+  "Cửu U": [
+   "#9a7ae0",
+   "#2a1a52"
+  ],
+  "Long Văn": [
+   "#ffd878",
+   "#b86a18"
+  ],
+  "Thái Cổ": [
+   "#ffeaa8",
+   "#a8741a"
+  ],
+  "Hồng Mông": [
+   "#ffd4ff",
+   "#9a48b8"
+  ],
+  "Thái Hư": [
+   "#d0faff",
+   "#3a8aa8"
+  ],
+  "Hỗn Độn": [
+   "#ff90b0",
+   "#4a2270"
+  ],
+  "Tiên Thiên": [
+   "#fff4c8",
+   "#d89a2a"
+  ],
+  "Thái Cực": [
+   "#ffffff",
+   "#26263a"
+  ]
+ },
+ "ho_vu_khi": {
+  "Phi Kiếm": "sword",
+  "Trường Kiếm": "sword",
+  "Linh Kiếm": "sword",
+  "Mộc Trượng": "staff",
+  "Phất Trần": "staff",
+  "Ngọc Địch": "staff",
+  "Quyền Sáo": "fist",
+  "Hộ Uyển": "fist",
+  "Chiến Quyền": "fist",
+  "Đan Lô": "vessel",
+  "Hồ Lô": "vessel",
+  "Dược Đỉnh": "vessel"
+ },
+ "lop_nhan_vat": {
+  "kiem": {
+   "n": "Kiếm Tu",
+   "role": "Ngự kiếm tầm trung, sát thương cao",
+   "desc": "Ngàn phi kiếm lơ lửng quanh thân, một niệm kiếm xuất.",
+   "robe": "#eaf6ff",
+   "trim": "#3aa7ff",
+   "hair": "#1b2038",
+   "col": "#7fd6ff",
+   "base": {
+    "hp": 130,
+    "mp": 70,
+    "atk": 15,
+    "def": 4,
+    "crit": 10
+   },
+   "gr": {
+    "hp": 24,
+    "mp": 6,
+    "atk": 3.3,
+    "def": 1.1
+   },
+   "range": 250
+  },
+  "phap": {
+   "n": "Pháp Tu",
+   "role": "Tầm xa, lôi pháp diện rộng",
+   "desc": "Dẫn thiên lôi giáng thế, một tay triệu sét.",
+   "robe": "#e6d9ff",
+   "trim": "#6aa8ff",
+   "hair": "#3a1f4a",
+   "col": "#9fd0ff",
+   "base": {
+    "hp": 95,
+    "mp": 130,
+    "atk": 17,
+    "def": 3,
+    "crit": 8
+   },
+   "gr": {
+    "hp": 17,
+    "mp": 9,
+    "atk": 3.7,
+    "def": 0.8
+   },
+   "range": 300
+  },
+  "the": {
+   "n": "Thể Tu",
+   "role": "Cận chiến, chịu đòn tốt",
+   "desc": "Luyện thể thành thánh, thân như kim cương.",
+   "robe": "#f5b44c",
+   "trim": "#7a2a1a",
+   "hair": "#2a1a14",
+   "col": "#ffd35a",
+   "base": {
+    "hp": 190,
+    "mp": 55,
+    "atk": 12,
+    "def": 8,
+    "crit": 5
+   },
+   "gr": {
+    "hp": 36,
+    "mp": 5,
+    "atk": 2.6,
+    "def": 1.9
+   },
+   "range": 78
+  },
+  "dan": {
+   "n": "Đan Tu",
+   "role": "Tầm xa, hồi phục và độc",
+   "desc": "Luyện đan cứu người, hóa độc diệt địch.",
+   "robe": "#dff7e4",
+   "trim": "#2fb36d",
+   "hair": "#5a3a2a",
+   "col": "#7dffb0",
+   "base": {
+    "hp": 120,
+    "mp": 110,
+    "atk": 13,
+    "def": 4,
+    "crit": 6
+   },
+   "gr": {
+    "hp": 22,
+    "mp": 8,
+    "atk": 2.9,
+    "def": 1
+   },
+   "range": 270
+  }
+ },
+ "than_thong": {
+  "kiem": [
+   {
+    "n": "Ngự Kiếm Thuật",
+    "ic": "🗡️",
+    "lv": 1,
+    "cd": 2,
+    "mp": 8,
+    "rng": 380,
+    "d": "Phóng bốn phi kiếm từ vòng kiếm lơ lửng quanh người, xuyên thẳng mục tiêu."
+   },
+   {
+    "n": "Kiếm Độn Phi Hành",
+    "ic": "🌠",
+    "lv": 4,
+    "cd": 6,
+    "mp": 14,
+    "rng": 260,
+    "d": "Đạp phi kiếm lướt tới, kiếm trận theo sau chém mọi thứ trên đường."
+   },
+   {
+    "n": "Vạn Kiếm Quy Tông",
+    "ic": "☔",
+    "lv": 8,
+    "cd": 10,
+    "mp": 30,
+    "rng": 340,
+    "d": "Kiếm lơ lửng bay lên trời hóa mưa kiếm giáng xuống một vùng."
+   },
+   {
+    "n": "Kiếm Trận Phong Thần",
+    "ic": "⚡",
+    "lv": 15,
+    "cd": 22,
+    "mp": 60,
+    "rng": 340,
+    "d": "Cắm tám thanh kiếm thành trận, kiếm ý bùng nổ vào tâm và cự kiếm giáng xuống."
+   },
+   {
+    "n": "Thái Cổ Kiếm Trận",
+    "ic": "🌀",
+    "lv": 30,
+    "cd": 40,
+    "mp": 90,
+    "rng": 230,
+    "d": "Mười hai kiếm xoay quanh thân 5 giây, chém mọi địch lại gần."
+   },
+   {
+    "n": "Chư Thiên Kiếm Vực",
+    "ic": "☯️",
+    "lv": 60,
+    "cd": 60,
+    "mp": 140,
+    "rng": 320,
+    "d": "Cự kiếm treo trời, ngàn kiếm mưa xuống kiếm vực, làm chậm mọi địch."
+   }
+  ],
+  "phap": [
+   {
+    "n": "Lôi Quang Tiễn",
+    "ic": "⚡",
+    "lv": 1,
+    "cd": 1.8,
+    "mp": 8,
+    "rng": 400,
+    "d": "Tia sét đánh mục tiêu rồi lan sang tối đa 2 kẻ gần đó."
+   },
+   {
+    "n": "Thiên Lôi Giáng",
+    "ic": "🌩️",
+    "lv": 4,
+    "cd": 5,
+    "mp": 14,
+    "rng": 380,
+    "d": "Ba tia sét giáng liên tiếp thành một đường thẳng, làm choáng."
+   },
+   {
+    "n": "Lôi Hoàn Hộ Thể",
+    "ic": "🔮",
+    "lv": 8,
+    "cd": 12,
+    "mp": 28,
+    "rng": 260,
+    "d": "Ba lôi cầu xoay quanh thân 7 giây, tự phóng sét vào địch gần."
+   },
+   {
+    "n": "Lôi Vân Kiếp",
+    "ic": "⛈️",
+    "lv": 15,
+    "cd": 24,
+    "mp": 62,
+    "rng": 340,
+    "d": "Triệu mây sấm trên đầu địch, sét đánh dồn dập trong 3 giây."
+   },
+   {
+    "n": "Cửu Thiên Lôi Ngục",
+    "ic": "🏛️",
+    "lv": 30,
+    "cd": 40,
+    "mp": 90,
+    "rng": 340,
+    "d": "Chín cột sét dựng thành lồng giam, địch trong lồng liên tục bị giật."
+   },
+   {
+    "n": "Thiên Kiếp Diệt Thế",
+    "ic": "🌌",
+    "lv": 60,
+    "cd": 60,
+    "mp": 140,
+    "rng": 340,
+    "d": "Triệu thiên kiếp giáng xuống cả vùng, kết thúc bằng cột sét hủy diệt."
+   }
+  ],
+  "the": [
+   {
+    "n": "Kim Cương Chưởng",
+    "ic": "👊",
+    "lv": 1,
+    "cd": 1.6,
+    "mp": 6,
+    "rng": 120,
+    "d": "Chưởng phong hình quạt, đẩy lùi địch."
+   },
+   {
+    "n": "Thiết Bố Sam",
+    "ic": "🛡️",
+    "lv": 4,
+    "cd": 14,
+    "mp": 18,
+    "rng": 9999,
+    "buff": 1,
+    "d": "Giảm 50% sát thương nhận trong 8 giây."
+   },
+   {
+    "n": "Mãnh Hổ Hạ Sơn",
+    "ic": "🐯",
+    "lv": 8,
+    "cd": 9,
+    "mp": 24,
+    "rng": 300,
+    "d": "Nhảy vọt giáng xuống, choáng địch."
+   },
+   {
+    "n": "Bất Diệt Kim Thân",
+    "ic": "🪷",
+    "lv": 15,
+    "cd": 28,
+    "mp": 55,
+    "rng": 9999,
+    "buff": 1,
+    "d": "12 giây tăng công, giảm sát thương, hồi máu, kim quang chấn địch."
+   },
+   {
+    "n": "Long Tượng Bàn Nhược",
+    "ic": "🐘",
+    "lv": 30,
+    "cd": 40,
+    "mp": 90,
+    "rng": 180,
+    "d": "Ba đợt chấn động liên hoàn, đẩy lùi và choáng địch."
+   },
+   {
+    "n": "Bất Động Minh Vương",
+    "ic": "🧘",
+    "lv": 60,
+    "cd": 60,
+    "mp": 140,
+    "rng": 9999,
+    "buff": 1,
+    "d": "8 giây: +60% công, giảm 50% sát thương, kim quang liên tục chấn địch."
+   }
+  ],
+  "dan": [
+   {
+    "n": "Linh Đan Phi Xạ",
+    "ic": "💊",
+    "lv": 1,
+    "cd": 2,
+    "mp": 8,
+    "rng": 380,
+    "d": "Ném linh đan nổ tung gây thương tổn."
+   },
+   {
+    "n": "Hồi Xuân Thuật",
+    "ic": "🌿",
+    "lv": 4,
+    "cd": 8,
+    "mp": 20,
+    "rng": 9999,
+    "heal": 1,
+    "d": "Hồi 40% sinh lực."
+   },
+   {
+    "n": "Độc Vụ Thuật",
+    "ic": "☠️",
+    "lv": 8,
+    "cd": 10,
+    "mp": 28,
+    "rng": 340,
+    "d": "Đám mây độc gây sát thương theo thời gian."
+   },
+   {
+    "n": "Cửu Chuyển Kim Đan",
+    "ic": "🏺",
+    "lv": 15,
+    "cd": 26,
+    "mp": 60,
+    "rng": 450,
+    "d": "Chín viên kim đan bay tới địch, đồng thời hồi máu."
+   },
+   {
+    "n": "Vạn Dược Thiên Hoa",
+    "ic": "🌸",
+    "lv": 30,
+    "cd": 40,
+    "mp": 90,
+    "rng": 210,
+    "d": "Hoa dược nở rộ 5 giây, vừa hồi máu vừa gây thương tổn."
+   },
+   {
+    "n": "Sinh Tử Luân Hồi",
+    "ic": "♾️",
+    "lv": 60,
+    "cd": 60,
+    "mp": 140,
+    "rng": 260,
+    "d": "Hồi máu liên tục 5 giây, gây thương tổn, và được hồi sinh nếu ngã xuống trong 10 giây."
+   }
+  ]
+ },
+ "ban_do": {
+  "V": {
+   "n": "Thanh Vân Thôn",
+   "lv": [
+    1,
+    50
+   ],
+   "ax": null
+  },
+  "W": {
+   "n": "Thanh Mộc Lâm",
+   "lv": [
+    1,
+    10
+   ],
+   "ax": [
+    -1,
+    0
+   ]
+  },
+  "E": {
+   "n": "Hắc Phong Cốc",
+   "lv": [
+    10,
+    20
+   ],
+   "ax": [
+    1,
+    0
+   ]
+  },
+  "N": {
+   "n": "Băng Hàn Tuyết Sơn",
+   "lv": [
+    20,
+    30
+   ],
+   "ax": [
+    0,
+    -1
+   ]
+  },
+  "S": {
+   "n": "Huyết Sắc Ma Địa",
+   "lv": [
+    30,
+    45
+   ],
+   "ax": [
+    0,
+    1
+   ]
+  },
+  "A": {
+   "n": "Lôi Vực Sa Mạc",
+   "lv": [
+    45,
+    55
+   ],
+   "ax": null
+  },
+  "B": {
+   "n": "Liệt Hỏa Nham Cốc",
+   "lv": [
+    55,
+    65
+   ],
+   "ax": null
+  },
+  "C": {
+   "n": "U Minh Đầm Lầy",
+   "lv": [
+    65,
+    72
+   ],
+   "ax": null
+  },
+  "D": {
+   "n": "Cửu Thiên Vân Hải",
+   "lv": [
+    72,
+    80
+   ],
+   "ax": null
+  },
+  "T": {
+   "n": "Thí Luyện Tháp",
+   "lv": [
+    1,
+    100
+   ],
+   "ax": null
+  },
+  "X": {
+   "n": "Hỗn Độn Hư Không",
+   "lv": [
+    80,
+    100
+   ],
+   "ax": null
+  },
+  "P": {
+   "n": "Cửu Long Cổ Mộ",
+   "lv": [
+    30,
+    100
+   ],
+   "ax": null
+  }
+ },
+ "yeu_thu": {
+  "tho": {
+   "n": "Linh Thố",
+   "z": "W",
+   "lv": [
+    1,
+    3
+   ],
+   "hpM": 0.8,
+   "atkM": 0.7,
+   "spd": 70,
+   "r": 13,
+   "aggro": 0,
+   "look": {
+    "body": "#fff6ea",
+    "belly": "#ffd8e0",
+    "ear": "long",
+    "earIn": "#ff9db0",
+    "eye": "#c0305a"
+   }
+  },
+  "moc": {
+   "n": "Mộc Yêu",
+   "z": "W",
+   "lv": [
+    3,
+    7
+   ],
+   "hpM": 1.2,
+   "atkM": 1,
+   "spd": 55,
+   "r": 17,
+   "aggro": 160,
+   "look": {
+    "body": "#8a6a44",
+    "belly": "#a98558",
+    "ear": "none",
+    "leaf": 1,
+    "eye": "#ffe27a"
+   }
+  },
+  "xa": {
+   "n": "Thanh Xà",
+   "z": "W",
+   "lv": [
+    6,
+    10
+   ],
+   "hpM": 1,
+   "atkM": 1.2,
+   "spd": 95,
+   "r": 14,
+   "aggro": 210,
+   "look": {
+    "snake": 1,
+    "body": "#4fcf6a",
+    "belly": "#c8f08a",
+    "eye": "#ffee55",
+    "fangs": 1
+   }
+  },
+  "bmoc": {
+   "n": "Mộc Tinh Vương",
+   "z": "W",
+   "lv": [
+    10,
+    10
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 70,
+   "r": 36,
+   "aggro": 260,
+   "look": {
+    "body": "#6b4a2a",
+    "belly": "#8b6a3c",
+    "ear": "none",
+    "leaf": 1,
+    "eye": "#ff6a3a",
+    "crown": 1
+   }
+  },
+  "lang": {
+   "n": "Hắc Phong Lang",
+   "z": "E",
+   "lv": [
+    10,
+    14
+   ],
+   "hpM": 1,
+   "atkM": 1.1,
+   "spd": 125,
+   "r": 17,
+   "aggro": 240,
+   "look": {
+    "body": "#555b78",
+    "belly": "#9aa0c0",
+    "ear": "point",
+    "earIn": "#2a2d40",
+    "eye": "#ff5a3a",
+    "fangs": 1,
+    "tails": 1,
+    "tail": "#555b78"
+   }
+  },
+  "bat": {
+   "n": "Huyết Bức",
+   "z": "E",
+   "lv": [
+    13,
+    17
+   ],
+   "hpM": 0.8,
+   "atkM": 1.2,
+   "spd": 115,
+   "r": 13,
+   "aggro": 260,
+   "fly": 1,
+   "look": {
+    "body": "#8a2e5e",
+    "belly": "#d77aa8",
+    "ear": "point",
+    "earIn": "#4a1830",
+    "eye": "#ffe14a",
+    "fangs": 1,
+    "wings": 1,
+    "wing": "#5a2045"
+   }
+  },
+  "hau": {
+   "n": "Sơn Tặc Yêu Hầu",
+   "z": "E",
+   "lv": [
+    16,
+    20
+   ],
+   "hpM": 1.3,
+   "atkM": 1.1,
+   "spd": 105,
+   "r": 17,
+   "aggro": 220,
+   "look": {
+    "body": "#b8814a",
+    "belly": "#f2cf9a",
+    "ear": "round",
+    "earIn": "#f2cf9a",
+    "eye": "#3a2a1a",
+    "tails": 1,
+    "tail": "#b8814a"
+   }
+  },
+  "blang": {
+   "n": "Hắc Phong Lang Vương",
+   "z": "E",
+   "lv": [
+    20,
+    20
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 120,
+   "r": 38,
+   "aggro": 280,
+   "look": {
+    "body": "#3c4060",
+    "belly": "#8a90b8",
+    "ear": "point",
+    "earIn": "#1a1c2c",
+    "eye": "#ff3030",
+    "fangs": 1,
+    "tails": 1,
+    "tail": "#3c4060",
+    "horn": 1,
+    "crown": 1
+   }
+  },
+  "ho": {
+   "n": "Tuyết Hồ",
+   "z": "N",
+   "lv": [
+    20,
+    24
+   ],
+   "hpM": 1,
+   "atkM": 1.1,
+   "spd": 120,
+   "r": 16,
+   "aggro": 230,
+   "look": {
+    "body": "#f4fbff",
+    "belly": "#ffffff",
+    "ear": "point",
+    "earIn": "#bfe0ff",
+    "eye": "#3a9aff",
+    "tails": 2,
+    "tail": "#e4f2ff"
+   }
+  },
+  "linh": {
+   "n": "Băng Linh",
+   "z": "N",
+   "lv": [
+    23,
+    27
+   ],
+   "hpM": 0.9,
+   "atkM": 1.2,
+   "spd": 70,
+   "r": 15,
+   "aggro": 260,
+   "ranged": 1,
+   "fly": 1,
+   "look": {
+    "body": "#8fe3ff",
+    "belly": "#d6f6ff",
+    "ear": "none",
+    "spikes": 1,
+    "eye": "#ffffff"
+   }
+  },
+  "hung": {
+   "n": "Hàn Băng Hùng",
+   "z": "N",
+   "lv": [
+    26,
+    30
+   ],
+   "hpM": 1.8,
+   "atkM": 1.1,
+   "spd": 75,
+   "r": 23,
+   "aggro": 200,
+   "look": {
+    "body": "#e4ebf5",
+    "belly": "#c4d0e2",
+    "ear": "round",
+    "earIn": "#a8b8d0",
+    "eye": "#2a3a5a"
+   }
+  },
+  "bho": {
+   "n": "Cửu Vĩ Băng Hồ",
+   "z": "N",
+   "lv": [
+    30,
+    30
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 110,
+   "r": 36,
+   "aggro": 280,
+   "ranged": 1,
+   "look": {
+    "body": "#eaf6ff",
+    "belly": "#ffffff",
+    "ear": "point",
+    "earIn": "#8fd0ff",
+    "eye": "#2a7aff",
+    "tails": 9,
+    "tail": "#d8ecff",
+    "crown": 1
+   }
+  },
+  "ma": {
+   "n": "Ma Tu Đồ",
+   "z": "S",
+   "lv": [
+    30,
+    36
+   ],
+   "hpM": 1,
+   "atkM": 1.2,
+   "spd": 85,
+   "r": 17,
+   "aggro": 260,
+   "ranged": 1,
+   "look": {
+    "body": "#5a2a7e",
+    "belly": "#a05cc8",
+    "ear": "none",
+    "horn": 1,
+    "eye": "#ff4adf",
+    "fangs": 1
+   }
+  },
+  "thi": {
+   "n": "Huyết Thi",
+   "z": "S",
+   "lv": [
+    34,
+    40
+   ],
+   "hpM": 1.5,
+   "atkM": 1.1,
+   "spd": 65,
+   "r": 19,
+   "aggro": 220,
+   "look": {
+    "body": "#8c3a3a",
+    "belly": "#c97a7a",
+    "ear": "round",
+    "earIn": "#5a1a1a",
+    "eye": "#ffffff",
+    "fangs": 1
+   }
+  },
+  "rong": {
+   "n": "Hỏa Ma Tiểu Long",
+   "z": "S",
+   "lv": [
+    38,
+    45
+   ],
+   "hpM": 1.5,
+   "atkM": 1.2,
+   "spd": 90,
+   "r": 22,
+   "aggro": 280,
+   "ranged": 1,
+   "fly": 1,
+   "look": {
+    "body": "#d8452a",
+    "belly": "#ffb04a",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#a02a1a",
+    "flame": 1,
+    "tails": 1,
+    "tail": "#d8452a",
+    "eye": "#fff06a",
+    "fangs": 1
+   }
+  },
+  "bma": {
+   "n": "Huyết Ma Lão Tổ",
+   "z": "S",
+   "lv": [
+    48,
+    48
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 95,
+   "r": 42,
+   "aggro": 300,
+   "ranged": 1,
+   "look": {
+    "body": "#3a0f2a",
+    "belly": "#8a2a5a",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#240818",
+    "flame": 1,
+    "eye": "#ff2a2a",
+    "fangs": 1,
+    "crown": 1,
+    "tails": 1,
+    "tail": "#5a1a3a"
+   }
+  },
+  "kong1": {
+   "n": "Hư Không Hành Giả",
+   "z": "X",
+   "lv": [
+    80,
+    86
+   ],
+   "hpM": 1.4,
+   "atkM": 1.3,
+   "spd": 95,
+   "r": 20,
+   "aggro": 260,
+   "ranged": 1,
+   "look": {
+    "body": "#2a1a4a",
+    "belly": "#6a3aa8",
+    "ear": "none",
+    "horn": 1,
+    "eye": "#ff6aff",
+    "fangs": 1
+   }
+  },
+  "kong2": {
+   "n": "Hỗn Độn Thôn Thú",
+   "z": "X",
+   "lv": [
+    86,
+    93
+   ],
+   "hpM": 2,
+   "atkM": 1.3,
+   "spd": 85,
+   "r": 27,
+   "aggro": 240,
+   "look": {
+    "body": "#1a1a2a",
+    "belly": "#4a2a6a",
+    "ear": "round",
+    "earIn": "#ff6aff",
+    "eye": "#ffee55",
+    "fangs": 1,
+    "horn": 1
+   }
+  },
+  "kong3": {
+   "n": "Thiên Kiếp Lôi Linh",
+   "z": "X",
+   "lv": [
+    93,
+    100
+   ],
+   "hpM": 1.5,
+   "atkM": 1.4,
+   "spd": 100,
+   "r": 19,
+   "aggro": 280,
+   "fly": 1,
+   "ranged": 1,
+   "look": {
+    "body": "#fff2a0",
+    "belly": "#ffffff",
+    "ear": "none",
+    "spikes": 1,
+    "eye": "#6aa0ff"
+   }
+  },
+  "bkong": {
+   "n": "Hỗn Độn Đại Đế",
+   "z": "X",
+   "lv": [
+    100,
+    100
+   ],
+   "boss": 1,
+   "hpM": 5,
+   "atkM": 1.3,
+   "spd": 100,
+   "r": 48,
+   "aggro": 320,
+   "ranged": 1,
+   "look": {
+    "body": "#0a0a1a",
+    "belly": "#ff6aff",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#3a1a5a",
+    "crown": 1,
+    "eye": "#ff3a8a",
+    "tails": 9,
+    "tail": "#6a2a9a",
+    "flame": 1
+   }
+  },
+  "hat": {
+   "n": "Sa Mạc Yêu Hạt",
+   "z": "A",
+   "lv": [
+    45,
+    49
+   ],
+   "hpM": 1.1,
+   "atkM": 1.2,
+   "spd": 100,
+   "r": 19,
+   "aggro": 240,
+   "look": {
+    "body": "#c8a050",
+    "belly": "#f0d890",
+    "ear": "none",
+    "eye": "#ff5a2a",
+    "fangs": 1,
+    "tails": 1,
+    "tail": "#b88a3a",
+    "horn": 1
+   }
+  },
+  "dieu": {
+   "n": "Lôi Điểu",
+   "z": "A",
+   "lv": [
+    48,
+    52
+   ],
+   "hpM": 0.9,
+   "atkM": 1.3,
+   "spd": 105,
+   "r": 16,
+   "aggro": 280,
+   "fly": 1,
+   "ranged": 1,
+   "look": {
+    "body": "#ffe66a",
+    "belly": "#fff8c0",
+    "ear": "point",
+    "earIn": "#ffb030",
+    "eye": "#3a6aff",
+    "wings": 1,
+    "wing": "#f2c83a",
+    "tails": 1,
+    "tail": "#ffe66a"
+   }
+  },
+  "thach": {
+   "n": "Thạch Giáp Nhân",
+   "z": "A",
+   "lv": [
+    51,
+    55
+   ],
+   "hpM": 2,
+   "atkM": 1.1,
+   "spd": 70,
+   "r": 25,
+   "aggro": 220,
+   "look": {
+    "body": "#9a8468",
+    "belly": "#bba888",
+    "ear": "round",
+    "earIn": "#7a6a50",
+    "eye": "#ffdd55",
+    "horn": 1
+   }
+  },
+  "blei": {
+   "n": "Thiên Lôi Hổ Vương",
+   "z": "A",
+   "lv": [
+    56,
+    56
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 115,
+   "r": 40,
+   "aggro": 300,
+   "ranged": 1,
+   "look": {
+    "body": "#f2e6b0",
+    "belly": "#ffffff",
+    "ear": "round",
+    "earIn": "#d8a030",
+    "eye": "#4aa0ff",
+    "wings": 1,
+    "wing": "#ffe66a",
+    "horn": 1,
+    "crown": 1,
+    "tails": 1,
+    "tail": "#f2e6b0",
+    "fangs": 1
+   }
+  },
+  "nham": {
+   "n": "Nham Tương Quái",
+   "z": "B",
+   "lv": [
+    55,
+    59
+   ],
+   "hpM": 1.6,
+   "atkM": 1.2,
+   "spd": 75,
+   "r": 21,
+   "aggro": 230,
+   "look": {
+    "body": "#6a3a2a",
+    "belly": "#ff7a2a",
+    "ear": "none",
+    "flame": 1,
+    "eye": "#ffe14a",
+    "horn": 1
+   }
+  },
+  "hoa": {
+   "n": "Hỏa Linh Tước",
+   "z": "B",
+   "lv": [
+    58,
+    62
+   ],
+   "hpM": 0.9,
+   "atkM": 1.3,
+   "spd": 110,
+   "r": 16,
+   "aggro": 280,
+   "fly": 1,
+   "ranged": 1,
+   "look": {
+    "body": "#ff6a2a",
+    "belly": "#ffd04a",
+    "ear": "point",
+    "earIn": "#ffb02a",
+    "eye": "#fff",
+    "wings": 1,
+    "wing": "#ff8a2a",
+    "flame": 1,
+    "tails": 1,
+    "tail": "#ff8a2a"
+   }
+  },
+  "dung": {
+   "n": "Dung Nham Hùng",
+   "z": "B",
+   "lv": [
+    61,
+    65
+   ],
+   "hpM": 1.8,
+   "atkM": 1.2,
+   "spd": 80,
+   "r": 25,
+   "aggro": 220,
+   "look": {
+    "body": "#a02a1a",
+    "belly": "#ff9a3a",
+    "ear": "round",
+    "earIn": "#5a1a10",
+    "eye": "#ffee55",
+    "fangs": 1,
+    "horn": 1
+   }
+  },
+  "bhoa": {
+   "n": "Xích Viêm Phượng Hoàng",
+   "z": "B",
+   "lv": [
+    66,
+    66
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 110,
+   "r": 40,
+   "aggro": 300,
+   "ranged": 1,
+   "fly": 1,
+   "look": {
+    "body": "#ff4a2a",
+    "belly": "#ffd04a",
+    "ear": "point",
+    "earIn": "#ffd04a",
+    "eye": "#fff06a",
+    "wings": 1,
+    "wing": "#ff7a1a",
+    "flame": 1,
+    "tails": 5,
+    "tail": "#ff8a2a",
+    "crown": 1
+   }
+  },
+  "ech": {
+   "n": "Độc Ma Cóc",
+   "z": "C",
+   "lv": [
+    65,
+    68
+   ],
+   "hpM": 1.2,
+   "atkM": 1.2,
+   "spd": 85,
+   "r": 19,
+   "aggro": 230,
+   "look": {
+    "body": "#4a7a3a",
+    "belly": "#a8d070",
+    "ear": "round",
+    "earIn": "#3a5a2a",
+    "eye": "#ffee55",
+    "fangs": 1
+   }
+  },
+  "mng": {
+   "n": "Quỷ Hỏa",
+   "z": "C",
+   "lv": [
+    68,
+    71
+   ],
+   "hpM": 0.9,
+   "atkM": 1.3,
+   "spd": 80,
+   "r": 15,
+   "aggro": 280,
+   "fly": 1,
+   "ranged": 1,
+   "look": {
+    "body": "#7affc8",
+    "belly": "#d6fff0",
+    "ear": "none",
+    "spikes": 1,
+    "eye": "#ffffff"
+   }
+  },
+  "ran": {
+   "n": "Độc Xà Vương",
+   "z": "C",
+   "lv": [
+    70,
+    72
+   ],
+   "hpM": 1.5,
+   "atkM": 1.3,
+   "spd": 105,
+   "r": 20,
+   "aggro": 240,
+   "look": {
+    "snake": 1,
+    "body": "#6a3a8a",
+    "belly": "#c28aff",
+    "eye": "#ffee55",
+    "fangs": 1
+   }
+  },
+  "bdoc": {
+   "n": "U Minh Quỷ Mẫu",
+   "z": "C",
+   "lv": [
+    73,
+    73
+   ],
+   "boss": 1,
+   "hpM": 4.5,
+   "atkM": 1.3,
+   "spd": 100,
+   "r": 42,
+   "aggro": 300,
+   "ranged": 1,
+   "look": {
+    "body": "#2a3a2a",
+    "belly": "#5aa070",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#1a2a2a",
+    "eye": "#7aff8a",
+    "fangs": 1,
+    "crown": 1,
+    "tails": 6,
+    "tail": "#3a5a3a"
+   }
+  },
+  "van": {
+   "n": "Vân Thú",
+   "z": "D",
+   "lv": [
+    72,
+    75
+   ],
+   "hpM": 1.2,
+   "atkM": 1.2,
+   "spd": 115,
+   "r": 18,
+   "aggro": 250,
+   "look": {
+    "body": "#ffffff",
+    "belly": "#f0f6ff",
+    "ear": "round",
+    "earIn": "#cfe8ff",
+    "eye": "#6aa0ff",
+    "tails": 1,
+    "tail": "#ffffff"
+   }
+  },
+  "tien": {
+   "n": "Kim Giáp Thiên Binh",
+   "z": "D",
+   "lv": [
+    75,
+    78
+   ],
+   "hpM": 1.6,
+   "atkM": 1.3,
+   "spd": 95,
+   "r": 21,
+   "aggro": 280,
+   "fly": 1,
+   "ranged": 1,
+   "look": {
+    "body": "#ffd45e",
+    "belly": "#fff3b0",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#ffffff",
+    "eye": "#2a4aff"
+   }
+  },
+  "long": {
+   "n": "Vân Long",
+   "z": "D",
+   "lv": [
+    77,
+    80
+   ],
+   "hpM": 1.7,
+   "atkM": 1.3,
+   "spd": 105,
+   "r": 24,
+   "aggro": 290,
+   "fly": 1,
+   "ranged": 1,
+   "look": {
+    "body": "#5ad0c0",
+    "belly": "#d8fff6",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#8af0e0",
+    "eye": "#fff06a",
+    "tails": 1,
+    "tail": "#5ad0c0",
+    "fangs": 1
+   }
+  },
+  "bdao": {
+   "n": "Thiên Đạo Hóa Thân",
+   "z": "D",
+   "lv": [
+    80,
+    80
+   ],
+   "boss": 1,
+   "hpM": 5,
+   "atkM": 1.3,
+   "spd": 105,
+   "r": 46,
+   "aggro": 320,
+   "ranged": 1,
+   "look": {
+    "body": "#fff6c8",
+    "belly": "#ffffff",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#ffe9a0",
+    "crown": 1,
+    "eye": "#ff3a3a",
+    "tails": 9,
+    "tail": "#ffe9a0",
+    "flame": 1
+   }
+  },
+  "bdg": {
+   "n": "Cửu Long Mộ Chủ",
+   "z": "P",
+   "dg": 1,
+   "lv": [
+    60,
+    60
+   ],
+   "boss": 1,
+   "hpM": 6,
+   "atkM": 1.3,
+   "spd": 100,
+   "r": 44,
+   "aggro": 320,
+   "ranged": 1,
+   "look": {
+    "body": "#3c3c52",
+    "belly": "#9a9ab8",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#2a2a3a",
+    "eye": "#ff6a3a",
+    "fangs": 1,
+    "crown": 1,
+    "tails": 1,
+    "tail": "#3c3c52",
+    "flame": 1
+   }
+  }
+ },
+ "nhiem_vu_chinh": [
+  {
+   "t": "tho",
+   "k": "kill",
+   "n": 5,
+   "lv": 1,
+   "title": "Sơ Nhập Tiên Môn",
+   "txt": "Linh Thố ở Thanh Mộc Lâm (dịch chuyển qua Truyền Tống Trận) đang quấy nhiễu linh mạch. Hãy diệt 5 con để làm quen đạo thuật."
+  },
+  {
+   "t": "moc",
+   "k": "col",
+   "n": 4,
+   "p": 0.7,
+   "mat": "Linh Thảo",
+   "lv": 4,
+   "title": "Hái Linh Thảo",
+   "txt": "Dược Đồng cần Linh Thảo rơi ra từ Mộc Yêu để luyện Hồi Khí Đan. Thu thập 4 cây."
+  },
+  {
+   "t": "xa",
+   "k": "kill",
+   "n": 8,
+   "lv": 7,
+   "title": "Thanh Xà Họa Thế",
+   "txt": "Thanh Xà độc đã cắn bị thương nhiều đệ tử. Diệt 8 con để bảo vệ môn phái."
+  },
+  {
+   "t": "bmoc",
+   "k": "kill",
+   "n": 1,
+   "lv": 10,
+   "boss": 1,
+   "title": "Trảm Mộc Tinh Vương",
+   "txt": "Mộc Tinh Vương ngàn năm đã thành yêu, trấn giữ tận cùng Thanh Mộc Lâm. Hãy hạ nó, ta sẽ ban bảo vật."
+  },
+  {
+   "t": "lang",
+   "k": "kill",
+   "n": 10,
+   "lv": 11,
+   "title": "Lang Họa Hắc Phong",
+   "txt": "Hắc Phong Cốc có bầy sói đen hung hãn. Diệt 10 Hắc Phong Lang."
+  },
+  {
+   "t": "bat",
+   "k": "kill",
+   "n": 10,
+   "lv": 14,
+   "title": "Huyết Bức Tập Kích",
+   "txt": "Huyết Bức bay lượn che kín bầu trời đêm. Diệt 10 con."
+  },
+  {
+   "t": "hau",
+   "k": "col",
+   "n": 6,
+   "p": 0.65,
+   "mat": "Hầu Yêu Đan",
+   "lv": 17,
+   "title": "Hầu Yêu Đan",
+   "txt": "Sơn Tặc Yêu Hầu giữ yêu đan trong người. Thu thập 6 viên Hầu Yêu Đan."
+  },
+  {
+   "t": "blang",
+   "k": "kill",
+   "n": 1,
+   "lv": 20,
+   "boss": 1,
+   "title": "Trảm Lang Vương",
+   "txt": "Hắc Phong Lang Vương là tai họa của cả thung lũng. Hạ nó, nhận Địa Bảo."
+  },
+  {
+   "t": "ho",
+   "k": "kill",
+   "n": 12,
+   "lv": 21,
+   "title": "Tuyết Sơn Hồ Ảnh",
+   "txt": "Đường lên Băng Hàn Tuyết Sơn bị Tuyết Hồ chiếm giữ. Diệt 12 con."
+  },
+  {
+   "t": "linh",
+   "k": "col",
+   "n": 8,
+   "p": 0.6,
+   "mat": "Băng Tinh",
+   "lv": 24,
+   "title": "Băng Tinh Luyện Khí",
+   "txt": "Băng Linh ngưng tụ Băng Tinh trong thân. Thu thập 8 viên để luyện khí."
+  },
+  {
+   "t": "hung",
+   "k": "kill",
+   "n": 12,
+   "lv": 27,
+   "title": "Hàn Băng Hùng Quần",
+   "txt": "Hàn Băng Hùng canh giữ đường vào đỉnh núi. Diệt 12 con."
+  },
+  {
+   "t": "bho",
+   "k": "kill",
+   "n": 1,
+   "lv": 30,
+   "boss": 1,
+   "title": "Cửu Vĩ Băng Hồ",
+   "txt": "Yêu hồ chín đuôi ngự trên đỉnh tuyết sơn. Hạ nó để mở đường xuống Ma Địa."
+  },
+  {
+   "t": "ma",
+   "k": "kill",
+   "n": 14,
+   "lv": 32,
+   "title": "Ma Đạo Hoành Hành",
+   "txt": "Huyết Sắc Ma Địa có Ma Tu Đồ đang tế luyện sinh hồn. Diệt 14 tên."
+  },
+  {
+   "t": "thi",
+   "k": "col",
+   "n": 10,
+   "p": 0.6,
+   "mat": "Huyết Châu",
+   "lv": 36,
+   "title": "Huyết Châu Phá Trận",
+   "txt": "Huyết Thi mang Huyết Châu dùng phá ma trận. Thu thập 10 viên."
+  },
+  {
+   "t": "rong",
+   "k": "kill",
+   "n": 14,
+   "lv": 40,
+   "title": "Hỏa Long Thiêu Thiên",
+   "txt": "Hỏa Ma Tiểu Long phun lửa thiêu rụi ma địa. Diệt 14 con."
+  },
+  {
+   "t": "bma",
+   "k": "kill",
+   "n": 1,
+   "lv": 48,
+   "boss": 1,
+   "title": "Diệt Huyết Ma Lão Tổ",
+   "txt": "Huyết Ma Lão Tổ là cội nguồn ma họa. Hạ hắn, công đức viên mãn, phi thăng chỉ còn một bước."
+  },
+  {
+   "t": "hat",
+   "k": "kill",
+   "n": 14,
+   "lv": 46,
+   "title": "Sa Mạc Yêu Hạt",
+   "txt": "Lôi Vực Sa Mạc (Lv 45-55) là bản đồ mới trong Truyền Tống Trận. Sa Mạc Yêu Hạt đang hoành hành. Diệt 14 con."
+  },
+  {
+   "t": "dieu",
+   "k": "col",
+   "n": 10,
+   "p": 0.6,
+   "mat": "Lôi Linh Vũ",
+   "lv": 50,
+   "title": "Lôi Linh Vũ",
+   "txt": "Lôi Điểu mang lông vũ chứa lôi linh. Thu thập 10 chiếc để luyện bảo."
+  },
+  {
+   "t": "thach",
+   "k": "kill",
+   "n": 14,
+   "lv": 54,
+   "title": "Thạch Giáp Hung Thần",
+   "txt": "Thạch Giáp Nhân chặn đường vào sâu trong sa mạc. Diệt 14 tên."
+  },
+  {
+   "t": "blei",
+   "k": "kill",
+   "n": 1,
+   "lv": 56,
+   "boss": 1,
+   "title": "Trảm Thiên Lôi Hổ Vương",
+   "txt": "Hổ Vương điều khiển thiên lôi, trấn giữ sa mạc. Hạ nó, nhận bảo vật."
+  },
+  {
+   "t": "nham",
+   "k": "kill",
+   "n": 14,
+   "lv": 57,
+   "title": "Nham Tương Hiểm Địa",
+   "txt": "Liệt Hỏa Nham Cốc (Lv 55-65) . Nham Tương Quái đang tràn ra khỏi miệng núi lửa. Diệt 14 con."
+  },
+  {
+   "t": "hoa",
+   "k": "col",
+   "n": 10,
+   "p": 0.6,
+   "mat": "Hỏa Tinh",
+   "lv": 61,
+   "title": "Hỏa Tinh Luyện Bảo",
+   "txt": "Hỏa Linh Tước ngưng tụ Hỏa Tinh. Thu thập 10 viên."
+  },
+  {
+   "t": "dung",
+   "k": "kill",
+   "n": 14,
+   "lv": 64,
+   "title": "Dung Nham Hùng Quần",
+   "txt": "Dung Nham Hùng canh giữ lối vào hang lửa. Diệt 14 con."
+  },
+  {
+   "t": "bhoa",
+   "k": "kill",
+   "n": 1,
+   "lv": 66,
+   "boss": 1,
+   "title": "Xích Viêm Phượng Hoàng",
+   "txt": "Phượng hoàng lửa nở rộ trên đỉnh núi lửa. Hạ nó để đoạt thần hỏa."
+  },
+  {
+   "t": "ech",
+   "k": "kill",
+   "n": 15,
+   "lv": 67,
+   "title": "Đầm Lầy Độc Ma",
+   "txt": "U Minh Đầm Lầy (Lv 65-72) , độc khí mịt mù. Diệt 15 Độc Ma Cóc."
+  },
+  {
+   "t": "mng",
+   "k": "col",
+   "n": 10,
+   "p": 0.6,
+   "mat": "U Minh Hỏa Châu",
+   "lv": 70,
+   "title": "U Minh Hỏa Châu",
+   "txt": "Quỷ Hỏa giữ Hỏa Châu chứa âm khí. Thu thập 10 viên."
+  },
+  {
+   "t": "ran",
+   "k": "kill",
+   "n": 15,
+   "lv": 71,
+   "title": "Độc Xà Vương Họa",
+   "txt": "Độc Xà Vương nấp trong bùn lầy. Diệt 15 con."
+  },
+  {
+   "t": "bdoc",
+   "k": "kill",
+   "n": 1,
+   "lv": 73,
+   "boss": 1,
+   "title": "Diệt U Minh Quỷ Mẫu",
+   "txt": "Quỷ Mẫu sáu đuôi là chúa tể đầm lầy. Hạ nó, mở đường lên Cửu Thiên."
+  },
+  {
+   "t": "van",
+   "k": "kill",
+   "n": 15,
+   "lv": 73,
+   "title": "Vân Hải Chi Môn",
+   "txt": "Cửu Thiên Vân Hải (Lv 72-80) . Diệt 15 Vân Thú để mở đường."
+  },
+  {
+   "t": "tien",
+   "k": "col",
+   "n": 10,
+   "p": 0.6,
+   "mat": "Thiên Binh Lệnh",
+   "lv": 76,
+   "title": "Thiên Binh Lệnh",
+   "txt": "Kim Giáp Thiên Binh mang lệnh bài thiên giới. Thu thập 10 chiếc."
+  },
+  {
+   "t": "long",
+   "k": "kill",
+   "n": 15,
+   "lv": 79,
+   "title": "Vân Long Hộ Giá",
+   "txt": "Vân Long canh giữ điện Thiên Đạo. Diệt 15 con."
+  },
+  {
+   "t": "bdao",
+   "k": "kill",
+   "n": 1,
+   "lv": 80,
+   "boss": 1,
+   "title": "Đối Mặt Thiên Đạo",
+   "txt": "Thiên Đạo Hóa Thân là thử thách cuối cùng trước khi phi thăng. Hạ nó, thành tiên!"
+  },
+  {
+   "t": "kong1",
+   "k": "kill",
+   "n": 16,
+   "lv": 83,
+   "title": "Hư Không Hành Giả",
+   "txt": "Hỗn Độn Hư Không (Lv 80-100) là bản đồ cuối cùng, nằm sau Truyền Tống Trận. Diệt 16 Hư Không Hành Giả."
+  },
+  {
+   "t": "kong2",
+   "k": "col",
+   "n": 12,
+   "p": 0.6,
+   "mat": "Hư Không Tinh",
+   "lv": 90,
+   "title": "Hư Không Tinh",
+   "txt": "Hỗn Độn Thôn Thú nuốt chửng tinh thạch hư không. Thu thập 12 viên."
+  },
+  {
+   "t": "kong3",
+   "k": "kill",
+   "n": 16,
+   "lv": 96,
+   "title": "Thiên Kiếp Lôi Linh",
+   "txt": "Lôi Linh là hóa thân của thiên kiếp. Diệt 16 con để chuẩn bị độ kiếp."
+  },
+  {
+   "t": "bkong",
+   "k": "kill",
+   "n": 1,
+   "lv": 100,
+   "boss": 1,
+   "title": "Trảm Hỗn Độn Đại Đế",
+   "txt": "Hỗn Độn Đại Đế là chủ nhân hư không. Hạ hắn, thành Chân Tiên!"
+  }
+ ],
+ "linh_thu": {
+  "bac": [
+   {
+    "n": "Phàm",
+    "s": "N",
+    "c": "#b9c0c8"
+   },
+   {
+    "n": "Hi Hữu",
+    "s": "R",
+    "c": "#6fe08a"
+   },
+   {
+    "n": "Cực Phẩm",
+    "s": "SR",
+    "c": "#c98bff"
+   },
+   {
+    "n": "Thần Thoại",
+    "s": "SSR",
+    "c": "#ffb040"
+   },
+   {
+    "n": "Chí Tôn",
+    "s": "UR",
+    "c": "#ff5a7a"
+   }
+  ],
+  "danh_sach": [
+   {
+    "id": "tho",
+    "n": "Linh Thố Nhí",
+    "r": 0,
+    "mult": 0.3,
+    "col": "#ffd8e0",
+    "desc": "+3% Công",
+    "bonus": {
+     "atkp": 0.03
+    },
+    "look": {
+     "body": "#fff6ea",
+     "belly": "#ffd8e0",
+     "ear": "long",
+     "earIn": "#ff9db0",
+     "eye": "#c0305a"
+    }
+   },
+   {
+    "id": "meo",
+    "n": "Hắc Miêu Ấu",
+    "r": 0,
+    "mult": 0.3,
+    "col": "#c8b8ff",
+    "desc": "+2% Bạo Kích",
+    "bonus": {
+     "crit": 2
+    },
+    "look": {
+     "body": "#2a2a3a",
+     "belly": "#4a4a62",
+     "ear": "point",
+     "earIn": "#ff9db0",
+     "eye": "#ffe14a",
+     "tails": 1,
+     "tail": "#2a2a3a"
+    }
+   },
+   {
+    "id": "quy",
+    "n": "Thạch Quy",
+    "r": 0,
+    "mult": 0.3,
+    "col": "#a8d0a0",
+    "desc": "+5% Sinh Lực",
+    "bonus": {
+     "hpp": 0.05
+    },
+    "look": {
+     "body": "#7a9a6a",
+     "belly": "#d8e8c0",
+     "ear": "round",
+     "earIn": "#5a7a4a",
+     "eye": "#2a3a2a"
+    }
+   },
+   {
+    "id": "ho",
+    "n": "Linh Hồ",
+    "r": 1,
+    "mult": 0.45,
+    "col": "#ffb0c0",
+    "desc": "+6% Bạo Kích",
+    "bonus": {
+     "crit": 6
+    },
+    "look": {
+     "body": "#fff4e0",
+     "belly": "#ffffff",
+     "ear": "point",
+     "earIn": "#ffb0c0",
+     "eye": "#c0305a",
+     "tails": 2,
+     "tail": "#fff4e0"
+    }
+   },
+   {
+    "id": "lang",
+    "n": "Phong Lang Ấu",
+    "r": 1,
+    "mult": 0.45,
+    "col": "#9aa0c0",
+    "desc": "+5% Công",
+    "bonus": {
+     "atkp": 0.05
+    },
+    "look": {
+     "body": "#555b78",
+     "belly": "#9aa0c0",
+     "ear": "point",
+     "earIn": "#2a2d40",
+     "eye": "#ff5a3a",
+     "fangs": 1,
+     "tails": 1,
+     "tail": "#555b78"
+    }
+   },
+   {
+    "id": "moc",
+    "n": "Mộc Linh",
+    "r": 1,
+    "mult": 0.45,
+    "col": "#8af08a",
+    "desc": "+7% Sinh Lực",
+    "bonus": {
+     "hpp": 0.07
+    },
+    "look": {
+     "body": "#8a6a44",
+     "belly": "#a98558",
+     "ear": "none",
+     "leaf": 1,
+     "eye": "#ffe27a"
+    }
+   },
+   {
+    "id": "rong",
+    "n": "Tiểu Hỏa Long",
+    "r": 2,
+    "mult": 0.6,
+    "col": "#ff8a2a",
+    "fly": 1,
+    "desc": "+10% Công",
+    "bonus": {
+     "atkp": 0.1
+    },
+    "look": {
+     "body": "#e8553a",
+     "belly": "#ffc060",
+     "ear": "none",
+     "horn": 1,
+     "wings": 1,
+     "wing": "#b03020",
+     "eye": "#fff06a",
+     "tails": 1,
+     "tail": "#e8553a",
+     "flame": 1
+    }
+   },
+   {
+    "id": "bphuong",
+    "n": "Băng Phượng Ấu",
+    "r": 2,
+    "mult": 0.6,
+    "col": "#9fe0ff",
+    "fly": 1,
+    "desc": "+7% Công, +3% Bạo Kích",
+    "bonus": {
+     "atkp": 0.07,
+     "crit": 3
+    },
+    "look": {
+     "body": "#bfeaff",
+     "belly": "#ffffff",
+     "ear": "point",
+     "earIn": "#8fd0ff",
+     "eye": "#2a7aff",
+     "wings": 1,
+     "wing": "#8fd0ff",
+     "tails": 3,
+     "tail": "#dff6ff"
+    }
+   },
+   {
+    "id": "bao",
+    "n": "Lôi Báo Ấu",
+    "r": 2,
+    "mult": 0.6,
+    "col": "#8a90e8",
+    "desc": "+8% Công, +5% Sinh Lực",
+    "bonus": {
+     "atkp": 0.08,
+     "hpp": 0.05
+    },
+    "look": {
+     "body": "#4a4f78",
+     "belly": "#9aa0c8",
+     "ear": "point",
+     "earIn": "#222222",
+     "eye": "#ffe14a",
+     "fangs": 1,
+     "tails": 1,
+     "tail": "#4a4f78"
+    }
+   },
+   {
+    "id": "kim",
+    "n": "Kim Ô Nhỏ",
+    "r": 3,
+    "mult": 0.85,
+    "col": "#ffd04a",
+    "fly": 1,
+    "desc": "+15% Sinh Lực, +5% Công",
+    "bonus": {
+     "hpp": 0.15,
+     "atkp": 0.05
+    },
+    "look": {
+     "body": "#ffd04a",
+     "belly": "#fff0a0",
+     "ear": "point",
+     "earIn": "#ff9a2a",
+     "eye": "#ff3a2a",
+     "wings": 1,
+     "wing": "#ffb02a",
+     "tails": 3,
+     "tail": "#ffa02a",
+     "flame": 1
+    }
+   },
+   {
+    "id": "ky",
+    "n": "Kỳ Lân Ấu",
+    "r": 3,
+    "mult": 0.85,
+    "col": "#8fe8d8",
+    "desc": "+8% Công, +8% Sinh Lực, +4% Bạo Kích",
+    "bonus": {
+     "atkp": 0.08,
+     "hpp": 0.08,
+     "crit": 4
+    },
+    "look": {
+     "body": "#8fe8d8",
+     "belly": "#e8fff8",
+     "ear": "point",
+     "earIn": "#ffffff",
+     "horn": 1,
+     "eye": "#6a5aff",
+     "tails": 1,
+     "tail": "#6ad0ff"
+    }
+   },
+   {
+    "id": "tlong",
+    "n": "Thanh Long Ấu",
+    "r": 3,
+    "mult": 0.85,
+    "col": "#5ad0c0",
+    "fly": 1,
+    "desc": "+10% Công, +10% Sinh Lực, +3% Bạo Kích",
+    "bonus": {
+     "atkp": 0.1,
+     "hpp": 0.1,
+     "crit": 3
+    },
+    "look": {
+     "body": "#4ad0b0",
+     "belly": "#d8fff4",
+     "ear": "none",
+     "horn": 1,
+     "wings": 1,
+     "wing": "#8af0e0",
+     "eye": "#fff06a",
+     "tails": 1,
+     "tail": "#4ad0b0"
+    }
+   },
+   {
+    "id": "cuuvi",
+    "n": "Cửu Vĩ Tiên Hồ",
+    "r": 4,
+    "mult": 1.2,
+    "col": "#ff9ad8",
+    "desc": "+16% Công, +12% Sinh Lực, +6% Bạo Kích",
+    "bonus": {
+     "atkp": 0.16,
+     "hpp": 0.12,
+     "crit": 6
+    },
+    "look": {
+     "body": "#fff0fa",
+     "belly": "#ffffff",
+     "ear": "point",
+     "earIn": "#ff9ad8",
+     "eye": "#ff3a8a",
+     "tails": 9,
+     "tail": "#ffd0f0",
+     "crown": 1
+    }
+   },
+   {
+    "id": "hundun",
+    "n": "Hỗn Độn Thôn Thiên",
+    "r": 4,
+    "mult": 1.2,
+    "col": "#ff6aff",
+    "fly": 1,
+    "desc": "+20% Công, +18% Sinh Lực, +8% Bạo Kích",
+    "bonus": {
+     "atkp": 0.2,
+     "hpp": 0.18,
+     "crit": 8
+    },
+    "look": {
+     "body": "#1a1030",
+     "belly": "#6a2aa8",
+     "ear": "none",
+     "horn": 1,
+     "wings": 1,
+     "wing": "#3a1a5a",
+     "eye": "#ff6aff",
+     "fangs": 1,
+     "tails": 5,
+     "tail": "#6a2aa8",
+     "flame": 1,
+     "crown": 1
+    }
+   }
+  ]
+ },
+ "thu_cuoi": [
+  {
+   "id": "hac",
+   "n": "Bạch Hạc",
+   "price": 3000,
+   "spd": 0.25,
+   "fly": 1,
+   "lift": 20,
+   "col": "#ffffff",
+   "look": {
+    "body": "#ffffff",
+    "belly": "#eef4ff",
+    "ear": "none",
+    "wings": 1,
+    "wing": "#dfe8ff",
+    "eye": "#e03a3a",
+    "tails": 1,
+    "tail": "#222244"
+   }
+  },
+  {
+   "id": "bao",
+   "n": "Lôi Báo",
+   "price": 8000,
+   "spd": 0.35,
+   "lift": 12,
+   "col": "#8a90e8",
+   "look": {
+    "body": "#4a4f78",
+    "belly": "#9aa0c8",
+    "ear": "point",
+    "earIn": "#222222",
+    "eye": "#ffe14a",
+    "fangs": 1,
+    "tails": 1,
+    "tail": "#4a4f78"
+   }
+  },
+  {
+   "id": "long",
+   "n": "Thanh Vân Long",
+   "price": 20000,
+   "spd": 0.45,
+   "fly": 1,
+   "lift": 22,
+   "col": "#5ad0c0",
+   "look": {
+    "body": "#4ad0b0",
+    "belly": "#d8fff4",
+    "ear": "none",
+    "horn": 1,
+    "wings": 1,
+    "wing": "#8af0e0",
+    "eye": "#fff06a",
+    "tails": 1,
+    "tail": "#4ad0b0"
+   }
+  },
+  {
+   "id": "phuong",
+   "n": "Hỏa Phượng",
+   "price": 60000,
+   "spd": 0.6,
+   "fly": 1,
+   "lift": 24,
+   "col": "#ff7a2a",
+   "look": {
+    "body": "#ff5a2a",
+    "belly": "#ffd04a",
+    "ear": "point",
+    "earIn": "#ffd04a",
+    "eye": "#ffffff",
+    "wings": 1,
+    "wing": "#ff8a1a",
+    "flame": 1,
+    "tails": 3,
+    "tail": "#ff8a2a"
+   }
+  }
+ ],
+ "hon_ky": [
+  {
+   "n": "Khinh Thân",
+   "d": "+8% tốc độ di chuyển"
+  },
+  {
+   "n": "Linh Tuyền",
+   "d": "Hồi linh lực nhanh hơn 40%"
+  },
+  {
+   "n": "Phá Giáp",
+   "d": "Đòn đánh bỏ qua thêm phòng thủ của địch"
+  },
+  {
+   "n": "Hộ Thể",
+   "d": "Giảm 8% sát thương nhận"
+  },
+  {
+   "n": "Liệt Phong",
+   "d": "Sát thương bạo kích tăng từ 170% lên 200%"
+  },
+  {
+   "n": "Hấp Huyết",
+   "d": "Hồi 3% sát thương gây ra"
+  },
+  {
+   "n": "Tử Thần",
+   "d": "+15% sát thương lên quái dưới 30% sinh lực"
+  },
+  {
+   "n": "Niết Bàn",
+   "d": "Thoát chết: hồi 40% sinh lực (hồi chiêu 120 giây)"
+  },
+  {
+   "n": "Kim Cương Bất Hoại",
+   "d": "Giảm thêm 8% sát thương nhận"
+  },
+  {
+   "n": "Thiên Địa Đồng Thọ",
+   "d": "+12% mọi sát thương gây ra"
+  }
+ ],
+ "hon_hoan": {
+  "mau": [
+   "#f4f4f4",
+   "#f4f4f4",
+   "#ffe066",
+   "#ffe066",
+   "#b36bff",
+   "#b36bff",
+   "#3a2a4a",
+   "#ff3a4a",
+   "#ffd35a",
+   "#ff7aff"
+  ],
+  "ten": [
+   "Bạch",
+   "Bạch",
+   "Hoàng",
+   "Hoàng",
+   "Tử",
+   "Tử",
+   "Hắc",
+   "Hồng",
+   "Kim",
+   "Thất Thải"
+  ]
+ },
+ "hao_quang": {
+  "mau": [
+   null,
+   "#ffd35a",
+   "#c98bff",
+   "#ff5a7a",
+   "#5affc0",
+   "#6bb8ff"
+  ],
+  "ten_mau": [
+   "Theo lớp",
+   "Kim quang",
+   "Tử khí",
+   "Huyết diễm",
+   "Thanh liên",
+   "Lam hải"
+  ],
+  "kieu": [
+   "Khí lưu",
+   "Hỏa diễm",
+   "Lôi điện",
+   "Liên hoa",
+   "Phi kiếm",
+   "Linh hồn",
+   "Băng tinh",
+   "Tinh hà"
+  ]
+ },
+ "nhiem_vu_ngay": {
+  "kill": {
+   "t": "Diệt 80 yêu thú",
+   "need": 80,
+   "r": {
+    "g": 70
+   }
+  },
+  "cast": {
+   "t": "Dùng 40 lần thần thông",
+   "need": 40,
+   "r": {
+    "g": 60
+   }
+  },
+  "tower": {
+   "t": "Qua 5 tầng Thí Luyện Tháp",
+   "need": 5,
+   "r": {
+    "tok": 3
+   }
+  },
+  "pull": {
+   "t": "Triệu hồi linh thú 3 lần",
+   "need": 3,
+   "r": {
+    "sh": 20
+   }
+  },
+  "duel": {
+   "t": "Đấu trường 2 trận",
+   "need": 2,
+   "r": {
+    "tok": 2
+   }
+  },
+  "dg": {
+   "t": "Hoàn thành 1 phó bản",
+   "need": 1,
+   "r": {
+    "tok": 5,
+    "sh": 20
+   }
+  }
+ },
+ "cong_thuc": {
+  "kinh_nghiem_can_de_len_cap": "floor(36 * cap^1.55)",
+  "quai_sinh_luc": "(40 + cap^2*1.4 + cap*30) * hpM (hpM theo từng loài, boss 4.5-5)",
+  "quai_cong": "(5 + cap*2.6 + cap^2*0.035) * atkM",
+  "quai_phong_ngu": "cap * 0.9",
+  "quai_kinh_nghiem": "(10 + cap^2*0.55 + cap*6) * (boss ? 8 : 1) * clamp(1 + (capQuai - capNguoiChoi)*0.08, 0.1, 1.4)",
+  "quai_linh_thach": "(3 + cap*1.6) * ngau_nhien(0.7..1.3) * (boss ? 8 : 1)",
+  "ty_le_roi_do": "quai thường 20%, boss 100% (phẩm tối thiểu Linh Khí... Pháp Bảo trở lên)",
+  "ngưỡng_phẩm_chất_%": {
+   "Phàm": "0-58",
+   "Linh Khí": "58-86",
+   "Pháp Bảo": "86-96",
+   "Địa Bảo": "96-99",
+   "Thiên Bảo": "99-99.8",
+   "Tiên Khí": "99.8-100"
+  },
+  "trang_bi_chi_so_goc": "q = (3 + capVatPham*2) * heSoPhamChat; vũ khí: công=q; áo: thủ=q*0.5, máu=q*6; mũ: thủ=q*0.32, linh=q*3, máu=q*2; bội: bạo kích=1+phẩm*1.4+cap*0.04, máu=q*3.5, công=q*0.3",
+  "cuong_hoa": "mỗi cấp +12% chỉ số, tối đa +10. Tỉ lệ: +0..3 100%, +4..6 70%, +7..9 45%. Giá = (capVatPham+5) * (cấpHiệnTại+1) * 14",
+  "bo_trang_bi": "2 món cùng nguyên tố: +5% công; 3 món: +8% công, +8% máu, +8% thủ; 4 món: +12% công, +5% bạo kích",
+  "chi_so_nguoi_choi": "gốc lớp + tăng trưởng * (cấp-1) + điểm tiềm năng (máu +20, linh +8, công +2.2, thủ +1.2 mỗi điểm) + trang bị; bạo kích tối đa 60%",
+  "diem_tiem_nang_moi_cap": 2,
+  "chien_luc": "maxHP/8 + maxMP/20 + công*5 + thủ*3 + bạo kích*14",
+  "gacha_linh_thu": {
+   "ty_le_%": {
+    "N": 52,
+    "R": 30,
+    "SR": 13,
+    "SSR": 4.5,
+    "UR": 0.5
+   },
+   "bao_dam": "SR+ sau 10 lần, SSR+ sau 40 lần, UR sau 120 lần",
+   "gia": "1 lần 1.000 Linh Thạch, 10 lần 9.000 (chắc SR+), 12 Tháp Lệnh hoặc 100 Linh Phách cho 1 lần",
+   "trung_lap": "lên sao tối đa 5; dư đổi Linh Phách theo bậc 5/10/20/50/100",
+   "he_so_sao": "bonus x(1 + 0.25*sao), sát thương tự đánh x(1 + 0.15*sao)"
+  },
+  "chu_ky_ngay_dem_giay": 360,
+  "dia_hinh": "thế giới 5200x5200, tâm làng (2600,2600); vùng Tây/Đông/Bắc/Nam theo hướng, 4 vùng góc theo khoảng cách max(|dx|,|dy|) > 1750; Thí Luyện Tháp tâm (4750,2600) bán kính 340; Hỗn Độn Hư Không tâm (2600,500) bán kính 420"
+ },
+ "he_va_khac_che": {
+  "he": {
+   "kim": {
+    "n": "Kim",
+    "ic": "⚔️",
+    "c": "#e8ecf4"
+   },
+   "moc": {
+    "n": "Mộc",
+    "ic": "🌿",
+    "c": "#6fe08a"
+   },
+   "thuy": {
+    "n": "Thủy",
+    "ic": "💧",
+    "c": "#6bb8ff"
+   },
+   "hoa": {
+    "n": "Hỏa",
+    "ic": "🔥",
+    "c": "#ff8a3a"
+   },
+   "tho": {
+    "n": "Thổ",
+    "ic": "⛰️",
+    "c": "#d8b060"
+   },
+   "bang": {
+    "n": "Băng",
+    "ic": "❄️",
+    "c": "#9fe0ff"
+   },
+   "loi": {
+    "n": "Lôi",
+    "ic": "⚡",
+    "c": "#ffe66a"
+   },
+   "am": {
+    "n": "Ám",
+    "ic": "🌑",
+    "c": "#b36bff"
+   },
+   "quang": {
+    "n": "Quang",
+    "ic": "✨",
+    "c": "#ffe9a0"
+   }
+  },
+  "khac_che_boi": {
+   "moc": "kim",
+   "tho": "moc",
+   "thuy": "tho",
+   "hoa": "thuy",
+   "kim": "hoa",
+   "bang": "hoa",
+   "loi": "tho",
+   "am": "quang",
+   "quang": "am"
+  },
+  "he_cua_yeu_thu": {
+   "tho": "moc",
+   "moc": "moc",
+   "xa": "moc",
+   "bmoc": "moc",
+   "lang": "kim",
+   "bat": "am",
+   "hau": "tho",
+   "blang": "kim",
+   "ho": "bang",
+   "linh": "bang",
+   "hung": "bang",
+   "bho": "bang",
+   "ma": "am",
+   "thi": "am",
+   "rong": "hoa",
+   "bma": "am",
+   "hat": "tho",
+   "dieu": "loi",
+   "thach": "tho",
+   "blei": "loi",
+   "nham": "hoa",
+   "hoa": "hoa",
+   "dung": "hoa",
+   "bhoa": "hoa",
+   "ech": "thuy",
+   "mng": "am",
+   "ran": "moc",
+   "bdoc": "am",
+   "van": "quang",
+   "tien": "quang",
+   "long": "thuy",
+   "bdao": "quang",
+   "kong1": "am",
+   "kong2": "am",
+   "kong3": "loi",
+   "bkong": "am",
+   "bdg": "am"
+  },
+  "he_cua_lop": {
+   "kiem": "kim",
+   "phap": "loi",
+   "the": "tho",
+   "dan": "moc"
+  },
+  "he_cua_than_thong": {
+   "kiem": [
+    "kim",
+    "kim",
+    "kim",
+    "quang",
+    "kim",
+    "quang"
+   ],
+   "phap": [
+    "loi",
+    "loi",
+    "loi",
+    "loi",
+    "loi",
+    "loi"
+   ],
+   "the": [
+    "tho",
+    "tho",
+    "tho",
+    "kim",
+    "tho",
+    "quang"
+   ],
+   "dan": [
+    "moc",
+    "moc",
+    "am",
+    "quang",
+    "moc",
+    "am"
+   ]
+  },
+  "quy_tac": "Đánh đúng hệ khắc chế +35% sát thương; cùng hệ -25%"
+ },
+ "ky_nang_yeu_thu": {
+  "theo_loai": {
+   "tho": [
+    "pounce"
+   ],
+   "moc": [
+    "root"
+   ],
+   "bmoc": [
+    "root",
+    "slam",
+    "summon"
+   ],
+   "xa": [
+    "spit"
+   ],
+   "lang": [
+    "pounce",
+    "howl"
+   ],
+   "bat": [
+    "screech"
+   ],
+   "hau": [
+    "slam"
+   ],
+   "blang": [
+    "pounce",
+    "howl",
+    "slam"
+   ],
+   "ho": [
+    "pounce",
+    "nova"
+   ],
+   "linh": [
+    "nova"
+   ],
+   "hung": [
+    "slam"
+   ],
+   "bho": [
+    "nova",
+    "pounce",
+    "howl"
+   ],
+   "ma": [
+    "curse",
+    "drain"
+   ],
+   "thi": [
+    "drain",
+    "pounce"
+   ],
+   "rong": [
+    "breath"
+   ],
+   "bma": [
+    "curse",
+    "drain",
+    "nova",
+    "summon"
+   ],
+   "hat": [
+    "spit",
+    "pounce"
+   ],
+   "dieu": [
+    "thunder"
+   ],
+   "thach": [
+    "slam"
+   ],
+   "blei": [
+    "thunder",
+    "pounce",
+    "slam"
+   ],
+   "nham": [
+    "slam",
+    "nova"
+   ],
+   "hoa": [
+    "breath"
+   ],
+   "dung": [
+    "slam",
+    "breath"
+   ],
+   "bhoa": [
+    "breath",
+    "nova",
+    "summon"
+   ],
+   "ech": [
+    "spit"
+   ],
+   "mng": [
+    "curse",
+    "nova"
+   ],
+   "ran": [
+    "spit",
+    "root"
+   ],
+   "bdoc": [
+    "web",
+    "summon",
+    "spit",
+    "curse"
+   ],
+   "van": [
+    "nova",
+    "pounce"
+   ],
+   "tien": [
+    "thunder",
+    "slam"
+   ],
+   "long": [
+    "breath",
+    "thunder"
+   ],
+   "bdao": [
+    "thunder",
+    "nova",
+    "slam",
+    "summon"
+   ],
+   "kong1": [
+    "curse",
+    "drain"
+   ],
+   "kong2": [
+    "drain",
+    "slam"
+   ],
+   "kong3": [
+    "thunder",
+    "nova"
+   ],
+   "bkong": [
+    "curse",
+    "nova",
+    "breath",
+    "summon",
+    "thunder"
+   ],
+   "bdg": [
+    "breath",
+    "slam",
+    "summon",
+    "thunder",
+    "curse"
+   ]
+  },
+  "ten": {
+   "pounce": "Phi Phác",
+   "slam": "Địa Chấn",
+   "nova": "Bạo Phong",
+   "spit": "Phun Độc",
+   "breath": "Long Tức",
+   "howl": "Gầm Thét",
+   "root": "Trói Rễ",
+   "web": "Phun Tơ",
+   "summon": "Triệu Hồi",
+   "drain": "Hút Hồn",
+   "curse": "Nguyền Rủa",
+   "screech": "Rít Chói",
+   "thunder": "Thiên Lôi"
+  },
+  "mo_ta": {
+   "pounce": "Lao thẳng vào chỗ bạn đứng sau một nhịp báo hiệu.",
+   "slam": "Giáng xuống vùng quanh thân gây sát thương lớn.",
+   "nova": "Vòng bão nổ quanh thân, làm chậm bạn.",
+   "spit": "Phun độc từ xa, trúng sẽ trúng độc 5 giây.",
+   "breath": "Phun hơi thở thành hình quạt phía trước, gây bỏng.",
+   "howl": "Gầm lên, đồng loại gần đó nhanh hơn 30% trong 6 giây.",
+   "root": "Rễ trồi lên trói chân bạn 3 giây.",
+   "web": "Bắn tơ dính, làm bạn chậm đi.",
+   "summon": "Triệu hồi đàn em hỗ trợ (tối đa 3).",
+   "drain": "Hút sinh lực để hồi máu cho bản thân.",
+   "curse": "Nguyền rủa: bạn nhận thêm 25% sát thương trong 7 giây.",
+   "screech": "Tiếng rít chói tai gây choáng nhẹ trong vùng gần.",
+   "thunder": "Ba tia sét lần lượt đánh vào chỗ bạn đứng."
+  },
+  "dac_tinh_tinh_anh": {
+   "cuongbao": {
+    "n": "Cuồng Bạo",
+    "d": "Đánh nhanh hơn 35%"
+   },
+   "kienco": {
+    "n": "Kiên Cố",
+    "d": "Giảm 35% sát thương nhận"
+   },
+   "taisinh": {
+    "n": "Tái Sinh",
+    "d": "Hồi 3% sinh lực mỗi giây khi giao chiến"
+   },
+   "doc": {
+    "n": "Độc Tố",
+    "d": "Đòn đánh gây độc"
+   },
+   "phanthuong": {
+    "n": "Phản Thương",
+    "d": "Phản 12% sát thương về người đánh"
+   },
+   "tatphong": {
+    "n": "Tật Phong",
+    "d": "Chạy nhanh hơn 40%"
+   },
+   "hothuan": {
+    "n": "Hộ Thuẫn",
+    "d": "Có khiên hấp thụ 25% sinh lực"
+   },
+   "vong": {
+    "n": "Vong Mệnh",
+    "d": "Nổ tung khi chết"
+   }
+  },
+  "ty_le": "Tinh Anh ~8% (1 đặc tính, x1.7 máu, x1.3 công), Thủ Lĩnh ~1% (2 đặc tính, x3.2 máu, x1.6 công)"
+ },
+ "pho_ban_cuu_long_co_mo": {
+  "do_kho": [
+   "Thường",
+   "Khó",
+   "Ác Mộng"
+  ],
+  "cap_yeu_cau": [
+   30,
+   50,
+   80
+  ],
+  "cong_them_cap_quai": [
+   0,
+   3,
+   6
+  ],
+  "he_so_mau": [
+   1,
+   1.6,
+   2.4
+  ],
+  "he_so_cong": [
+   1,
+   1.25,
+   1.5
+  ],
+  "luot_mien_phi_moi_ngay": 3,
+  "phi_them_luot": "8 Tháp Lệnh",
+  "phan_thuong": "Tháp Lệnh 6/12/20, Linh Phách 20/40/80 (+100 lần đầu), 2/3/4 trang bị, Tu Vi và Linh Thạch theo cấp"
+ }
+}
