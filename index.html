@@ -93,6 +93,8 @@ input#nameIn,input#chatIn{font-family:inherit;background:rgba(0,0,0,.45);border:
 .sk .mpc{position:absolute;right:3px;bottom:1px;font-size:9px;color:var(--blue);text-shadow:0 1px 2px #000}
 .pot i{position:absolute;right:3px;bottom:0;font-size:11px;font-style:normal;color:#fff;text-shadow:0 1px 2px #000}
 .sk:active,.pot:active{transform:scale(.94)}
+.sk .nm{position:absolute;left:0;right:0;bottom:10px;font-size:7.5px;line-height:1.05;text-align:center;color:#fff;text-shadow:0 1px 2px #000,0 0 3px #000;padding:0 1px;pointer-events:none;display:none;z-index:1}
+@media (min-width:761px),(orientation:landscape) and (max-height:620px){.sk .nm{display:block}}
 #banner{position:absolute;left:0;right:0;top:22%;text-align:center;font-size:clamp(22px,5vw,40px);font-weight:700;color:var(--gold);text-shadow:0 0 24px rgba(255,210,122,.7),0 3px 0 #3a2a0a;opacity:0;pointer-events:none}
 #banner.show{animation:ban 2.6s ease-out forwards}
 #banner small{display:block;font-size:.4em;color:var(--ink);font-weight:400;margin-top:4px;text-shadow:0 1px 3px #000}
@@ -111,7 +113,7 @@ input#nameIn,input#chatIn{font-family:inherit;background:rgba(0,0,0,.45);border:
 .tbar{height:7px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:4px}.tbar i{display:block;height:100%;background:linear-gradient(90deg,#4fd6a0,#ffd27a)}
 .slot img.ico{position:absolute;inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);border-radius:8px;pointer-events:none}
 .slot small{z-index:1;text-shadow:0 1px 2px #000,0 0 3px #000;font-weight:700}
-.icolg{float:left;width:56px;height:56px;margin-right:8px;border-radius:8px;border:1px solid rgba(255,255,255,.2)}
+.icolg{float:left;width:84px;height:84px;margin-right:8px;border-radius:8px;border:1px solid rgba(255,255,255,.2)}
 .diff{font-size:12px;opacity:.9}
 .egg{width:92px;height:112px;margin:6px auto 10px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(circle at 35% 28%,#fffbe8,#ffd27a 45%,#c8903a);box-shadow:0 0 30px var(--gc,#ffd27a);position:relative}
 .egg::before{content:"";position:absolute;left:22px;top:38px;width:16px;height:12px;border-radius:50%;background:rgba(120,70,20,.35);box-shadow:34px 20px 0 -2px rgba(120,70,20,.35),8px 46px 0 -3px rgba(120,70,20,.3)}
@@ -164,6 +166,62 @@ input#nameIn,input#chatIn{font-family:inherit;background:rgba(0,0,0,.45);border:
   .card canvas{width:96px;height:110px}
 }
 @media (max-width:480px){:root{--sk:38px}.sk.basic{width:48px;height:48px}.pot{width:32px;height:32px}}
+@media (orientation:landscape) and (max-height:620px){
+  :root{--sk:46px}
+  #me{width:196px;padding:5px 8px}#meName{font-size:13px}#meRealm{font-size:10px;margin-bottom:2px}#gold{margin-top:3px;font-size:12px}
+  #tf{top:6px;bottom:auto;width:210px}
+  #tr{display:contents}
+  #mini{position:absolute;right:8px;top:8px;width:100px;height:100px}
+  #zoneT{position:absolute;right:8px;top:112px;max-width:170px;text-align:right;font-size:11px}
+  #menu{position:absolute;right:8px;top:138px;display:grid;grid-template-columns:repeat(2,32px);gap:3px}
+  #menu button{width:32px;height:32px;font-size:15px}
+  #qt{position:absolute;left:8px;top:140px;width:196px;font-size:11px}
+  #chat{left:8px;top:auto;bottom:146px;width:230px}
+  #log{height:74px;font-size:11px}#chatIn{display:none}
+  #bar{left:auto;right:10px;bottom:8px;transform:none;flex-direction:column;align-items:flex-end;gap:6px}
+  #pots{flex-direction:row}
+  #sks{display:grid;grid-template-columns:repeat(3,var(--sk)) 66px;grid-template-areas:"s4 s5 s6 b" "s1 s2 s3 b";gap:6px;align-items:center}
+  #sks .sk:nth-child(1){grid-area:s1}#sks .sk:nth-child(2){grid-area:s2}#sks .sk:nth-child(3){grid-area:s3}#sks .sk:nth-child(4){grid-area:s4}#sks .sk:nth-child(5){grid-area:s5}#sks .sk:nth-child(6){grid-area:s6}
+  #sks .sk.basic{grid-area:b;width:66px;height:66px}
+  #joy{left:20px;bottom:18px;width:120px;height:120px}#joyk{left:38px;top:38px}
+  #panel{width:min(760px,calc(100% - 16px));max-height:calc(100% - 16px)}
+  #toast{top:30%}
+}
+/* ---- giao diện gọn ---- */
+#menuBtn{display:none}
+#hud.ui-compact #menuBtn,#hud.ui-mini #menuBtn{display:block}
+#hud.ui-compact #menu button,#hud.ui-mini #menu button{display:none}
+#hud.ui-compact #menu button[data-m="bag"],#hud.ui-compact #menu button[data-m="auto"],#hud.ui-mini #menu button[data-m="auto"],#hud.ui-compact #menu #menuBtn,#hud.ui-mini #menu #menuBtn{display:block}
+#hud.ui-compact #menu.open button,#hud.ui-mini #menu.open button{display:block}
+#hud.ui-compact #menu.open,#hud.ui-mini #menu.open{background:rgba(10,22,18,.92);border:1px solid var(--line);border-radius:10px;padding:5px;z-index:6}
+#hud.ui-compact,#hud.ui-mini{--sk:42px}
+#hud.ui-mini{--sk:38px}
+#hud.ui-compact .sk .nm,#hud.ui-compact .sk .mpc,#hud.ui-mini .sk .nm,#hud.ui-mini .sk .mpc,#hud.ui-mini .sk .k{display:none}
+#hud.ui-compact .pot,#hud.ui-mini .pot{width:32px;height:32px;font-size:15px}
+#hud.ui-compact #me{width:min(150px,40vw);padding:5px 7px;background:rgba(10,22,18,.6)}
+#hud.ui-mini #me{width:min(118px,34vw);padding:4px 6px;background:rgba(10,22,18,.5)}
+#hud.ui-compact #meRealm,#hud.ui-mini #meRealm,#hud.ui-mini #gold{display:none}
+#hud.ui-compact #meName{font-size:12px}#hud.ui-mini #meName{font-size:11px}
+#hud.ui-compact #gold{font-size:11px;margin-top:2px}
+#hud.ui-compact .bar,#hud.ui-mini .bar{height:9px;margin-top:3px}
+#hud.ui-compact .bar span,#hud.ui-mini .bar span{display:none}
+#hud.ui-compact .bar.xp,#hud.ui-mini .bar.xp{height:4px}
+#hud.ui-compact #mini{width:min(88px,22vw);height:min(88px,22vw)}
+#hud.ui-mini #mini{width:min(64px,18vw);height:min(64px,18vw)}
+#hud.ui-compact #zoneT{font-size:10px;padding:1px 6px;background:rgba(10,22,18,.55)}
+#hud.ui-mini #zoneT{display:none}
+#hud.ui-compact #menu button{width:34px;height:34px;font-size:16px}
+#hud.ui-compact #qt{width:min(150px,36vw);font-size:10.5px;padding:4px 6px;max-height:44px;overflow:hidden;background:rgba(10,22,18,.55)}
+#hud.ui-mini #qt{display:none}
+#hud.ui-compact #log{height:40px;font-size:11px}
+#hud.ui-compact #chat{width:min(230px,44vw)}
+#hud.ui-mini #chat{display:none}
+#hud.ui-compact #chatIn{display:none}
+#hud.ui-compact #tf{width:min(190px,40vw);padding:4px 8px;background:rgba(10,22,18,.6)}
+#hud.ui-compact #tfInfo,#hud.ui-mini #tfInfo{display:none}
+#hud.ui-mini #tf{width:min(160px,36vw);padding:3px 6px}
+#hud.ui-compact #joy,#hud.ui-mini #joy{width:100px;height:100px}
+#hud.ui-compact #joyk,#hud.ui-mini #joyk{left:30px;top:30px}
 @media (prefers-reduced-motion:reduce){#banner.show{animation-duration:.01s;animation-fill-mode:forwards}}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#08130f"><link rel="icon" href="icons/icon-64.png"><link rel="apple-touch-icon" href="icons/icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
@@ -184,6 +242,7 @@ input#nameIn,input#chatIn{font-family:inherit;background:rgba(0,0,0,.45);border:
     <input id="nameIn" maxlength="14" placeholder="Đạo hiệu của ngươi" autocomplete="off">
     <button class="btn" id="goBtn">Nhập Đạo</button>
   </div>
+  <div class="row"><button class="btn ghost" id="expBtn">Xuất file lưu</button><button class="btn ghost" id="impBtn">Nhập file lưu</button></div>
   <div class="hint">
     Chạm hoặc nhấp để di chuyển, chạm vào yêu thú để khóa mục tiêu và tự đánh. Phím <kbd>WASD</kbd> di chuyển, <kbd>1</kbd>-<kbd>5</kbd> thần thông, <kbd>Space</kbd> đánh thường,
     <kbd>Q</kbd>/<kbd>E</kbd> đan dược, <kbd>F</kbd> tự động săn, <kbd>R</kbd> cưỡi thú, <kbd>T</kbd> tự nhận và trả nhiệm vụ, <kbd>B</kbd> hành trang, <kbd>L</kbd> nhiệm vụ, <kbd>M</kbd> bản đồ, <kbd>H</kbd> hồi thành, nút 🔄 đổi nhân vật.
@@ -204,17 +263,19 @@ input#nameIn,input#chatIn{font-family:inherit;background:rgba(0,0,0,.45);border:
     <canvas id="mini" width="132" height="132"></canvas>
     <div id="zoneT"></div>
     <div id="menu">
+      <button data-m="more" id="menuBtn" title="Thêm chức năng" aria-label="Thêm chức năng">☰</button>
       <button data-m="bag" title="Hành trang (B)" aria-label="Hành trang">🎒</button>
       <button data-m="quest" title="Nhiệm vụ (L)" aria-label="Nhiệm vụ">📜</button>
       <button data-m="map" title="Bản đồ (M)" aria-label="Bản đồ">🗺️</button>
+      <button data-m="dex" title="Yêu Thú Phổ" aria-label="Yêu Thú Phổ">📖</button>
+      <button data-m="daily" id="dailyBtn" title="Điểm danh, nhiệm vụ ngày, thành tựu" aria-label="Điểm danh">📅</button>
+      <button data-m="online" title="Online (O)" aria-label="Online">🌐</button>
       <button data-m="auto" id="autoBtn" title="Tự động săn (F)" aria-label="Tự động săn">⚙️</button>
       <button data-m="aq" id="aqBtn" title="Tự nhận và trả nhiệm vụ (T)" aria-label="Tự nhận và trả nhiệm vụ">📋</button>
       <button data-m="home" title="Hồi thành (H)" aria-label="Hồi thành">🏯</button>
-      <button data-m="switch" title="Đổi nhân vật" aria-label="Đổi nhân vật">🔄</button>
-      <button data-m="online" title="Online (O)" aria-label="Online">🌐</button>
-      <button data-m="daily" id="dailyBtn" title="Điểm danh, nhiệm vụ ngày, thành tựu" aria-label="Điểm danh">📅</button>
-      <button data-m="dex" title="Yêu Thú Phổ" aria-label="Yêu Thú Phổ">📖</button>
       <button data-m="settings" title="Cài đặt" aria-label="Cài đặt">🎛️</button>
+      <button data-m="ui" title="Đổi mức giao diện" aria-label="Đổi mức giao diện">🧩</button>
+      <button data-m="switch" title="Đổi nhân vật" aria-label="Đổi nhân vật">🔄</button>
     </div>
     <div id="qt"></div>
   </div>
@@ -280,7 +341,7 @@ const CLASSES = {
 };
 
 const ZONES = {
-  V: { n: 'Thanh Vân Thôn', lv: [1, 50], ax: null },
+  V: { n: 'Thanh Vân Tông', lv: [1, 50], ax: null },
   W: { n: 'Thanh Mộc Lâm', lv: [1, 10], ax: [-1, 0] },
   E: { n: 'Hắc Phong Cốc', lv: [10, 20], ax: [1, 0] },
   N: { n: 'Băng Hàn Tuyết Sơn', lv: [20, 30], ax: [0, -1] },
@@ -451,7 +512,7 @@ const keys = {};
 const decals = [];
 let monsters = [], drops = [], projs = [], eprojs = [], fxs = [], parts = [], txts = [], bots = [], timers = [], npcs = [];
 const SAVEKEY = 'thanhvan_tutien_v1', SLOTKEY = 'thanhvan_tutien_slots_v1', MAXSLOT = 6;
-const SAVE_FIELDS = ['lv', 'exp', 'gold', 'inv', 'eq', 'pHP', 'pMP', 'q', 'b', 'autoSell', 'kills', 'pts', 'alloc', 'pet', 'autoQuest', 'fx', 'mount', 'tokens', 'towerBest', 'petBook', 'pity', 'shards', 'honor', 'arena', 'daily', 'ach', 'dex', 'dexClaim', 'dgClear', 'dgTime', 'dgE'];
+const SAVE_FIELDS = ['lv', 'exp', 'gold', 'inv', 'eq', 'pHP', 'pMP', 'q', 'b', 'autoSell', 'autoSellMax', 'sets', 'kills', 'pts', 'alloc', 'pet', 'autoQuest', 'fx', 'mount', 'tokens', 'towerBest', 'petBook', 'pity', 'shards', 'honor', 'arena', 'daily', 'ach', 'dex', 'dexClaim', 'dgClear', 'dgTime', 'dgE', 'bank', 'study'];
 let pet = null;
 const FACE_DEFAULT = '';
 let faceImg = null;
@@ -472,8 +533,9 @@ function pickFace() {
 }
 
 /* ---- cài đặt, chất lượng, âm thanh ---- */
-const SET = { q: 'auto', sfx: true, vol: .6, music: true, shake: true, dmgnum: true, joy: 'auto' };
+const SET = { ui: 'compact', fx: 'clear', dark: 'off', q: 'auto', sfx: true, vol: .6, music: true, shake: true, dmgnum: true, joy: 'auto' };
 try { Object.assign(SET, JSON.parse(localStorage.getItem('tt_settings_v1') || '{}')); } catch (e) { /* bỏ qua */ }
+const FXC = () => SET.fx !== 'full';
 const saveSet = () => { try { localStorage.setItem('tt_settings_v1', JSON.stringify(SET)); } catch (e) { /* bỏ qua */ } };
 const QL = { low: { dpr: 1, parts: 260, light: false, wx: .35, tuft: .4 }, mid: { dpr: 1.5, parts: 520, light: true, wx: .7, tuft: .75 }, high: { dpr: 2, parts: 900, light: true, wx: 1, tuft: 1 } };
 let Q = QL.high, QN = 'high';
@@ -536,7 +598,7 @@ function resize() {
   W = document.body.clientWidth || window.innerWidth; H = document.body.clientHeight || window.innerHeight;
   cv.width = Math.floor(W * DPR); cv.height = Math.floor(H * DPR);
   cv.style.width = W + 'px'; cv.style.height = H + 'px';
-  G.zoom = W < 700 ? .8 : W > 1600 ? 1.15 : 1;
+  const mn = Math.min(W, H); G.zoom = mn < 520 ? .75 : W < 700 ? .8 : W > 1600 ? 1.15 : 1;
 }
 window.addEventListener('resize', resize); applyQuality(initialQ());
 window.addEventListener('pointerdown', audioInit, { passive: true }); window.addEventListener('keydown', audioInit);
@@ -614,16 +676,20 @@ function genDecor() {
     const x = 60 + R() * (WORLD - 120), y = 60 + R() * (WORLD - 120), z = zoneAt(x, y), arr = tk[z];
     if (z === 'T' || z === 'X' || z === 'P') continue;
     if (z === 'V' && (Math.hypot(x - CX, y - CY - 40) < 215 || Math.abs(x - CX) < 30 || Math.abs(y - CY) < 30)) continue;
-    if (Math.abs(x - (CX - 250)) < 140 && Math.abs(y - (CY + 240)) < 85) continue;
+    if (Math.abs(x - (CX - 230)) < 120 && Math.abs(y - (CY + 270)) < 70) continue;
     tufts.push({ x, y, z, k: arr[Math.floor(R() * arr.length)], s: .6 + R() * .8, v: R() });
   }
-  const vill = [['house', -270, -200, '#3b7a78'], ['house', 270, -210, '#8a3b3b'], ['house', -310, 60, '#6a4a8a'], ['house', 310, 70, '#3b7a78'], ['pagoda', 0, -310, '#2f5f6a']];
-  for (const [k, ox, oy, col] of vill) decor.push({ k, x: CX + ox, y: CY + oy, s: 1, v: 0, z: 'V', col });
-  for (const [ox, oy] of [[-170, -150], [170, -150], [-170, 170], [170, 170], [-60, 250], [60, 250], [-350, -60], [350, -60]]) decor.push({ k: 'cherry', x: CX + ox, y: CY + oy, s: 1 + ((ox * oy) % 3) * .05, v: .3, z: 'V' });
-  for (const [ox, oy] of [[-130, -20], [130, -20], [-130, 110], [130, 110], [0, -150], [230, 20], [-230, 20]]) decor.push({ k: 'lantern', x: CX + ox, y: CY + oy, s: 1, v: 0, z: 'V' });
+  const D = (k, ox, oy, o) => decor.push(Object.assign({ k, x: CX + ox, y: CY + oy, s: 1, v: 0, z: 'V' }, o || {}));
+  D('hall', 0, -330, { col: '#2f6a6a', t: 'Thanh Vân Điện' }); D('flag', -170, -300, { col: '#2f6a6a' }); D('flag', 170, -300, { col: '#8a3b3b' });
+  D('sect', -300, -230, { w: 110, st: 2, col: '#6a4a8a', t: 'Tàng Kinh Các' }); D('pagoda', 295, -262, { col: '#2f5f6a' });
+  D('sect', -335, -48, { w: 100, st: 1, col: '#2f8a55', t: 'Luyện Đan Phòng' }); D('sect', -335, 130, { w: 100, st: 1, col: '#c8508a', t: 'Linh Thú Viên' });
+  D('sect', 335, -48, { w: 100, st: 1, col: '#8a3b3b', t: 'Luyện Khí Đường' }); D('sect', 335, 130, { w: 100, st: 1, col: '#5a5a7a', t: 'Tông Môn Kho' });
+  D('statue', 0, -135); D('incense', 0, -214); D('gate', 0, 424, { col: '#2f6a6a', t: 'Thanh Vân Tông' });
+  for (const [ox, oy] of [[-185, -160], [185, -160], [-195, 70], [195, 70], [-60, 285], [60, 345], [-100, 392], [100, 392]]) D('cherry', ox, oy, { s: 1 + ((ox * oy) % 3) * .05, v: .3 });
+  for (const [ox, oy] of [[-46, -200], [46, -200], [-46, -70], [46, -70], [-46, 160], [46, 160], [-46, 270], [46, 270], [-46, 380], [46, 380], [-230, 20], [230, 20]]) D('lantern', ox, oy);
   for (let i = 0; i < 10; i++) { const a = i / 10 * TAU; decor.push({ k: i % 2 ? 'crystal' : 'obelisk', x: XX + Math.cos(a) * 360, y: XY + Math.sin(a) * 330, s: 1.1, v: i / 10, z: 'X' }); }
   for (let i = 0; i < 10; i++) { const a = i / 10 * TAU; decor.push({ k: i % 2 ? 'brazier' : 'pillar', x: DX + Math.cos(a) * 330, y: DY + Math.sin(a) * 300, s: 1.1, v: i / 10, z: 'P' }); }
-  decor.push({ k: 'anvil', x: CX + 252, y: CY + 112, s: 1, v: 0, z: 'V' });
+  decor.push({ k: 'anvil', x: CX + 305, y: CY + 20, s: 1, v: 0, z: 'V' });
   for (let i = 0; i < 8; i++) { const a = i / 8 * TAU + .2; decor.push({ k: i % 2 ? 'brazier' : 'pillar', x: TX + Math.cos(a) * 290, y: TY + Math.sin(a) * 250, s: 1, v: i / 8, z: 'T' }); }
   const signs = [[-470, 0, 'Thanh Mộc Lâm  Lv 1-10'], [470, 0, 'Hắc Phong Cốc  Lv 10-20'], [0, -470, 'Băng Hàn Tuyết Sơn  Lv 20-30'], [0, 470, 'Huyết Sắc Ma Địa  Lv 30-45']];
   for (const [ox, oy, t] of signs) decor.push({ k: 'sign', x: CX + ox, y: CY + oy, s: 1, v: 0, z: zoneAt(CX + ox, CY + oy), t });
@@ -647,7 +713,7 @@ function genItem(lv, boost = 0, minRar = 0, slot) {
   for (const k in st) st[k] = k === 'crit' ? Math.round(st[k] * 10) / 10 : Math.max(1, Math.round(st[k]));
   const cls = P ? P.cls : 'kiem';
   const base = slot === 'weapon' ? pick(BASEN.weapon[cls]) : pick(BASEN[slot]);
-  return { id: Math.random().toString(36).slice(2), slot, rar, lv, st, name: pick(PREF[rar]) + base };
+  return { id: Math.random().toString(36).slice(2), slot, rar, lv, st, name: pick(PREF[rar]) + base, sk: rar < 2 ? 0 : Math.floor(Math.random() * (clamp(rar - 1, 0, 3) + 1)) };
 }
 const itemScore = it => it ? ((it.st.atk || 0) * 2 + (it.st.def || 0) * 1.6 + (it.st.hp || 0) * .2 + (it.st.mp || 0) * .1 + (it.st.crit || 0) * 8) * (1 + .12 * (it.plus || 0)) : 0;
 const sellVal = it => Math.round((it.lv + 3) * (it.rar + 1) * 2.4);
@@ -659,9 +725,9 @@ const reqLv = it => Math.max(1, it.lv - 3);
 function newPlayer(cls, name) {
   const p = {
     name, cls, lv: 1, exp: 0, gold: 100, x: CX, y: CY + 90, face: 1, hp: 1, mp: 1, maxhp: 1, maxmp: 1, atk: 1, def: 0, crit: 0, spd: 175,
-    inv: [], eq: { weapon: null, armor: null, head: null, charm: null }, pHP: 5, pMP: 3, q: { idx: 0, state: 'none', prog: 0 }, b: null, autoSell: false,
+    inv: [], eq: { weapon: null, armor: null, head: null, charm: null }, pHP: 5, pMP: 3, q: { idx: 0, state: 'none', prog: 0 }, b: null, autoSell: false, autoSellMax: -1, sets: [null, null, null],
     cd: [0, 0, 0, 0, 0, 0], cdMax: [1, 1, 1, 1, 1, 1], bcd: 0, potcd: 0, buf: {}, combat: 0, target: null, moveTo: null, pendingNpc: null, leap: null,
-    atkAnim: 0, hurt: 0, dead: false, deadT: 0, moving: false, kimT: 0, kills: 0, gcd: 0, cid: Math.random().toString(36).slice(2), pts: 0, alloc: { hp: 0, mp: 0, atk: 0, def: 0 }, pet: null, daily: null, ach: {}, dex: {}, dexClaim: {}, petBook: {}, pity: { n: 0, s: 0, u: 0 }, shards: 0, mount: null, riding: false, tokens: 0, towerBest: 0, autoQuest: false, fx: { aura: true, ring: true, style: 0 }, rf: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    atkAnim: 0, hurt: 0, dead: false, deadT: 0, moving: false, kimT: 0, kills: 0, gcd: 0, cid: Math.random().toString(36).slice(2), pts: 0, alloc: { hp: 0, mp: 0, atk: 0, def: 0 }, pet: null, bank: [], study: null, daily: null, ach: {}, dex: {}, dexClaim: {}, petBook: {}, pity: { n: 0, s: 0, u: 0 }, shards: 0, mount: null, riding: false, tokens: 0, towerBest: 0, autoQuest: false, fx: { aura: true, ring: true, style: 0 }, rf: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   };
   return p;
 }
@@ -700,6 +766,7 @@ function playerFromSave(s) {
   const p = newPlayer(s.cls, s.name), z = zoneAt(s.x, s.y), ok = s.v === 2 && z !== 'T' && z !== 'X' && z !== 'P';
   p.cid = s.cid; p.x = ok ? s.x : CX; p.y = ok ? s.y : CY + 90;
   for (const k of SAVE_FIELDS) if (s[k] !== undefined && s[k] !== null) p[k] = s[k];
+  if (s.autoSellMax == null && s.autoSell) p.autoSellMax = 0;
   if (s.pts === undefined) p.pts = Math.max(0, (p.lv - 1) * 2 - Object.values(p.alloc || {}).reduce((a, b) => a + b, 0));
   return p;
 }
@@ -734,18 +801,23 @@ function initWorld() {
       const p = spawnAny(t.z, tt); { const mm = mkMonster(type, Math.round(L), p.x, p.y); rollTier(mm); monsters.push(mm); }
     }
   }
+  const NP = (id, name, ox, oy, look, o) => Object.assign({ id, name, x: CX + ox, y: CY + oy, look }, o || {});
   npcs = [
-    { id: 'elder', name: 'Thanh Vân Trưởng Lão', x: CX - 95, y: CY - 70, look: { cls: 'phap', robe: '#f4f1e8', trim: '#d9a441', hair: '#eeeeee', beard: 1 } },
-    { id: 'pharm', name: 'Dược Đồng', x: CX + 115, y: CY - 60, look: { cls: 'dan', robe: '#79d98f', trim: '#2f8a55', hair: '#4a3a2a' } },
-    { id: 'smith', name: 'Thợ Rèn', x: CX + 215, y: CY + 95, look: { cls: 'the', robe: '#c8522c', trim: '#3a1a0a', hair: '#222222', beard: 1 } },
-    { id: 'pets', name: 'Linh Thú Sư', x: CX - 215, y: CY + 110, look: { cls: 'dan', robe: '#ffd9ec', trim: '#d8508a', hair: '#e8a0c0', longhair: 1 } },
-    { id: 'board', name: 'Bảng Săn Yêu', x: CX - 20, y: CY + 165, board: 1 },
-    { id: 'portal', name: 'Truyền Tống Trận', x: CX, y: CY + 10, portal: 1 }
+    NP('elder', 'Tông Chủ Thanh Vân', -70, -262, { cls: 'phap', robe: '#f4f1e8', trim: '#d9a441', hair: '#eeeeee', beard: 1 }),
+    NP('board', 'Nhiệm Vụ Đường', 92, -262, null, { board: 1 }),
+    NP('lib', 'Tàng Kinh Trưởng Lão', -290, -192, { cls: 'phap', robe: '#8a6ad0', trim: '#e8c860', hair: '#e8e8e8', beard: 1 }),
+    NP('pharm', 'Dược Đồng', -300, -10, { cls: 'dan', robe: '#79d98f', trim: '#2f8a55', hair: '#4a3a2a' }),
+    NP('pets', 'Linh Thú Sư', -292, 168, { cls: 'dan', robe: '#ffd9ec', trim: '#d8508a', hair: '#e8a0c0', longhair: 1 }),
+    NP('smith', 'Thợ Rèn', 300, -10, { cls: 'the', robe: '#c8522c', trim: '#3a1a0a', hair: '#222222', beard: 1 }),
+    NP('bank', 'Thủ Kho', 292, 168, { cls: 'the', robe: '#8a7a5a', trim: '#e8c860', hair: '#444444' }),
+    NP('tower', 'Thủ Tháp Sứ', 290, -205, { cls: 'kiem', robe: '#5a4a8a', trim: '#ffd27a', hair: '#dddddd', longhair: 1 }),
+    NP('dungeon', 'Cổ Mộ Thủ Vệ', -120, 330, { cls: 'the', robe: '#3a3a52', trim: '#ffd45e', hair: '#222233', beard: 1 }),
+    NP('arena', 'Võ Đài Quản Sự', 205, 195, { cls: 'kiem', robe: '#c8402a', trim: '#ffd27a', hair: '#2a1a14' }),
+    NP('portal', 'Truyền Tống Trận', 0, 10, null, { portal: 1 })
   ];
-  npcs.push({ id: 'dungeon', name: 'Cổ Mộ Thủ Vệ', x: CX - 130, y: CY - 255, look: { cls: 'the', robe: '#3a3a52', trim: '#ffd45e', hair: '#222233', beard: 1 } });
-  npcs.push({ id: 'tower', name: 'Thủ Tháp Sứ', x: CX + 6, y: CY - 255, look: { cls: 'kiem', robe: '#5a4a8a', trim: '#ffd27a', hair: '#dddddd', longhair: 1 } });
   npcs.forEach(n => { n.map = 'V'; });
   for (const z of ['W', 'E', 'N', 'S', 'A', 'B', 'C', 'D', 'T', 'X', 'P']) { const p = portalPos(z); npcs.push({ id: 'portal', name: 'Truyền Tống Trận', x: p.x, y: p.y, portal: 1, map: z }); }
+  [[110, 300], [190, 318], [270, 300]].forEach(([ox, oy]) => { const mm = mkMonster('dummy', 30, CX + ox, CY + oy); mm.dummy = true; mm.name = 'Mộc Nhân Trang'; monsters.push(mm); });
   const names = ['Diệp Phàm', 'Tiêu Viêm', 'Hàn Lập', 'Lâm Động', 'Vương Lâm', 'Thạch Hạo', 'Mạnh Hạo', 'Tần Vũ', 'Dược Lão', 'Tiểu Y Tiên', 'Mục Trần', 'Bạch Tiểu Thuần'];
   bots = names.map((n, i) => {
     const cls = pick(Object.keys(CLASSES)), K = CLASSES[cls];
@@ -774,17 +846,62 @@ const ELEM = {
   'Thanh Vân': ['#d4e4ff', '#5a7ac8'], 'Tử Điện': ['#dab0ff', '#7a30d0'], 'Cửu U': ['#9a7ae0', '#2a1a52'], 'Long Văn': ['#ffd878', '#b86a18'], 'Thái Cổ': ['#ffeaa8', '#a8741a'],
   'Hồng Mông': ['#ffd4ff', '#9a48b8'], 'Thái Hư': ['#d0faff', '#3a8aa8'], 'Hỗn Độn': ['#ff90b0', '#4a2270'], 'Tiên Thiên': ['#fff4c8', '#d89a2a'], 'Thái Cực': ['#ffffff', '#26263a']
 };
+const SKIN_N = { weapon: ['Cổ Phác', 'Thanh Liên', 'Long Văn', 'Tinh Hà'], armor: ['Đạo Gia', 'Vân Văn', 'Long Lân', 'Nhật Diễm'], head: ['Giản Dị', 'Phượng Vũ', 'Long Giác', 'Nhật Nguyệt'], charm: ['Cổ Ngọc', 'Linh Văn', 'Thiên Cơ', 'Tiên Duyên'] };
+const SKIN_AC = ['#e8c860', '#6fe0a0', '#ff6a4a', '#c8a8ff'];
+function skinOf(it) { if (it.sk != null) return it.sk; let h = 0; for (const ch of String(it.id)) h = (h * 31 + ch.charCodeAt(0)) >>> 0; const max = clamp(it.rar - 1, 0, 3); return max === 0 ? 0 : h % (max + 1); }
+function skinWeapon(c, v, t) {
+  const sk = v.sk || 0; if (!sk) return; const ac = v.ac; c.save(); c.lineJoin = 'round';
+  if (v.fam === 'sword') {
+    if (sk === 1) { c.fillStyle = hexA(ac, .85); for (const s2 of [-1, 1]) { c.beginPath(); c.moveTo(s2 * 3, -18); c.quadraticCurveTo(s2 * 11, -16, s2 * 9, -6); c.quadraticCurveTo(s2 * 5, -8, s2 * 3, -18); c.fill(); } c.beginPath(); c.arc(0, 9, 2.4, 0, TAU); c.fill(); }
+    else if (sk === 2) { c.fillStyle = ac; for (const s2 of [-1, 1]) { c.beginPath(); c.moveTo(s2 * 5, 8); c.lineTo(s2 * 11, 3); c.lineTo(s2 * 7, 12); c.closePath(); c.fill(); } glow(c, 0, -12, 26, ac, .35); }
+    else { glow(c, 0, -12, 30, ac, .4); c.fillStyle = 'rgba(255,255,255,.9)'; for (let i = 0; i < 5; i++) { c.beginPath(); c.arc(Math.sin(i * 2.1 + t) * 3, -4 - i * 5, 1, 0, TAU); c.fill(); } for (const s2 of [-1, 1]) { c.fillStyle = hexA(ac, .7); c.beginPath(); c.moveTo(s2 * 8, -26 + Math.sin(t * 2) * 2); c.lineTo(s2 * 10, -20); c.lineTo(s2 * 6, -20); c.closePath(); c.fill(); } }
+  } else if (v.fam === 'staff') {
+    if (sk === 1) { c.fillStyle = hexA(ac, .8); for (let i = 0; i < 6; i++) { c.save(); c.translate(0, -27); c.rotate(i / 6 * TAU); c.beginPath(); c.ellipse(0, -9, 3, 6, 0, 0, TAU); c.fill(); c.restore(); } }
+    else if (sk === 2) { c.strokeStyle = ac; c.lineWidth = 2.4; c.beginPath(); c.moveTo(-9, -22); c.quadraticCurveTo(-14, -34, -4, -38); c.moveTo(9, -22); c.quadraticCurveTo(14, -34, 4, -38); c.stroke(); }
+    else { c.strokeStyle = ac; c.lineWidth = 2; c.beginPath(); c.arc(0, -27, 12, Math.PI * .2, Math.PI * .8); c.stroke(); glow(c, 0, -27, 20, ac, .4); for (let i = 0; i < 3; i++) { c.fillStyle = '#ffffff'; c.beginPath(); c.arc(Math.cos(t * 2 + i * 2.1) * 12, -27 + Math.sin(t * 2 + i * 2.1) * 6, 1.3, 0, TAU); c.fill(); } }
+  } else if (v.fam === 'fist') {
+    if (sk === 1) { c.fillStyle = ac; for (let i = 0; i < 4; i++) { c.beginPath(); c.moveTo(-9.5 + i * 5, -13); c.lineTo(-7.5 + i * 5, -19); c.lineTo(-5.5 + i * 5, -13); c.fill(); } }
+    else if (sk === 2) { c.strokeStyle = ac; c.lineWidth = 1.2; for (let i = 0; i < 3; i++) { c.beginPath(); c.arc(0, 2 - i * 5, 7, Math.PI * .1, Math.PI * .9); c.stroke(); } }
+    else glow(c, 0, -4, 28, ac, .5);
+  } else {
+    if (sk === 1) { c.fillStyle = hexA(ac, .8); for (let i = 0; i < 6; i++) { c.save(); c.translate(0, 14); c.rotate((i - 2.5) * .5); c.beginPath(); c.ellipse(0, -9, 3, 7, 0, 0, TAU); c.fill(); c.restore(); } }
+    else if (sk === 2) glow(c, 0, 12, 36, ac, .5);
+    else { c.strokeStyle = ac; c.lineWidth = 1.2; c.beginPath(); c.arc(0, 0, 16, 0, TAU); c.stroke(); for (let i = 0; i < 4; i++) { c.fillStyle = '#ffffff'; c.beginPath(); c.arc(Math.cos(t + i * 1.6) * 16, Math.sin(t + i * 1.6) * 16, 1.4, 0, TAU); c.fill(); } }
+  }
+  c.restore();
+}
+function skinArmor(c, v, t) {
+  const sk = v.sk || 0; if (!sk) return; const ac = v.ac; c.save(); c.lineCap = 'round';
+  if (sk === 1) { c.strokeStyle = hexA(ac, .85); c.lineWidth = 1.1; for (let r = 0; r < 3; r++) for (let i = 0; i < 3; i++) { c.beginPath(); c.arc(-6 + i * 6 + (r % 2) * 3, -22 + r * 6, 2.6, Math.PI * 1.1, Math.PI * 1.9); c.stroke(); } }
+  else if (sk === 2) { c.strokeStyle = hexA(ac, .8); c.lineWidth = .9; for (let r = 0; r < 4; r++) for (let i = 0; i < 4; i++) { c.beginPath(); c.arc(-7.5 + i * 5 + (r % 2) * 2.5, -23 + r * 4.6, 2.4, .1, Math.PI - .1); c.stroke(); } }
+  else { c.fillStyle = hexA(ac, .9); c.beginPath(); c.arc(0, -19, 3.2, 0, TAU); c.fill(); c.strokeStyle = hexA(ac, .9); c.lineWidth = 1; for (let i = 0; i < 8; i++) { const a = i / 8 * TAU + t * .5; c.beginPath(); c.moveTo(Math.cos(a) * 4.5, -19 + Math.sin(a) * 4.5); c.lineTo(Math.cos(a) * 7.5, -19 + Math.sin(a) * 7.5); c.stroke(); } glow(c, 0, -19, 11, ac, .45); }
+  c.restore();
+}
+function skinHead(c, v, t) {
+  const sk = v.sk || 0; if (!sk) return; const ac = v.ac; c.save(); c.lineCap = 'round'; c.lineJoin = 'round';
+  if (sk === 1) { c.fillStyle = hexA(ac, .9); for (const s2 of [-1, 1]) { c.beginPath(); c.moveTo(s2 * 12, -2); c.quadraticCurveTo(s2 * 26, -12, s2 * 22, -26); c.quadraticCurveTo(s2 * 16, -14, s2 * 10, -4); c.closePath(); c.fill(); } }
+  else if (sk === 2) { c.strokeStyle = ac; c.lineWidth = 2.4; for (const s2 of [-1, 1]) { c.beginPath(); c.moveTo(s2 * 8, -14); c.quadraticCurveTo(s2 * 14, -26, s2 * 8, -34); c.moveTo(s2 * 12, -24); c.lineTo(s2 * 20, -26); c.stroke(); } }
+  else { c.strokeStyle = hexA(ac, .9); c.lineWidth = 2; c.beginPath(); c.ellipse(0, -26, 16, 5, 0, 0, TAU); c.stroke(); glow(c, 0, -26, 24, ac, .4); for (let i = 0; i < 3; i++) { const a = t * 1.6 + i * 2.1; c.fillStyle = '#ffffff'; c.beginPath(); c.arc(Math.cos(a) * 16, -26 + Math.sin(a) * 5, 1.5, 0, TAU); c.fill(); } }
+  c.restore();
+}
+function skinCharm(c, v, t) {
+  const sk = v.sk || 0; if (!sk) return; const ac = v.ac; c.save(); c.lineCap = 'round';
+  if (sk === 1) { c.strokeStyle = hexA(ac, .9); c.lineWidth = 1.2; for (let i = 0; i < 4; i++) { const a = i / 4 * TAU + t; c.beginPath(); c.moveTo(Math.cos(a) * 14, Math.sin(a) * 14 - 2); c.lineTo(Math.cos(a) * 19, Math.sin(a) * 19 - 2); c.stroke(); } }
+  else if (sk === 2) { c.strokeStyle = ac; c.lineWidth = 1.6; c.beginPath(); c.moveTo(-5, 18); c.quadraticCurveTo(-8, 28, -4, 34); c.moveTo(5, 18); c.quadraticCurveTo(8, 28, 4, 34); c.stroke(); }
+  else for (let i = 0; i < 3; i++) { const a = t * 2 + i * 2.1; glow(c, Math.cos(a) * 17, Math.sin(a) * 17, 7, ac, .8); }
+  c.restore();
+}
 const visCache = new Map();
 function itemVis(it) {
   let v = visCache.get(it.id); if (v) return v;
   const m = ALLBASES.find(b => it.name.endsWith(b.base)) || { slot: it.slot, fam: it.slot, base: '' };
   const pk = Object.keys(ELEM).find(k => it.name.startsWith(k)), cols = pk ? ELEM[pk] : ['#cdd5de', '#7d8896'];
-  v = { slot: it.slot, fam: m.fam, base: m.base, tier: it.rar, c1: cols[0], c2: cols[1], rc: RAR[it.rar].c, id: it.id };
+  const sk = skinOf(it); v = { slot: it.slot, fam: m.fam, base: m.base, tier: it.rar, c1: cols[0], c2: cols[1], rc: RAR[it.rar].c, id: it.id, sk, ac: SKIN_AC[sk] };
   visCache.set(it.id, v); return v;
 }
 function botGear(cls, lv) {
   const rar = Math.min(5, Math.floor(lv / 14)), pk = rar ? pick(Object.keys(ELEM)) : null, cols = pk ? ELEM[pk] : ['#cdd5de', '#7d8896'], g = {};
-  const mk = (slot, base) => { const m = ALLBASES.find(b => b.base === base); return { slot, fam: m.fam, base, tier: rar, c1: cols[0], c2: cols[1], rc: RAR[rar].c, id: Math.random().toString(36).slice(2) }; };
+  const mk = (slot, base) => { const m = ALLBASES.find(b => b.base === base); const sk = Math.min(3, Math.floor(rar / 1.5)); return { slot, fam: m.fam, base, tier: rar, c1: cols[0], c2: cols[1], rc: RAR[rar].c, id: Math.random().toString(36).slice(2), sk, ac: SKIN_AC[sk] }; };
   g.weapon = mk('weapon', pick(BASEN.weapon[cls])); g.armor = mk('armor', pick(BASEN.armor)); g.head = mk('head', pick(BASEN.head)); g.charm = mk('charm', pick(BASEN.charm));
   return g;
 }
@@ -871,6 +988,7 @@ function weaponArt(c, v, t, single) {
       for (let i = 0; i < 3; i++) { const k = (t * .8 + i / 3) % 1; c.fillStyle = `rgba(190,255,220,${.5 * (1 - k)})`; c.beginPath(); c.arc(Math.sin(k * 6 + i) * 4, -14 - k * 20, 2 + k * 3, 0, TAU); c.fill(); }
     }
   }
+  skinWeapon(c, v, t);
   c.restore();
 }
 function armorArt(c, v, t) {
@@ -909,6 +1027,7 @@ function headArt(c, v, t) {
     c.fillStyle = c1; c.beginPath(); c.arc(0, 3, 3.6, 0, TAU); c.fill(); c.stroke();
     c.fillStyle = c2; for (const s of [-1, 1]) { c.beginPath(); c.moveTo(s * 14, 2); c.quadraticCurveTo(s * 24, -6, s * 22, -18); c.quadraticCurveTo(s * 18, -8, s * 14, -4); c.closePath(); c.fill(); c.stroke(); }
   }
+  skinHead(c, v, t);
   c.restore();
 }
 function charmArt(c, v, t) {
@@ -938,6 +1057,7 @@ function charmArt(c, v, t) {
     const g = c.createRadialGradient(-1, 4, 1, 0, 6, 5); g.addColorStop(0, '#ffffff'); g.addColorStop(1, c1); c.fillStyle = g; c.beginPath(); c.arc(0, 6, 4.4, 0, TAU); c.fill();
     c.strokeStyle = '#c8302a'; c.lineWidth = 1.8; c.beginPath(); c.moveTo(0, 17); c.lineTo(0, 23 + Math.sin(t * 3)); c.stroke();
   }
+  skinCharm(c, v, t);
   c.restore();
 }
 /* ---- trang bị mặc trên nhân vật ---- */
@@ -959,44 +1079,45 @@ function armorDeco(c, v, t) {
   else { c.strokeStyle = c2; c.lineWidth = 1.6; c.beginPath(); c.moveTo(-7, -26); c.lineTo(3, -15); c.moveTo(7, -26); c.lineTo(-3, -15); c.stroke(); }
   if (v.tier >= 2) { c.fillStyle = c1; c.beginPath(); c.arc(0, -24.5, 1.7, 0, TAU); c.fill(); if (v.tier >= 3) glow(c, 0, -24.5, 6, c1, .8); }
   if (v.tier >= 3) { c.globalCompositeOperation = 'lighter'; c.strokeStyle = hexA(c1, .6); c.lineWidth = 1.8; c.beginPath(); c.moveTo(-12, -5.5); c.quadraticCurveTo(0, -1.5, 12, -5.5); c.stroke(); }
+  skinArmor(c, v, t);
   c.restore();
 }
 function armorShoulders(c, v, t) {
   if (v.base === 'Hộ Thể Giáp') { for (const s of [-1, 1]) { c.fillStyle = '#aeb6c4'; c.beginPath(); c.arc(s * 11, -24, 5, 0, TAU); c.fill(); outl(c); c.strokeStyle = v.c2; c.lineWidth = 1.2; c.beginPath(); c.arc(s * 11, -24, 3, 0, TAU); c.stroke(); } }
   if (v.tier >= 4) for (const s of [-1, 1]) glow(c, s * 15, -28 + Math.sin(t * 2 + s) * 2, 7, v.c1, .7);
 }
-function headDeco(c, v, t) { c.save(); c.translate(0, -51); c.scale(.62, .62); headArt(c, v, t); c.restore(); }
+function headDeco(c, v, t) { c.save(); c.translate(0, -52); c.scale(.78, .78); headArt(c, v, t); c.restore(); }
 function charmDeco(c, v, t) {
   c.save();
-  if (v.base === 'Ngọc Bội') { c.translate(-8, -12); c.scale(.4, .4); }
-  else if (v.base === 'Linh Phù') { c.translate(8, -11); c.rotate(Math.sin(t * 2) * .1); c.scale(.36, .36); }
-  else if (v.base === 'Đan Châu') { c.translate(-21, -42 + Math.sin(t * 2.4) * 3); c.scale(.55, .55); }
-  else { c.translate(0, -17); c.scale(.4, .4); }
+  if (v.base === 'Ngọc Bội') { c.translate(-8, -12); c.scale(.55, .55); }
+  else if (v.base === 'Linh Phù') { c.translate(8, -11); c.rotate(Math.sin(t * 2) * .1); c.scale(.5, .5); }
+  else if (v.base === 'Đan Châu') { c.translate(-21, -42 + Math.sin(t * 2.4) * 3); c.scale(.7, .7); }
+  else { c.translate(0, -17); c.scale(.55, .55); }
   charmArt(c, v, t); c.restore();
 }
 function weaponBack(c, v, t) {
   if (v.fam === 'sword') {
     const n = v.tier >= 5 ? 3 : v.tier >= 4 ? 2 : 1;
-    for (let i = 0; i < n; i++) { c.save(); c.translate(-22 - i * 6, -30 + i * 11 + Math.sin(t * 2.5 + i) * 3); c.rotate(-1.15 - i * .35 + Math.sin(t * 2 + i) * .08); c.scale(.7, .7); weaponArt(c, v, t); c.restore(); }
-  } else if (v.fam === 'vessel') { c.save(); c.translate(-23, -33 + Math.sin(t * 2.3) * 3); c.scale(.62, .62); weaponArt(c, v, t); c.restore(); }
+    for (let i = 0; i < n; i++) { c.save(); c.translate(-26 - i * 7, -32 + i * 12 + Math.sin(t * 2.5 + i) * 3); c.rotate(-1.15 - i * .35 + Math.sin(t * 2 + i) * .08); c.scale(.95, .95); weaponArt(c, v, t); c.restore(); }
+  } else if (v.fam === 'vessel') { c.save(); c.translate(-25, -34 + Math.sin(t * 2.3) * 3); c.scale(.85, .85); weaponArt(c, v, t); c.restore(); }
 }
 function weaponFront(c, v, t, o, arm) {
   if (v.fam === 'staff') {
-    c.save(); c.translate(15, -14 - arm * .4); c.rotate(.12 + (o.atk > 0 ? o.atk * .9 : 0) + Math.sin(t * 2) * .04); c.scale(.62, .62); weaponArt(c, v, t); c.restore();
+    c.save(); c.translate(15, -14 - arm * .4); c.rotate(.12 + (o.atk > 0 ? o.atk * .9 : 0) + Math.sin(t * 2) * .04); c.scale(.85, .85); weaponArt(c, v, t); c.restore();
     c.fillStyle = '#ffe2c4'; c.beginPath(); c.arc(14.6, -12 - arm * .4, 2.6, 0, TAU); c.fill();
   } else if (v.fam === 'fist') {
-    for (const s of [-1, 1]) { c.save(); c.translate(s * 13 + (s > 0 && o.atk > 0 ? 5 : 0), -13 + (s < 0 ? arm * .4 : -arm * .4)); c.scale(.42, .42); weaponArt(c, v, t, true); c.restore(); }
+    for (const s of [-1, 1]) { c.save(); c.translate(s * 13 + (s > 0 && o.atk > 0 ? 5 : 0), -13 + (s < 0 ? arm * .4 : -arm * .4)); c.scale(.58, .58); weaponArt(c, v, t, true); c.restore(); }
   }
 }
 /* ---- biểu tượng vật phẩm ---- */
 const iconCache = new Map(), iconUrl = new Map();
 function iconCanvas(it) {
   let cv = iconCache.get(it.id); if (cv) return cv;
-  cv = document.createElement('canvas'); cv.width = 64; cv.height = 64; const c = cv.getContext('2d'), v = itemVis(it);
+  cv = document.createElement('canvas'); cv.width = 96; cv.height = 96; const c = cv.getContext('2d'), v = itemVis(it); c.scale(1.5, 1.5);
   const g = c.createRadialGradient(32, 40, 4, 32, 36, 42); g.addColorStop(0, hexA(v.rc, .35)); g.addColorStop(1, 'rgba(10,18,16,.92)'); c.fillStyle = g; c.fillRect(0, 0, 64, 64);
   c.save(); c.translate(32, 33);
   if (v.slot === 'weapon') { if (v.fam === 'sword') { c.rotate(.55); c.scale(.82, .82); } else if (v.fam === 'staff') { c.rotate(.5); c.scale(.8, .8); } else c.scale(v.fam === 'fist' ? 1.05 : 1, v.fam === 'fist' ? 1.05 : 1); weaponArt(c, v, 0); }
-  else if (v.slot === 'armor') { c.scale(.95, .95); armorArt(c, v, 0); }
+  else if (v.slot === 'armor') { c.scale(.95, .95); armorArt(c, v, 0); c.save(); c.scale(1.8, 1.8); c.translate(0, 14); skinArmor(c, v, 0); c.restore(); }
   else if (v.slot === 'head') { c.scale(1.35, 1.35); headArt(c, v, 0); }
   else { c.scale(1.2, 1.2); charmArt(c, v, 0); }
   c.restore(); iconCache.set(it.id, cv); return cv;
@@ -1007,10 +1128,10 @@ function itemIcon(it) {
   iconUrl.set(it.id, u); return u;
 }
 function drawBagPreview() {
-  const el = $('#bagPrev'); if (!el) return; const c = el.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, 160, 190);
-  const g = c.createRadialGradient(80, 150, 10, 80, 120, 110); g.addColorStop(0, 'rgba(79,214,160,.22)'); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.fillRect(0, 0, 160, 190);
-  const o = Object.assign(playerLook(), { moving: false, lift: 0, atk: 0, scale: 2.1, face: 1, t: T });
-  drawFxBack(c, 80, 168, P.cls, P.lv, P.fx, T, 1.5, P.rf); drawChibi(c, 80, 168, o); drawFxFront(c, 80, 168, P.cls, P.lv, P.fx, T, 1.5, P.rf);
+  const el = $('#bagPrev'); if (!el) return; const c = el.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, 200, 230);
+  const g = c.createRadialGradient(100, 190, 10, 100, 150, 140); g.addColorStop(0, 'rgba(79,214,160,.28)'); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.fillRect(0, 0, 200, 230);
+  const o = Object.assign(playerLook(), { moving: false, lift: 0, atk: 0, scale: 2.5, face: 1, t: T });
+  drawFxBack(c, 100, 205, P.cls, P.lv, P.fx, T, 1.8, P.rf); drawChibi(c, 100, 205, o); drawFxFront(c, 100, 205, P.cls, P.lv, P.fx, T, 1.8, P.rf);
 }
 const IRIS = { kiem: '#5ac8ff', phap: '#8a8aff', the: '#e8a030', dan: '#5ad88a' };
 function outfitDeco(c, cls, t, mv, o) {
@@ -1638,6 +1759,7 @@ function drawBoardObj(c, x, y) {
 
 /* trang trí */
 function drawDecor(c, d, t) {
+  if (d.k === 'sect' || d.k === 'hall' || d.k === 'gate' || d.k === 'statue' || d.k === 'incense' || d.k === 'flag') { c.save(); c.translate(d.x, d.y); drawBuilding(c, d, t); c.restore(); return; }
   c.save(); c.translate(d.x, d.y); const s = d.s;
   const sh = (rx, ry) => { c.fillStyle = 'rgba(0,0,0,.26)'; c.beginPath(); c.ellipse(0, 0, rx, ry, 0, 0, TAU); c.fill(); };
   switch (d.k) {
@@ -1707,7 +1829,8 @@ function drawDecals(c, vx0, vx1, vy0, vy1) {
   for (const d of decals) {
     if (d.x < vx0 || d.x > vx1 || d.y < vy0 || d.y > vy1) continue; const k = d.t / d.life, a = Math.min(1, (1 - k) * 2) * .75;
     c.save(); c.translate(d.x, d.y); c.scale(1, .62); c.globalAlpha = a;
-    if (d.type === 'scorch') { const g = c.createRadialGradient(0, 0, 2, 0, 0, d.r); g.addColorStop(0, 'rgba(20,10,5,.75)'); g.addColorStop(.75, 'rgba(40,18,8,.45)'); g.addColorStop(1, 'rgba(255,120,30,.25)'); c.fillStyle = g; c.beginPath(); c.arc(0, 0, d.r, 0, TAU); c.fill(); }
+    if (d.type === 'ink') { c.fillStyle = 'rgba(10,8,18,.55)'; for (let i = 0; i < 9; i++) { const a2 = i * 2.4 + d.x, rr = d.r * (.25 + (i % 4) * .18); c.beginPath(); c.ellipse(Math.cos(a2) * d.r * .35, Math.sin(a2) * d.r * .3, rr * .5, rr * .38, a2, 0, TAU); c.fill(); } c.strokeStyle = 'rgba(10,8,18,.5)'; c.lineWidth = 2; for (let i = 0; i < 12; i++) { const a2 = i / 12 * TAU + d.y, r2 = d.r * (.8 + (i % 3) * .15); c.beginPath(); c.moveTo(Math.cos(a2) * d.r * .3, Math.sin(a2) * d.r * .3); c.lineTo(Math.cos(a2) * r2, Math.sin(a2) * r2); c.stroke(); } }
+    else if (d.type === 'scorch') { const g = c.createRadialGradient(0, 0, 2, 0, 0, d.r); g.addColorStop(0, 'rgba(20,10,5,.75)'); g.addColorStop(.75, 'rgba(40,18,8,.45)'); g.addColorStop(1, 'rgba(255,120,30,.25)'); c.fillStyle = g; c.beginPath(); c.arc(0, 0, d.r, 0, TAU); c.fill(); }
     else if (d.type === 'frost') { const g = c.createRadialGradient(0, 0, 2, 0, 0, d.r); g.addColorStop(0, 'rgba(230,248,255,.7)'); g.addColorStop(1, 'rgba(150,220,255,.1)'); c.fillStyle = g; c.beginPath(); c.arc(0, 0, d.r, 0, TAU); c.fill(); c.strokeStyle = 'rgba(255,255,255,.7)'; c.lineWidth = 1.5; for (let i = 0; i < 7; i++) { const a2 = i / 7 * TAU + d.x; c.beginPath(); c.moveTo(0, 0); c.lineTo(Math.cos(a2) * d.r * .9, Math.sin(a2) * d.r * .9); c.stroke(); } }
     else if (d.type === 'poison') { const g = c.createRadialGradient(0, 0, 2, 0, 0, d.r); g.addColorStop(0, 'rgba(110,200,90,.55)'); g.addColorStop(1, 'rgba(150,90,220,.1)'); c.fillStyle = g; c.beginPath(); c.arc(0, 0, d.r, 0, TAU); c.fill(); }
     else if (d.type === 'holy') { c.strokeStyle = 'rgba(255,226,154,.8)'; c.lineWidth = 2.5; c.beginPath(); c.arc(0, 0, d.r * .9, 0, TAU); c.stroke(); c.beginPath(); c.arc(0, 0, d.r * .55, 0, TAU); c.stroke(); c.rotate(d.x); for (let i = 0; i < 6; i++) { c.rotate(TAU / 6); c.beginPath(); c.moveTo(0, -d.r * .55); c.lineTo(0, -d.r * .9); c.stroke(); } }
@@ -1721,16 +1844,23 @@ function castFx(i, sk, a) {
   addFx(.7, (c, k) => { c.save(); c.translate(P.x, P.y + 2); c.scale(1, .45); c.globalCompositeOperation = 'lighter'; c.globalAlpha = (1 - k) * .9; c.strokeStyle = col; c.lineWidth = 2.5; c.rotate(k * 3); c.beginPath(); c.arc(0, 0, R * (.6 + k * .6), 0, TAU); c.stroke(); c.beginPath(); c.arc(0, 0, R * (.4 + k * .4), 0, TAU); c.stroke(); for (let n = 0; n < 6; n++) { c.rotate(TAU / 6); c.beginPath(); c.moveTo(0, -R * .4); c.lineTo(0, -R * .75); c.stroke(); } c.restore(); });
   if (big) { txt(P.x, P.y - 92, sk.n, col, true); G.punch = Math.max(G.punch || 0, .05 + (i - 3) * .02); G.sfc = col; G.sfa = Math.max(G.sfa || 0, .22 + (i - 3) * .05); G.hitstop = Math.max(G.hitstop || 0, .09); burst(P.x, P.y - 30, col, 18, 200, .7, 4); }
 }
-function ringFx(x, y, r0, r1, life, col, w = 4) { addFx(life, (c, k) => { c.save(); c.strokeStyle = col; c.globalAlpha = (1 - k) * .9; c.lineWidth = w * (1 - k * .6); c.beginPath(); c.arc(x, y, r0 + (r1 - r0) * (1 - Math.pow(1 - k, 2)), 0, TAU); c.stroke(); c.restore(); }); }
+function ringFx(x, y, r0, r1, life, col, w = 4) { addFx(life, (c, k) => { c.save(); const rr = r0 + (r1 - r0) * (1 - Math.pow(1 - k, 2)); c.globalAlpha = (1 - k) * .9; c.lineWidth = w * (1 - k * .6) + 3; c.strokeStyle = 'rgba(12,18,36,.5)'; c.beginPath(); c.arc(x, y, rr, 0, TAU); c.stroke(); c.strokeStyle = col; c.lineWidth = w * (1 - k * .6); c.beginPath(); c.arc(x, y, rr, 0, TAU); c.stroke(); c.restore(); }); }
 function slashFx(x, y, ang, len, col, life = .22) {
   addFx(life, (c, k) => { c.save(); c.translate(x, y); c.rotate(ang); c.globalCompositeOperation = 'lighter'; c.globalAlpha = 1 - k; c.strokeStyle = col; c.lineCap = 'round';
     c.lineWidth = 9 * (1 - k * .5); c.beginPath(); c.arc(-len * .2, 0, len * (.6 + k * .5), -.9, .9); c.stroke(); c.strokeStyle = '#fff'; c.lineWidth = 3; c.beginPath(); c.arc(-len * .2, 0, len * (.6 + k * .5), -.8, .8); c.stroke(); c.restore(); });
 }
-function warnFx(x, y, R, life, col) { addFx(life, (c, k) => { c.save(); c.fillStyle = hexA(col, .1 + k * .22); c.strokeStyle = hexA(col, .85); c.lineWidth = 2.5; c.beginPath(); c.arc(x, y, R, 0, TAU); c.fill(); c.stroke(); c.fillStyle = hexA(col, .28); c.beginPath(); c.arc(x, y, R * k, 0, TAU); c.fill(); c.restore(); }); }
+function warnFx(x, y, R, life, col) { addFx(life, (c, k) => { c.save(); c.fillStyle = hexA(col, .14 + k * .26); c.beginPath(); c.arc(x, y, R, 0, TAU); c.fill(); c.strokeStyle = 'rgba(10,10,20,.55)'; c.lineWidth = 5.5; c.beginPath(); c.arc(x, y, R, 0, TAU); c.stroke(); c.strokeStyle = hexA(col, .95); c.lineWidth = 3; c.setLineDash([10, 7]); c.lineDashOffset = -T * 30; c.beginPath(); c.arc(x, y, R, 0, TAU); c.stroke(); c.setLineDash([]); c.fillStyle = hexA(col, .34); c.beginPath(); c.arc(x, y, R * k, 0, TAU); c.fill(); c.restore(); }); }
 function pillarFx(x, y, col, life = .8, w = 30, h = 360) { addFx(life, (c, k) => { c.save(); c.globalCompositeOperation = 'lighter'; const a = Math.sin(Math.min(1, k) * Math.PI); const g = c.createLinearGradient(0, y - h, 0, y); g.addColorStop(0, hexA(col, 0)); g.addColorStop(1, hexA(col, .85 * a)); c.fillStyle = g; const ww = w * (1 - k * .4); c.fillRect(x - ww, y - h, ww * 2, h); c.restore(); }); }
 function boltFx(x1, y1, x2, y2, col = '#bfe6ff') {
-  const pts = [[x1, y1]]; const n = 7; for (let i = 1; i < n; i++) pts.push([x1 + (x2 - x1) * i / n + rnd(-16, 16), y1 + (y2 - y1) * i / n]); pts.push([x2, y2]);
-  addFx(.28, (c, k) => { c.save(); c.globalCompositeOperation = 'lighter'; c.globalAlpha = 1 - k; c.lineJoin = 'round'; for (const [w, cc] of [[9, hexA(col, .4)], [3, '#ffffff']]) { c.strokeStyle = cc; c.lineWidth = w; c.beginPath(); c.moveTo(pts[0][0], pts[0][1]); for (const p of pts) c.lineTo(p[0], p[1]); c.stroke(); } c.restore(); });
+  const n = 9, pts = [[x1, y1]]; for (let i = 1; i < n; i++) pts.push([x1 + (x2 - x1) * i / n + rnd(-18, 18), y1 + (y2 - y1) * i / n + rnd(-6, 6)]); pts.push([x2, y2]);
+  const forks = []; for (let f = 0; f < 3; f++) { const b = pts[2 + Math.floor(Math.random() * (n - 4))], fp = [b], dir = Math.random() < .5 ? -1 : 1; let fx = b[0], fy = b[1]; for (let j = 0; j < 3; j++) { fx += dir * rnd(14, 30); fy += rnd(10, 26); fp.push([fx + rnd(-6, 6), fy]); } forks.push(fp); }
+  addFx(.32, (c, k) => {
+    c.save(); c.globalAlpha = (1 - k * k) * .5; c.strokeStyle = 'rgb(15,20,60)'; c.lineWidth = 9; c.lineJoin = 'round'; c.beginPath(); c.moveTo(pts[0][0], pts[0][1]); for (const p of pts) c.lineTo(p[0], p[1]); c.stroke(); c.restore();
+    c.save(); c.globalCompositeOperation = 'lighter'; const a = 1 - k * k; c.lineJoin = 'round'; c.lineCap = 'round';
+    const stroke = (arr, w, cc, al) => { c.globalAlpha = al * a; c.strokeStyle = cc; c.lineWidth = w; c.beginPath(); c.moveTo(arr[0][0], arr[0][1]); for (const p of arr) c.lineTo(p[0], p[1]); c.stroke(); };
+    stroke(pts, 16, '#7a3aff', .22); stroke(pts, 9, hexA(col, .55), 1); for (const f of forks) { stroke(f, 6, hexA(col, .4), 1); stroke(f, 1.6, '#ffffff', .85); } stroke(pts, 3, '#ffffff', 1);
+    c.restore(); glow(c, x2, y2, 46, col, .6 * a);
+  });
 }
 function swordDropFx(x, y, life, col = '#bfeaff', big = 1) {
   addFx(life, (c, k) => { const yy = y - (1 - k) * 420 * big; c.save(); c.translate(x, yy); c.globalAlpha = Math.min(1, k * 3); const s = big; c.fillStyle = '#e8f8ff'; c.strokeStyle = col; c.lineWidth = 1.5; c.beginPath(); c.moveTo(0, 0); c.lineTo(5 * s, -28 * s); c.lineTo(0, -34 * s); c.lineTo(-5 * s, -28 * s); c.closePath(); c.fill(); c.stroke(); c.fillStyle = '#c9a24a'; c.fillRect(-8 * s, -36 * s, 16 * s, 3 * s); c.restore(); glow(c, x, yy - 14 * s, 22 * s, col, .5); });
@@ -1772,8 +1902,13 @@ function strike(m, mult, o) {
   if (o.burn) m.burn = { t: o.burn, dps: d * .22, tick: .5 };
   if (o.kb) { const ox = o.ox !== undefined ? o.ox : P.x, oy = o.oy !== undefined ? o.oy : P.y; const a = Math.atan2(m.y - oy, m.x - ox); m.kbx = Math.cos(a) * o.kb * 8; m.kby = Math.sin(a) * o.kb * 8; }
 }
-function aoeHit(x, y, R, mult, o) { if (R >= 90 && o && o.col) decal(x, y, R * .9, o.col); const l = monstersIn(x, y, R); for (const m of l) strike(m, mult, o); return l; }
+function impactRing(x, y, R, col) {
+  if (T - (G.irT || -9) < .18 && Math.hypot(x - (G.irX || 0), y - (G.irY || 0)) < 40) return; G.irT = T; G.irX = x; G.irY = y;
+  addFx(.4, (c, k) => { c.save(); c.globalAlpha = (1 - k) * .9; c.fillStyle = hexA(col, .16); c.beginPath(); c.arc(x, y, R, 0, TAU); c.fill(); c.strokeStyle = 'rgba(12,18,36,.55)'; c.lineWidth = 5; c.beginPath(); c.arc(x, y, R, 0, TAU); c.stroke(); c.strokeStyle = col; c.lineWidth = 2.6; c.beginPath(); c.arc(x, y, R, 0, TAU); c.stroke(); c.restore(); });
+}
+function aoeHit(x, y, R, mult, o) { if (R >= 90) impactRing(x, y, R, (o && o.col) || '#ffffff'); if (R >= 90 && o && o.col) decal(x, y, R * .9, o.col); const l = monstersIn(x, y, R); for (const m of l) strike(m, mult, o); return l; }
 function hurtMonster(m, d, crit, col, pl) {
+  if (m.dummy) { m.flash = .1; P.combat = 5; sfx(crit ? 'crit' : 'hit'); m.dlog = (m.dlog || []).filter(x => T - x[0] < 5); m.dlog.push([T, d]); txt(m.x, m.y - m.r * 2.2, d, crit ? '#ffd34d' : (col || '#fff'), crit); if (crit) starFx(m.x, m.y - m.r, col || '#ffd34d'); return; }
   if (m.aff && m.aff.includes('kienco')) d = Math.max(1, Math.round(d * .65));
   if (m.shield > 0) { const ab = Math.min(m.shield, d); m.shield -= ab; d -= ab; if (d <= 0) { m.flash = .08; txt(m.x, m.y - m.r * 2.2, 'Hộ thuẫn', '#9fd8ff'); return; } }
   m.hp -= d; m.flash = .1; P.combat = 5; sfx(crit ? 'crit' : 'hit');
@@ -1830,7 +1965,7 @@ function hurtPlayer(d, src) {
 }
 function die(src) {
   P.dead = true; P.deadT = 3.5; P.target = null; P.moveTo = null; G.auto = false; updateAutoBtn();
-  banner('Thân Tử Đạo Tiêu', 'Hồi sinh tại Thanh Vân Thôn' + (src ? ' · bị ' + src + ' đánh bại' : ''));
+  banner('Thân Tử Đạo Tiêu', 'Hồi sinh tại Thanh Vân Tông' + (src ? ' · bị ' + src + ' đánh bại' : ''));
   burst(P.x, P.y - 20, '#ffffff', 24, 120, 1, 4, -60);
   for (const m of monsters) if (m.state === 'chase') m.state = 'return';
 }
@@ -2013,9 +2148,13 @@ const SWB = {};
 const swN = () => clamp(3 + realmIdx(P.lv), 3, 12);
 function swHover(i, n, t) { const a = -Math.PI + (i + .5) / n * Math.PI, R = (44 + n * 1.6) * 1.15; return { x: P.x + Math.cos(a) * R, y: P.y - 38 + Math.sin(a) * R * .62 + Math.sin(t * 2 + i) * 2.2, ang: a }; }
 function swordShape(c, x, y, ang, len, col) {
-  c.save(); c.translate(x, y); c.rotate(ang + Math.PI / 2); glow(c, 0, -len * .3, len * .85, col, .45);
-  const w = len * .17; c.fillStyle = '#f4fbff'; c.beginPath(); c.moveTo(0, -len); c.lineTo(w, -len * .3); c.lineTo(w * .8, len * .15); c.lineTo(-w * .8, len * .15); c.lineTo(-w, -len * .3); c.closePath(); c.fill();
-  c.strokeStyle = col; c.lineWidth = 1.1; c.stroke(); c.fillStyle = '#d6b050'; c.fillRect(-w * 1.7, len * .12, w * 3.4, len * .1); c.fillStyle = '#7a4a2a'; c.fillRect(-w * .45, len * .22, w * .9, len * .26); c.restore();
+  c.save(); c.translate(x, y); c.rotate(ang + Math.PI / 2); glow(c, 0, -len * .3, len * .9, col, .5);
+  const w = len * .16, g = c.createLinearGradient(-w, 0, w, 0); g.addColorStop(0, '#cfeaff'); g.addColorStop(.5, '#ffffff'); g.addColorStop(1, '#9fd0ff');
+  c.fillStyle = g; c.beginPath(); c.moveTo(0, -len); c.lineTo(w, -len * .32); c.lineTo(w * .85, len * .14); c.lineTo(-w * .85, len * .14); c.lineTo(-w, -len * .32); c.closePath(); c.fill();
+  c.strokeStyle = 'rgba(15,25,50,.85)'; c.lineWidth = 2.8; c.stroke(); c.strokeStyle = col; c.lineWidth = 1.1; c.stroke(); c.strokeStyle = hexA(col, .8); c.lineWidth = .8; c.beginPath(); c.moveTo(0, -len * .9); c.lineTo(0, len * .1); c.stroke();
+  c.fillStyle = '#e8c860'; c.beginPath(); c.moveTo(-w * 1.9, len * .1); c.lineTo(w * 1.9, len * .1); c.lineTo(w * 1.5, len * .2); c.lineTo(-w * 1.5, len * .2); c.closePath(); c.fill();
+  c.fillStyle = '#5a3a2a'; c.fillRect(-w * .45, len * .2, w * .9, len * .24);
+  c.strokeStyle = '#d83a4a'; c.lineWidth = 1.4; c.beginPath(); c.moveTo(0, len * .44); c.quadraticCurveTo(w * 1.2 + Math.sin(T * 5) * len * .08, len * .7, w * .4, len * .95); c.stroke(); c.restore();
 }
 function drawSwarm(c) { const n = swN(); for (let i = 0; i < n; i++) { if ((SWB[i] || 0) > T) continue; const h = swHover(i, n, T); swordShape(c, h.x, h.y, h.ang, 15, '#9fe8ff'); } }
 function swSlot() { const n = swN(); let i = (G.swRR = (G.swRR || 0) + 1) % n, tries = n; while (tries-- > 0 && (SWB[i] || 0) > T) i = (i + 1) % n; return i; }
@@ -2104,7 +2243,7 @@ SKILL_IMPL.phap.length = 0; SKILL_IMPL.phap.push(
     f.upd = dt => { tk -= dt; if (tk <= 0) { tk = .5; const m = nearestMonster(P.x, P.y, 210); if (m) { boltFx(P.x, P.y - 30, m.x, m.y - m.r, '#cfe4ff'); strike(m, .8, { col: '#bfe6ff' }); burst(m.x, m.y - m.r, '#e6f2ff', 6, 110, .3, 3); } } };
   },
   a => {
-    const p = clampRange(a.x, a.y, 340); cloudFx(p.x, p.y, 3.4); warnFx(p.x, p.y, 190, .7, '#9fd0ff'); G.sfc = '#1a2040'; G.sfa = Math.max(G.sfa || 0, .25);
+    const p = clampRange(a.x, a.y, 340); cloudFx(p.x, p.y, 3.4); warnFx(p.x, p.y, 190, .7, '#9fd0ff'); 
     later(.7, () => boltAt(p.x, p.y, 3.0, 190, { stun: 1.0 }));
     for (let i = 0; i < 16; i++) later(.9 + i * .17, () => { const ang = rnd(0, TAU), rr = Math.sqrt(Math.random()) * 180; boltAt(p.x + Math.cos(ang) * rr, p.y + Math.sin(ang) * rr * .9, 1.15, 72); });
   },
@@ -2117,7 +2256,7 @@ SKILL_IMPL.phap.length = 0; SKILL_IMPL.phap.push(
     later(3.2, () => { boltAt(p.x, p.y, 4.0, 190, { stun: 1.5 }); shake(12); });
   },
   a => {
-    const p = clampRange(a.x, a.y, 340); G.sfc = '#120a28'; G.sfa = .4; G.hitstop = .15; cloudFx(p.x - 120, p.y, 3.2); cloudFx(p.x + 120, p.y, 3.2); cloudFx(p.x, p.y - 60, 3.2); warnFx(p.x, p.y, 300, 1.2, '#b36bff');
+    const p = clampRange(a.x, a.y, 340);  G.hitstop = .15; cloudFx(p.x - 120, p.y, 3.2); cloudFx(p.x + 120, p.y, 3.2); cloudFx(p.x, p.y - 60, 3.2); warnFx(p.x, p.y, 300, 1.2, '#b36bff');
     for (let i = 0; i < 12; i++) later(.5 + i * .12, () => { const ang = rnd(0, TAU), rr = Math.sqrt(Math.random()) * 300; boltAt(p.x + Math.cos(ang) * rr, p.y + Math.sin(ang) * rr * .85, 1.4, 80, { bc: '#d6a8ff' }); });
     later(1.9, () => { for (let k = 0; k < 4; k++) boltFx(p.x + rnd(-24, 24), p.y - 640, p.x, p.y, '#ffffff'); aoeHit(p.x, p.y, 280, 7.0, { stun: 2, kb: 60, ox: p.x, oy: p.y, col: '#d6a8ff' }); shake(22); ringFx(p.x, p.y, 10, 300, .9, '#d6a8ff', 10); ringFx(p.x, p.y, 10, 200, .7, '#ffffff', 5); pillarFx(p.x, p.y, '#d6a8ff', 1.2, 60, 700); burst(p.x, p.y, '#ffffff', 80, 360, 1, 6); });
   }
@@ -2183,7 +2322,7 @@ function questKill(m) {
   if (q && P.q.state === 'active' && q.t === m.type) {
     if (q.k === 'kill') { P.q.prog++; ch = true; }
     else if (Math.random() < q.p) { P.q.prog++; ch = true; txt(m.x, m.y - m.r * 2 - 56, '+1 ' + q.mat, '#9dffc0'); }
-    if (P.q.prog >= q.n) { P.q.prog = q.n; P.q.state = 'ready'; toast('Nhiệm vụ hoàn thành. Hãy về gặp Trưởng Lão.'); if (G.huntType === q.t) G.huntType = null; }
+    if (P.q.prog >= q.n) { P.q.prog = q.n; P.q.state = 'ready'; toast('Nhiệm vụ hoàn thành. Hãy về gặp Tông Chủ.'); if (G.huntType === q.t) G.huntType = null; }
   }
   const b = P.b; if (b && b.state === 'active' && b.t === m.type) { b.prog++; ch = true; if (b.prog >= b.n) { b.prog = b.n; b.state = 'ready'; toast('Lệnh săn yêu hoàn thành. Về Bảng Săn Yêu nhận thưởng.'); if (G.huntType === b.t) G.huntType = null; } }
   if (ch) renderTracker();
@@ -2192,9 +2331,9 @@ function renderTracker() {
   let h = ''; const q = curQ();
   if (q) {
     const st = P.q.state; h += `<div class="qh">${esc(q.title)}</div>`;
-    if (st === 'none') h += `<div>Gặp Trưởng Lão ở trung tâm làng (Lv ${q.lv})</div>`;
+    if (st === 'none') h += `<div>Gặp Tông Chủ tại Chính Điện (Lv ${q.lv})</div>`;
     else if (st === 'active') h += `<div>${q.k === 'kill' ? 'Diệt' : 'Thu thập'} ${esc(q.k === 'kill' ? MT[q.t].n : q.mat)}: <span class="qr">${P.q.prog}/${q.n}</span></div>`;
-    else h += `<div class="qr">Hoàn thành! Về gặp Trưởng Lão</div>`;
+    else h += `<div class="qr">Hoàn thành! Về gặp Tông Chủ</div>`;
   } else h += `<div class="qh">Chính tuyến đã hoàn thành</div>`;
   if (P.b) h += `<div class="qh" style="margin-top:4px">Săn yêu</div><div>${P.b.state === 'ready' ? '<span class="qr">Về Bảng Săn Yêu nhận thưởng</span>' : 'Diệt ' + esc(MT[P.b.t].n) + ': <span class="qr">' + P.b.prog + '/' + P.b.n + '</span>'}</div>`;
   $('#qt').innerHTML = h;
@@ -2225,6 +2364,9 @@ function interact(n) {
   else if (n.id === 'pets') openPets();
   else if (n.id === 'tower') openTower();
   else if (n.id === 'dungeon') openDungeon();
+  else if (n.id === 'lib') openLibrary();
+  else if (n.id === 'bank') openBank();
+  else if (n.id === 'arena') { G.olTab = 'arena'; openPanel('online'); }
   else if (n.id === 'portal') openPanel('map');
 }
 function dialog(title, body, btns) {
@@ -2268,16 +2410,16 @@ function updateAQBtn() { $('#aqBtn').classList.toggle('on', !!P.autoQuest); }
 
 function openElder() {
   const q = curQ();
-  if (!q) return dialog('Thanh Vân Trưởng Lão', 'Con đã hoàn thành mọi sứ mệnh của tông môn. Hãy tiếp tục săn Huyết Ma và rèn luyện để phi thăng!', [{ t: 'Đóng', fn: closePanel }]);
+  if (!q) return dialog('Tông Chủ Thanh Vân', 'Con đã hoàn thành mọi sứ mệnh của tông môn. Hãy tiếp tục săn Huyết Ma và rèn luyện để phi thăng!', [{ t: 'Đóng', fn: closePanel }]);
   const rexp = Math.round(expNeed(q.lv) * (q.boss ? .8 : .45)), rg = q.lv * 25;
   const rew = `<div class="sep"></div>Phần thưởng: <b style="color:#7ac8ff">${fmt(rexp)} Tu Vi</b>, <b style="color:#ffd27a">${fmt(rg)} Linh Thạch</b>${q.boss ? ', <b style="color:#c98bff">1 bảo vật Địa Bảo trở lên</b>' : ''}`;
-  if (P.q.state === 'none') dialog('Thanh Vân Trưởng Lão', `<b style="color:#ffd27a">${esc(q.title)}</b> (Lv ${q.lv})<br>${esc(q.txt)}${rew}${P.lv < q.lv - 2 ? '<br><span class="dn">Cảnh giới của con còn thấp, hãy cẩn thận.</span>' : ''}`, [
+  if (P.q.state === 'none') dialog('Tông Chủ Thanh Vân', `<b style="color:#ffd27a">${esc(q.title)}</b> (Lv ${q.lv})<br>${esc(q.txt)}${rew}${P.lv < q.lv - 2 ? '<br><span class="dn">Cảnh giới của con còn thấp, hãy cẩn thận.</span>' : ''}`, [
     { t: 'Nhận nhiệm vụ', pri: 1, fn: () => { P.q.state = 'active'; P.q.prog = 0; renderTracker(); closePanel(); toast('Đã nhận: ' + q.title); } }, { t: 'Để sau', fn: closePanel }]);
-  else if (P.q.state === 'active') dialog('Thanh Vân Trưởng Lão', `<b style="color:#ffd27a">${esc(q.title)}</b><br>${esc(q.txt)}<br>Tiến độ: <b>${P.q.prog}/${q.n}</b>`, [{ t: 'Tự động đi làm', pri: 1, fn: () => { closePanel(); trackQuest(); } }, { t: 'Đóng', fn: closePanel }]);
-  else dialog('Thanh Vân Trưởng Lão', `Tốt lắm! Con đã hoàn thành <b style="color:#ffd27a">${esc(q.title)}</b>.${rew}`, [{
+  else if (P.q.state === 'active') dialog('Tông Chủ Thanh Vân', `<b style="color:#ffd27a">${esc(q.title)}</b><br>${esc(q.txt)}<br>Tiến độ: <b>${P.q.prog}/${q.n}</b>`, [{ t: 'Tự động đi làm', pri: 1, fn: () => { closePanel(); trackQuest(); } }, { t: 'Đóng', fn: closePanel }]);
+  else dialog('Tông Chủ Thanh Vân', `Tốt lắm! Con đã hoàn thành <b style="color:#ffd27a">${esc(q.title)}</b>.${rew}`, [{
     t: 'Giao nhiệm vụ', pri: 1, fn: () => {
       gainExp(rexp); P.gold += rg; let msg = 'Nhận ' + fmt(rexp) + ' Tu Vi, ' + fmt(rg) + ' Linh Thạch';
-      if (q.boss) { const it = genItem(q.lv, 3, 3); if (P.inv.length < 30) { P.inv.push(it); msg += ', [' + it.name + ']'; chat('[Hệ Thống] ' + P.name + ' nhận được [' + it.name + '] (' + RAR[it.rar].n + ') từ Trưởng Lão!', RAR[it.rar].c); } }
+      if (q.boss) { const it = genItem(q.lv, 3, 3); if (P.inv.length < 30) { P.inv.push(it); msg += ', [' + it.name + ']'; chat('[Hệ Thống] ' + P.name + ' nhận được [' + it.name + '] (' + RAR[it.rar].n + ') từ Tông Chủ!', RAR[it.rar].c); } }
       P.q.idx++; P.q.state = 'none'; P.q.prog = 0; renderTracker(); toast(msg); save(); closePanel(); if (QUESTS[P.q.idx]) setTimeout(openElder, 250);
     }
   }]);
@@ -2304,7 +2446,7 @@ function openBoard() {
    ===================================================================== */
 function pickup(d) {
   const it = d.it;
-  if (P.autoSell && it.rar === 0) { const v = sellVal(it); P.gold += v; txt(P.x, P.y - 64, '+' + v + ' 💰', '#ffd27a'); return true; }
+  if (P.autoSellMax >= 0 && it.rar <= P.autoSellMax) { const v = sellVal(it); P.gold += v; txt(P.x, P.y - 64, '+' + v + ' 💰', '#ffd27a'); return true; }
   if (P.inv.length >= 30) { if (T - (G.fullT || 0) > 2) { toast('Hành trang đã đầy'); G.fullT = T; } return false; }
   sfx('pickup', it.rar); P.inv.push(it); txt(P.x, P.y - 64, it.name, RAR[it.rar].c); if (it.rar >= 2) { burst(P.x, P.y - 20, RAR[it.rar].c, 12, 90, .6, 3.5); }
   if (G.panel === 'bag') renderBag(); return true;
@@ -2384,7 +2526,7 @@ function monThumb(type) {
   monThumbs[type] = u; return u;
 }
 function renderDex() {
-  const keys = Object.keys(MT).sort((a, b) => ZONES[MT[a].z].lv[0] - ZONES[MT[b].z].lv[0] || (MT[a].boss ? 1 : 0) - (MT[b].boss ? 1 : 0) || MT[a].lv[0] - MT[b].lv[0]), dex = P.dex || {}, found = keys.filter(k => dex[k]).length;
+  const keys = Object.keys(MT).filter(k => !MT[k].hid).sort((a, b) => ZONES[MT[a].z].lv[0] - ZONES[MT[b].z].lv[0] || (MT[a].boss ? 1 : 0) - (MT[b].boss ? 1 : 0) || MT[a].lv[0] - MT[b].lv[0]), dex = P.dex || {}, found = keys.filter(k => dex[k]).length;
   const sel = G.dexSel && MT[G.dexSel] ? G.dexSel : keys[0];
   let h = `<div class="ph"><b>📖 Yêu Thú Phổ</b><button class="x" data-act="close" aria-label="Đóng">✕</button></div><div style="font-size:12px;color:var(--dim);margin-bottom:4px">Đã khám phá ${found}/${keys.length}. Diệt đủ 30, 150, 600 con mỗi loài để tăng sát thương lên loài đó (+3%, +6%, +10%) và nhận Linh Phách.</div>`;
   h += `<div class="pgrid" style="grid-template-columns:repeat(auto-fill,minmax(70px,1fr))">${keys.map(k => { const t = MT[k], n = dex[k] || 0; return `<button class="pcard ${k === sel ? 'sel' : ''}" data-act="dexsel" data-id="${k}" style="border-color:${n ? (t.boss ? '#ffb040' : '#5a8a6a') : '#444'};padding:3px"><img alt="" src="${monThumb(k)}" style="width:54px;height:54px;${n ? '' : 'filter:brightness(0) opacity(.55)'}"><span style="font-size:10px">${n ? esc(t.n) : '???'}</span><small style="font-size:10px">${n ? n + ' · ' + '★'.repeat(dexTier(k)) : ''}</small></button>`; }).join('')}</div>`;
@@ -2492,7 +2634,7 @@ function findAutoTarget() {
   const chasing = monsters.find(m => !m.dead && m.state === 'chase' && Math.hypot(m.x - P.x, m.y - P.y) < 400);
   if (chasing) return chasing;
   if (ht) return nearestMonster(P.x, P.y, 99999, m => m.type === ht);
-  return nearestMonster(P.x, P.y, 650, m => m.dg || ((m.boss ? m.lv <= P.lv + 2 : m.lv <= P.lv + 5) && m.lv >= P.lv - 12));
+  return nearestMonster(P.x, P.y, 650, m => !m.dummy && (m.dg || ((m.boss ? m.lv <= P.lv + 2 : m.lv <= P.lv + 5) && m.lv >= P.lv - 12)));
 }
 function bestZone() { return ['W', 'E', 'N', 'S', 'A', 'B', 'C', 'D', 'X'].find(k => P.lv <= ZONES[k].lv[1]) || 'X'; }
 function huntCenter() {
@@ -2587,7 +2729,7 @@ function update(dt) {
   for (let i = decals.length - 1; i >= 0; i--) { decals[i].t += dt; if (decals[i].t >= decals[i].life) decals.splice(i, 1); }
   G.zone = zoneAt(P.x, P.y);
   if (G.zone !== G.lastZone) { G.lastZone = G.zone; if (G.zoneInit) { const z = ZONES[G.zone]; banner(z.n, G.zone === 'V' ? 'Khu an toàn' : 'Cấp đề xuất ' + z.lv[0] + ' - ' + z.lv[1]); chat('[Hệ Thống] Bạn đã vào ' + z.n + '.', '#9dd8ff'); } G.zoneInit = true; }
-  updatePlayer(dt); updateMonsters(dt); updateBots(dt); updateProjs(dt); updateEProjs(dt); updateDrops(dt); updatePet(dt); updateAmbient(dt); autoQuestTick(dt); updateTower(dt); updateDungeon(dt); updateOnline(dt);
+  updatePlayer(dt); springTick(dt); updateMonsters(dt); updateBots(dt); updateProjs(dt); updateEProjs(dt); updateDrops(dt); updatePet(dt); updateAmbient(dt); autoQuestTick(dt); updateTower(dt); updateDungeon(dt); updateOnline(dt);
   for (let i = timers.length - 1; i >= 0; i--) { const tm = timers[i]; tm.s -= dt; if (tm.s <= 0) { timers.splice(i, 1); try { tm.fn(); } catch (e) { console.error(e); } } }
   for (let i = fxs.length - 1; i >= 0; i--) { const f = fxs[i]; f.t += dt; if (f.upd) f.upd(dt); if (f.t >= f.life) { fxs.splice(i, 1); if (f.end) f.end(); } }
   for (let i = parts.length - 1; i >= 0; i--) { const p = parts[i]; p.life -= dt; if (p.life <= 0) { parts.splice(i, 1); continue; } p.vy += p.g * dt; p.x += p.vx * dt; p.y += p.vy * dt; }
@@ -2601,7 +2743,7 @@ function update(dt) {
 const rl = [], lights = [];
 function render() {
   const c = ctx, Z = G.zoom * (1 + (G.punch || 0));
-  c.setTransform(DPR, 0, 0, DPR, 0, 0); c.fillStyle = '#060d0a'; c.fillRect(0, 0, W, H);
+  c.setTransform(DPR, 0, 0, DPR, 0, 0); c.fillStyle = '#1b2a26'; c.fillRect(0, 0, W, H);
   const sx = shakeAmt ? rnd(-shakeAmt, shakeAmt) * .5 : 0, sy = shakeAmt ? rnd(-shakeAmt, shakeAmt) * .5 : 0;
   const cx = cam.x + sx, cy = cam.y + sy;
   c.save(); c.translate(W / 2, H / 2); c.scale(Z, Z); c.translate(-cx, -cy);
@@ -2609,13 +2751,15 @@ function render() {
   const vx0 = cx - W / 2 / Z - 120, vx1 = cx + W / 2 / Z + 120, vy0 = cy - H / 2 / Z - 120, vy1 = cy + H / 2 / Z + 260;
   /* mặt đất làng */
   if (G.map === 'V' && vx1 > CX - 460 && vx0 < CX + 460 && vy1 > CY - 460 && vy0 < CY + 460) {
-    c.fillStyle = 'rgba(206,196,166,.92)'; c.fillRect(CX - 24, CY - 420, 48, 840); c.fillRect(CX - 440, CY - 24, 880, 48);
-    c.strokeStyle = 'rgba(120,108,84,.5)'; c.lineWidth = 2; c.strokeRect(CX - 24, CY - 420, 48, 840); c.strokeRect(CX - 440, CY - 24, 880, 48);
+    c.fillStyle = 'rgba(206,196,166,.92)'; c.fillRect(CX - 28, CY - 300, 56, 740); c.fillRect(CX - 340, CY - 20, 680, 40); c.fillRect(CX - 300, CY + 142, 260, 26); c.fillRect(CX + 40, CY + 142, 260, 26); c.fillRect(CX - 140, CY - 300, 280, 70);
+    c.strokeStyle = 'rgba(120,108,84,.5)'; c.lineWidth = 2; c.strokeRect(CX - 28, CY - 300, 56, 740); c.strokeRect(CX - 340, CY - 20, 680, 40); c.strokeRect(CX - 140, CY - 300, 280, 70);
+    c.fillStyle = 'rgba(190,180,150,.95)'; c.fillRect(CX + 80, CY + 276, 230, 60); c.strokeStyle = 'rgba(120,108,84,.6)'; c.lineWidth = 2; c.strokeRect(CX + 80, CY + 276, 230, 60);
+    c.fillStyle = 'rgba(214,204,176,.96)'; c.beginPath(); c.arc(CX + 205, CY + 228, 74, 0, TAU); c.fill(); c.strokeStyle = 'rgba(120,108,84,.7)'; c.lineWidth = 3; c.stroke(); c.beginPath(); c.arc(CX + 205, CY + 228, 52, 0, TAU); c.stroke(); c.beginPath(); c.moveTo(CX + 205 - 74, CY + 228); c.lineTo(CX + 205 + 74, CY + 228); c.moveTo(CX + 205, CY + 228 - 74); c.lineTo(CX + 205, CY + 228 + 74); c.stroke();
     c.fillStyle = 'rgba(220,210,180,.96)'; c.beginPath(); c.arc(CX, CY + 40, 200, 0, TAU); c.fill(); c.strokeStyle = 'rgba(120,108,84,.6)'; c.lineWidth = 4; c.stroke();
     c.strokeStyle = 'rgba(150,138,110,.5)'; c.lineWidth = 1.5; for (let r = 60; r < 200; r += 46) { c.beginPath(); c.arc(CX, CY + 40, r, 0, TAU); c.stroke(); }
   }
-  if (G.map === 'V' && vx1 > CX - 400 && vx0 < CX - 100 && vy1 > CY + 150 && vy0 < CY + 330) {
-    const px = CX - 250, py = CY + 240, rx = 120, ry = 70;
+  if (G.map === 'V' && vx1 > CX - 350 && vx0 < CX - 110 && vy1 > CY + 200 && vy0 < CY + 340) {
+    const px = CX - 230, py = CY + 270, rx = 100, ry = 55;
     c.fillStyle = '#6a5a44'; c.beginPath(); c.ellipse(px, py, rx + 9, ry + 8, 0, 0, TAU); c.fill();
     const wg = c.createRadialGradient(px - 20, py - 15, 5, px, py, rx); wg.addColorStop(0, '#8ad8e8'); wg.addColorStop(1, '#2f7a9a');
     c.fillStyle = wg; c.beginPath(); c.ellipse(px, py, rx, ry, 0, 0, TAU); c.fill();
@@ -2661,21 +2805,21 @@ function render() {
   drawWeather(c);
   if (G.sfa > 0) { c.fillStyle = hexA(G.sfc || '#ffffff', Math.min(.5, G.sfa)); c.fillRect(0, 0, W, H); }
   drawCinematic(c);
-  const vg = c.createRadialGradient(W / 2, H / 2, Math.min(W, H) * .35, W / 2, H / 2, Math.max(W, H) * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.55)'); c.fillStyle = vg; c.fillRect(0, 0, W, H);
   if (P.hurt > 0) { c.fillStyle = `rgba(255,40,40,${P.hurt * 1.6})`; c.fillRect(0, 0, W, H); }
   drawComboHud(c);
-  if (P.dead) { c.fillStyle = 'rgba(0,0,0,.55)'; c.fillRect(0, 0, W, H); }
+  if (P.dead) { c.fillStyle = 'rgba(210,225,240,.25)'; c.fillRect(0, 0, W, H); }
   if (P.hp < P.maxhp * .25 && !P.dead) { c.fillStyle = `rgba(160,0,0,${.08 + .06 * Math.sin(T * 6)})`; c.fillRect(0, 0, W, H); }
 }
 function label(c, s, x, y, col, size = 12) { c.save(); c.font = `700 ${size}px "Noto Serif",serif`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineJoin = 'round'; c.lineWidth = 3.5; c.strokeStyle = 'rgba(0,0,0,.85)'; c.strokeText(s, x, y); c.fillStyle = col; c.fillText(s, x, y); c.restore(); }
 function drawMonUI(c, m) {
   if (m.slow > 0) { c.save(); c.globalAlpha = .35; c.fillStyle = '#8fe3ff'; c.beginPath(); c.ellipse(m.x, m.y - m.r, m.r * 1.1, m.r, 0, 0, TAU); c.fill(); c.restore(); }
   if (m.stun > 0) { for (let i = 0; i < 3; i++) { const a = T * 5 + i * 2.1; c.fillStyle = '#ffe66a'; c.beginPath(); c.arc(m.x + Math.cos(a) * m.r * .8, m.y - m.r * 2.3 - (m.fly ? 22 : 0) + Math.sin(a) * 4, 3, 0, TAU); c.fill(); } }
-  const show = P.target === m || m.boss || m.hp < m.maxhp || m.state === 'chase'; if (!show) return;
+  const show = P.target === m || m.boss || m.dummy || m.hp < m.maxhp || m.state === 'chase'; if (!show) return;
   const y = m.y - m.r * 2.35 - (m.fly ? 22 : 0) - 8, w = Math.max(34, m.r * 2.2);
   c.fillStyle = 'rgba(0,0,0,.65)'; c.fillRect(m.x - w / 2 - 1, y - 1, w + 2, 7); c.fillStyle = m.boss ? '#ff7a2a' : '#e0404f'; c.fillRect(m.x - w / 2, y, w * clamp(m.hp / m.maxhp, 0, 1), 5);
   label(c, 'Lv.' + m.lv + ' ' + m.name, m.x, y - 9, m.tier === 2 ? '#e0a0ff' : m.tier === 1 ? '#ffd45e' : m.boss ? '#ffb070' : m.lv > P.lv + 4 ? '#ff7b7b' : '#fff', m.boss || m.tier ? 13 : 11);
   if (m.aff && m.aff.length) label(c, m.aff.map(k => AFF[k].n).join(' · '), m.x, y - 23, '#ffb070', 9);
+  if (m.dummy) label(c, 'DPS ' + fmt((m.dlog || []).filter(x => T - x[0] < 5).reduce((a, x) => a + x[1], 0) / 5), m.x, y - 23, '#ffd27a', 11);
   if (P.target === m) { c.save(); c.strokeStyle = '#ff5a5a'; c.lineWidth = 2; c.setLineDash([6, 5]); c.lineDashOffset = -T * 20; c.beginPath(); c.ellipse(m.x, m.y, m.r * 1.3, m.r * .55, 0, 0, TAU); c.stroke(); c.restore(); }
 }
 function drawDrop(c, d) {
@@ -2840,14 +2984,62 @@ function cloudFx(x, y, life) {
     c.restore(); glow(c, x, y - 320, 130, '#b8c8ff', a * (Math.random() < .25 ? .5 : .1)); });
 }
 const FSTYLE = { kiem: { col: '#bff3ff', st: 'sliver' }, phap: { col: '#bfe6ff', st: 'sliver' }, the: { col: '#ffd35a', st: 'dust' }, dan: { col: '#9dffc0', st: 'leaf' } };
+function glyphDraw(c, seed, sz) {
+  const r = mulberry(seed * 7919 + 13), n = 3 + Math.floor(r() * 3); c.beginPath();
+  for (let i = 0; i < n; i++) { const k = Math.floor(r() * 4), x0 = (r() - .5) * sz, y0 = (r() - .5) * sz, x1 = (r() - .5) * sz, y1 = (r() - .5) * sz;
+    if (k === 0) { c.moveTo(-sz / 2, y0); c.lineTo(sz / 2, y0); } else if (k === 1) { c.moveTo(x0, -sz / 2); c.lineTo(x0, sz / 2); } else if (k === 2) { c.moveTo(x0, y0); c.lineTo(x1, y1); } else { c.moveTo(x0, y0); c.quadraticCurveTo(x1, y0, x1, y1); } }
+  c.stroke();
+}
+function baguaDraw(c, R, t, col, a) {
+  c.save(); c.globalCompositeOperation = 'lighter'; c.strokeStyle = col; c.fillStyle = col; c.globalAlpha = a * .85;
+  for (const [k, w] of [[1, 2.2], [.93, 1], [.66, 1], [.36, 1]]) { c.lineWidth = w; c.beginPath(); c.arc(0, 0, R * k, 0, TAU); c.stroke(); }
+  c.save(); c.rotate(t * .25); c.lineWidth = 2.2;
+  for (let i = 0; i < 8; i++) { c.save(); c.rotate(i / 8 * TAU); c.translate(0, -R * .8); for (let l = 0; l < 3; l++) { const y = (l - 1) * R * .05; c.beginPath(); if (((i >> l) & 1) === 1) { c.moveTo(-R * .09, y); c.lineTo(-R * .02, y); c.moveTo(R * .02, y); c.lineTo(R * .09, y); } else { c.moveTo(-R * .09, y); c.lineTo(R * .09, y); } c.stroke(); } c.restore(); }
+  c.restore(); c.save(); c.rotate(-t * .4); c.lineWidth = 1.1;
+  for (let i = 0; i < 16; i++) { c.save(); c.rotate(i / 16 * TAU); c.translate(0, -R * .5); glyphDraw(c, i + 3, R * .075); c.restore(); }
+  c.restore(); c.save(); c.rotate(t); c.beginPath(); c.arc(0, 0, R * .18, Math.PI / 2, Math.PI * 1.5); c.fill(); c.beginPath(); c.arc(0, 0, R * .18, -Math.PI / 2, Math.PI / 2); c.stroke(); c.restore();
+  c.restore();
+}
+function groundArrayFx(x, y, R, col, life, o) { addFx(life, (c, k) => { const a = k < .15 ? k / .15 : k > .75 ? (1 - k) / .25 : 1, fl = o && o.follow; c.save(); c.translate(fl ? P.x : x, (fl ? P.y : y) + 2); c.scale(1, .42); baguaDraw(c, R, T, col, a); c.restore(); }); }
+function skyArrayFx(x, y, R, col, life) {
+  if (QN === 'low') return;
+  addFx(life, (c, k) => { const a = k < .2 ? k / .2 : k > .75 ? (1 - k) / .25 : 1, cy = y - 240; c.save(); c.translate(x, cy); baguaDraw(c, R, T, col, a); c.restore();
+    c.save(); c.globalCompositeOperation = 'lighter'; const g = c.createLinearGradient(0, cy, 0, y); g.addColorStop(0, hexA(col, .22 * a)); g.addColorStop(1, hexA(col, 0)); c.fillStyle = g; c.beginPath(); c.moveTo(x - R * .9, cy); c.lineTo(x + R * .9, cy); c.lineTo(x + R * .5, y); c.lineTo(x - R * .5, y); c.closePath(); c.fill(); c.restore(); });
+}
+function talismanFx(x0, y0, x1, y1, dur, col, hit) {
+  const cx = (x0 + x1) / 2 + rnd(-50, 50), cy = Math.min(y0, y1) - rnd(30, 80);
+  addFx(dur, (c, k) => { const u = 1 - k, x = u * u * x0 + 2 * u * k * cx + k * k * x1, y = u * u * y0 + 2 * u * k * cy + k * k * y1; c.save(); c.translate(x, y); c.rotate(k * 9); glow(c, 0, 0, 22, col, .5); c.fillStyle = '#f6e6a8'; c.fillRect(-6, -13, 12, 26); c.strokeStyle = '#c8302a'; c.lineWidth = 1.2; c.strokeRect(-6, -13, 12, 26); glyphDraw(c, Math.floor(k * 5) + 2, 14); c.restore(); },
+    () => { burst(x1, y1, col, 10, 130, .4, 3); ringFx(x1, y1, 4, 44, .3, col, 3); if (hit) hit(x1, y1); });
+}
+function crescentFx(x, y, ang, len, col) { addFx(.4, (c, k) => { c.save(); c.translate(x, y); c.rotate(ang); c.globalCompositeOperation = 'lighter'; c.lineCap = 'round'; const e = 1 - Math.pow(1 - k, 2), a = 1 - k; for (const [w, cc] of [[22, hexA(col, .3)], [9, hexA(col, .7)], [3, '#ffffff']]) { c.globalAlpha = a; c.strokeStyle = cc; c.lineWidth = w * (1 - k * .5); c.beginPath(); c.arc(-len * .4, 0, len * (.7 + e * .5), -.75, .75); c.stroke(); } c.restore(); }); }
+function inkDecal(x, y, r) { decals.push({ x, y, r, col: '#000000', type: 'ink', t: 0, life: 6 }); if (decals.length > 36) decals.shift(); }
+function glyphRainFx(x, y, R, col, n, life) {
+  if (QN === 'low') return; const it = Array.from({ length: n }, () => ({ ox: rnd(-R, R), oy: rnd(-R * .5, R * .5), d: rnd(0, .6), v: rnd(.7, 1.3), s: Math.floor(rnd(1, 90)) }));
+  addFx(life, (c, k) => { c.save(); c.globalCompositeOperation = 'lighter'; c.strokeStyle = col; c.lineWidth = 1.4; for (const p of it) { const kk = clamp((k * life - p.d) / (life * .55), 0, 1); if (kk <= 0 || kk >= 1) continue; c.globalAlpha = Math.sin(kk * Math.PI) * .9; c.save(); c.translate(x + p.ox, y + p.oy - 240 * (1 - kk) * p.v); glyphDraw(c, p.s, 16); c.restore(); } c.restore(); });
+}
+function drawGoldenBell(c, x, y, t) {
+  const R = 46, H = 100; c.save(); c.translate(x, y); glow(c, 0, -H * .5, 70, '#ffd35a', .35 + .08 * Math.sin(t * 5));
+  const g = c.createLinearGradient(-R, 0, R, 0); g.addColorStop(0, 'rgba(255,200,80,.28)'); g.addColorStop(.5, 'rgba(255,240,170,.1)'); g.addColorStop(1, 'rgba(255,200,80,.28)');
+  c.fillStyle = g; c.beginPath(); c.moveTo(-R, 2); c.bezierCurveTo(-R, -H * .55, -R * .5, -H, 0, -H); c.bezierCurveTo(R * .5, -H, R, -H * .55, R, 2); c.closePath(); c.fill();
+  c.strokeStyle = hexA('#ffd35a', .9); c.lineWidth = 2.6; c.stroke(); c.beginPath(); c.ellipse(0, 2, R, R * .22, 0, 0, TAU); c.stroke();
+  c.lineWidth = 1.2; c.strokeStyle = hexA('#ffe9a0', .7); for (const k of [-.5, 0, .5]) { c.beginPath(); c.moveTo(k * R * .9, 0); c.quadraticCurveTo(k * R * 1.1, -H * .55, k * R * .3, -H * .95); c.stroke(); }
+  c.globalCompositeOperation = 'lighter'; c.strokeStyle = hexA('#fff2b0', .75); c.lineWidth = 1.2; for (let r = 0; r < 2; r++) for (let i = 0; i < 5; i++) { c.save(); c.translate((i - 2) * R * .36, -H * (.28 + r * .28)); glyphDraw(c, i + r * 7 + 11, 11); c.restore(); }
+  c.fillStyle = hexA('#ffd35a', .9); c.beginPath(); c.ellipse(0, -H, 6, 4, 0, 0, TAU); c.fill(); c.restore();
+}
 function skillFlair(i, a) {
   const f = FSTYLE[P.cls], col = auraColor(P.cls, P.fx.style), c0 = f.col;
-  convergeFx(col, 8 + i * 3, 70 + i * 8, .35);
+  if (i < 3) txt(P.x, P.y - 88, SKILL_META[P.cls][i].n, col, false);
+  if (!FXC()) convergeFx(col, 8 + i * 3, 70 + i * 8, .35);
+  groundArrayFx(P.x, P.y, 46 + i * 16, col, .8 + i * .18, { follow: true });
+  if (i >= 2) skyArrayFx(a.x, a.y, 64 + i * 14, col, 1.1 + i * .2);
+  if (P.cls === 'phap' && i >= 1) for (let k = 0; k < (FXC() ? 2 : 2 + Math.min(3, i)); k++) talismanFx(P.x + P.face * 10, P.y - 42, a.x + rnd(-50, 50), a.y - 16, .32 + k * .07, '#ffe27a');
+  if (P.cls === 'kiem' && i >= 2) { inkDecal(a.x, a.y, 70 + i * 14); crescentFx(a.x, a.y - 20, a.ang, 110 + i * 14, col); }
+  if (i >= 3 && !FXC()) glyphRainFx(a.x, a.y, 150 + i * 18, col, 26 + i * 4, 1.8);
   if (i === 0) burst(P.x + Math.cos(a.ang) * 30, P.y - 24 + Math.sin(a.ang) * 30, c0, 8, 180, .4, 3);
   if (i === 1) { ringFx(P.x, P.y, 6, 70, .5, c0, 3); spiralFx(c0, .9); }
-  if (i === 2) { rainFx(a.x, a.y, 150, c0, f.st, 34, 1.4); G.sfc = c0; G.sfa = Math.max(G.sfa || 0, .12); }
-  if (i === 3) { cloudFx(a.x, a.y, 1.3); rainFx(a.x, a.y, 190, c0, f.st, 50, 1.6); ringFx(P.x, P.y, 10, 200, .8, c0, 5); }
-  if (i >= 4) { rainFx(P.x, P.y, 280, c0, f.st, 80, 2.2); ringFx(P.x, P.y, 10, 280, 1, col, 8); ringFx(P.x, P.y, 10, 190, .8, '#ffffff', 4); pillarFx(P.x, P.y, col, 1.2, 40, 520); }
+  if (i === 2) { rainFx(a.x, a.y, 150, c0, f.st, FXC() ? 16 : 34, 1.4); G.sfc = c0; G.sfa = Math.max(G.sfa || 0, .12); }
+  if (i === 3) { cloudFx(a.x, a.y, 1.3); rainFx(a.x, a.y, 190, c0, f.st, FXC() ? 22 : 50, 1.6); ringFx(P.x, P.y, 10, 200, .8, c0, 5); }
+  if (i >= 4) { rainFx(P.x, P.y, 280, c0, f.st, FXC() ? 32 : 80, 2.2); ringFx(P.x, P.y, 10, 280, 1, col, 8); ringFx(P.x, P.y, 10, 190, .8, '#ffffff', 4); pillarFx(P.x, P.y, col, 1.2, 40, 520); }
   G.aboost = i >= 3 ? 1.6 : .8; classSig(i, a);
 }
 function cinematic(i, sk) { if (i >= 3) G.cin = { t: 0, life: i >= 4 ? 1.1 : .55, col: auraColor(P.cls, P.fx.style), name: sk.n, bars: i >= 4 }; }
@@ -2857,8 +3049,7 @@ function drawCinematic(c) {
   for (let i = 0; i < 44; i++) { const ang = (i * 2.399 + m * .31) % TAU, r0 = Math.min(W, H) * (.28 + ((i * 7 + m) % 5) * .03), r1 = Math.hypot(W, H) * .55; c.globalAlpha = a * .45; c.lineWidth = 1 + (i % 3); c.beginPath(); c.moveTo(Math.cos(ang) * r0, Math.sin(ang) * r0); c.lineTo(Math.cos(ang) * r1, Math.sin(ang) * r1); c.stroke(); }
   c.restore();
   if (ci.bars) {
-    const bh = H * .1 * a; c.fillStyle = '#000'; c.fillRect(0, 0, W, bh); c.fillRect(0, H - bh, W, bh);
-    c.save(); c.translate(W / 2, H * .36); c.scale(1 + (1 - a) * .3, 1 + (1 - a) * .3); c.globalAlpha = a; c.font = `700 ${Math.round(Math.min(W, H) * .075)}px "Noto Serif",serif`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineJoin = 'round'; c.lineWidth = 6; c.strokeStyle = 'rgba(0,0,0,.8)'; c.strokeText(ci.name, 0, 0); c.fillStyle = '#ffffff'; c.shadowColor = ci.col; c.shadowBlur = 24; c.fillText(ci.name, 0, 0); c.restore();
+        c.save(); c.translate(W / 2, H * .36); c.scale(1 + (1 - a) * .3, 1 + (1 - a) * .3); c.globalAlpha = a; c.font = `700 ${Math.round(Math.min(W, H) * .075)}px "Noto Serif",serif`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineJoin = 'round'; c.lineWidth = 6; c.strokeStyle = 'rgba(0,0,0,.8)'; c.strokeText(ci.name, 0, 0); c.fillStyle = '#ffffff'; c.shadowColor = ci.col; c.shadowBlur = 24; c.fillText(ci.name, 0, 0); c.restore();
   }
 }
 function drawComboHud(c) {
@@ -2884,7 +3075,7 @@ function fxUpdate(dt) {
 }
 function drawPlayer(c) {
   const o = playerLook();
-  if (P.buf.shield) { glow(c, P.x, P.y - 26, 52, '#ffd35a', .45); c.save(); c.strokeStyle = hexA('#ffd35a', .7 + Math.sin(T * 6) * .2); c.lineWidth = 2.5; c.beginPath(); c.arc(P.x, P.y - 26, 40, 0, TAU); c.stroke(); c.restore(); }
+  if (P.buf.shield) drawGoldenBell(c, P.x, P.y, T);
   if (P.buf.vajra) glow(c, P.x, P.y - 40, 90, '#ffd35a', .5 + .1 * Math.sin(T * 6));
   if (P.buf.kim) { c.save(); c.translate(P.x, P.y - 4); c.globalCompositeOperation = 'lighter'; c.rotate(T * .8); for (let i = 0; i < 8; i++) { c.rotate(TAU / 8); c.fillStyle = hexA('#ffd36a', .5); c.beginPath(); c.ellipse(0, -48, 9, 22, 0, 0, TAU); c.fill(); } c.restore(); glow(c, P.x, P.y - 26, 70, '#ffd35a', .45); o.aura = { col: '#ffd35a', r: 46 }; }
   if (P.riding && mnt) { mnt.x = P.x; mnt.y = P.y; mnt.face = P.face; drawMonster(c, mnt, T); }
@@ -3026,7 +3217,7 @@ const dayPhase = () => ((T + DAYLEN * .2) % DAYLEN) / DAYLEN;
 const nightAmt = () => { const p = dayPhase(); return sm(.52, .64, p) * (1 - sm(.9, 1, p)); };
 const ZAMB = { P: .3, X: .32, T: .28, V: 0, W: 0, E: .05, N: 0, S: .3, A: .04, B: .14, C: .36, D: 0 };
 function updateAmbient(dt) {
-  const target = Math.max(nightAmt(), ZAMB[G.zone] || 0); G.amb += (target - G.amb) * Math.min(1, dt * .8);
+  const dk = SET.dark === 'real' ? 1 : SET.dark === 'soft' ? .35 : 0, target = Math.max(nightAmt(), ZAMB[G.zone] || 0) * dk; G.amb += (target - G.amb) * Math.min(1, dt * .8);
   G.flash = Math.max(0, G.flash - dt * 2.5); G.lt -= dt;
   if (G.lt <= 0) {
     G.lt = rnd(5, 11);
@@ -3152,7 +3343,7 @@ function updateTower(dt) {
   else if (tw.state === 'clear') { tw.t -= dt; if (tw.t <= 0) { tw.floor++; tw.state = 'prep'; tw.t = 1.5; } }
 }
 function drawFloor(c, t, X0, Y0, R, col) {
-  c.save(); c.fillStyle = '#14101e'; c.beginPath(); c.arc(X0, Y0, R, 0, TAU); c.fill();
+  c.save(); c.fillStyle = '#2a2446'; c.beginPath(); c.arc(X0, Y0, R, 0, TAU); c.fill();
   const g = c.createRadialGradient(X0, Y0, 20, X0, Y0, R); g.addColorStop(0, hexA(col, .3)); g.addColorStop(1, hexA(col, 0)); c.fillStyle = g; c.beginPath(); c.arc(X0, Y0, R, 0, TAU); c.fill();
   c.strokeStyle = hexA(col, .5); c.lineWidth = 2; for (const k of [.35, .65, .92]) { c.beginPath(); c.arc(X0, Y0, R * k, 0, TAU); c.stroke(); }
   c.translate(X0, Y0); c.rotate(t * .08); c.globalCompositeOperation = 'lighter'; c.strokeStyle = hexA(col, .5 + .2 * Math.sin(t * 2)); c.lineWidth = 2;
@@ -3167,6 +3358,33 @@ const DG_N = ['Thường', 'Khó', 'Ác Mộng'], DG_REQ = [30, 50, 80], DG_LV =
 MT.bdg = { n: 'Cửu Long Mộ Chủ', z: 'P', dg: 1, lv: [60, 60], boss: 1, hpM: 6, atkM: 1.3, spd: 100, r: 44, aggro: 320, ranged: 1, look: { body: '#3c3c52', belly: '#9a9ab8', ear: 'none', horn: 1, wings: 1, wing: '#2a2a3a', eye: '#ff6a3a', fangs: 1, crown: 1, tails: 1, tail: '#3c3c52', flame: 1 } };
 MON_EL.bdg = 'am'; MABIL.bdg = ['breath', 'slam', 'summon', 'thunder', 'curse'];
 BLOOK.bdg = { a: 'snake', dragon: 1, r: 44, boss: 1, aura: '#ffd45e', body: '#3c3c52', belly: '#9a9ab8', mane: '#ffd45e', mark: '#ffd45e', eye: '#ff6a3a', rise: 1.5, crown: 1, decor: 'gold', pearl: '#ffd45e', wings: 1, wing: '#2a2a3a', wing2: '#4a4a62', fly: 0 };
+/* =====================================================================
+   THANH VÂN TÔNG: Tàng Kinh Các, Kho, Mộc Nhân Trang, Linh Tuyền
+   ===================================================================== */
+MT.dummy = { n: 'Mộc Nhân Trang', z: 'V', dg: 1, hid: 1, lv: [30, 30], hpM: 50, atkM: 0, spd: 0, r: 24, aggro: 0, look: { body: '#9a7040', belly: '#b88a50', ear: 'none', eye: '#fff2c0' } };
+MON_EL.dummy = 'kim'; MABIL.dummy = []; BLOOK.dummy = { a: 'golem', r: 24, body: '#9a7040', crack: '#d6b050', eye: '#fff2c0' };
+function openLibrary(msg) {
+  const al = P.alloc || {}, used = (al.hp || 0) + (al.mp || 0) + (al.atk || 0) + (al.def || 0), cost = P.lv * 200, d = dayNum(); if (!P.study || P.study.day !== d) P.study = { day: d, n: 0 };
+  const sc = P.lv * 400, left = Math.max(0, 3 - P.study.n), ex = Math.round(expNeed(P.lv) * .08);
+  const body = (msg ? '<b style="color:#7dffc8">' + msg + '</b><br>' : '') + 'Tàng Kinh Các lưu giữ kinh thư của tông môn.<br><b>Tẩy Tủy:</b> hoàn lại toàn bộ điểm tiềm năng đã cộng (' + used + ' điểm) để cộng lại từ đầu. Phí <b style="color:#ffd27a">' + fmt(cost) + '</b> 💰.<br><b>Tham Ngộ:</b> đọc kinh thư nhận <b>' + fmt(ex) + '</b> Tu Vi (8% cấp hiện tại). Phí <b style="color:#ffd27a">' + fmt(sc) + '</b> 💰, hôm nay còn <b>' + left + '/3</b> lần.<br>Linh Thạch: <b style="color:#ffd27a">' + fmt(P.gold) + '</b>';
+  dialog('Tàng Kinh Trưởng Lão', body, [
+    { t: 'Tẩy Tủy', dis: !used || P.gold < cost, fn: () => { P.gold -= cost; P.pts += used; P.alloc = { hp: 0, mp: 0, atk: 0, def: 0 }; recalc(); save(); openLibrary('Đã hoàn lại ' + used + ' điểm tiềm năng'); } },
+    { t: 'Tham Ngộ', pri: 1, dis: left <= 0 || P.gold < sc || P.lv >= MAXLV, fn: () => { P.gold -= sc; P.study.n++; gainExp(ex); save(); openLibrary('Cảm ngộ được ' + fmt(ex) + ' Tu Vi'); } },
+    { t: 'Đóng', fn: closePanel }]);
+}
+function openBank() { G.panel = 'bank'; $('#panel').hidden = false; renderBank(); }
+function renderBank() {
+  P.bank = P.bank || [];
+  const cell = (it, act, i) => `<button class="slot" data-act="${act}" data-i="${i}" style="border-color:${RAR[it.rar].c}"><img class="ico" alt="" src="${itemIcon(it)}"><small style="color:${RAR[it.rar].c}">Lv${it.lv}${it.plus ? ' +' + it.plus : ''}${it.lock ? ' 🔒' : ''}</small></button>`;
+  let h = `<div class="ph"><b>📦 Kho Tông Môn</b><button class="x" data-act="close" aria-label="Đóng">✕</button></div>`;
+  h += `<div class="stats">Hành trang (${P.inv.length}/30): chạm món để cất vào kho</div><div class="grid">${P.inv.map((it, i) => cell(it, 'bkdep', i)).join('') || '<span style="color:var(--dim)">Trống</span>'}</div>`;
+  h += `<div class="stats">Kho tông môn (${P.bank.length}/40): chạm món để lấy ra</div><div class="grid">${P.bank.map((it, i) => cell(it, 'bkwd', i)).join('') || '<span style="color:var(--dim)">Trống</span>'}</div>`;
+  $('#panel').innerHTML = h;
+}
+function springTick(dt) {
+  if (G.map !== 'V' || !P || P.dead) return; const dx = P.x - (CX - 230), dy = (P.y - (CY + 270)) / .55;
+  if (dx * dx + dy * dy < 100 * 100) { if (P.hp < P.maxhp || P.mp < P.maxmp) { P.hp = Math.min(P.maxhp, P.hp + P.maxhp * .08 * dt); P.mp = Math.min(P.maxmp, P.mp + P.maxmp * .08 * dt); if (Math.random() < .3) P_(P.x + rnd(-14, 14), P.y - rnd(0, 18), rnd(-6, 6), rnd(-50, -20), .9, 3, '#9ff0ff'); if (!G.springT || T - G.springT > 6) { G.springT = T; txt(P.x, P.y - 90, 'Linh Tuyền hồi phục', '#9ff0ff'); } } }
+}
 function dgRegister() {
   DT.dg = { t: 'Hoàn thành 1 phó bản', need: 1, r: { tok: 5, sh: 20 } };
   ACH.push({ id: 'dg3', n: 'Mộ Chủ Khắc Tinh', d: 'Hoàn thành phó bản 5 lần', ok: () => (P.dgClear || [0, 0, 0]).reduce((a, b) => a + b, 0) >= 5, r: { tok: 20, sh: 80 } }, { id: 'dgn', n: 'Ác Mộng Chung Kết', d: 'Hoàn thành phó bản độ khó Ác Mộng', ok: () => ((P.dgClear || [0, 0, 0])[2] || 0) >= 1, r: { tok: 30, sh: 150 } });
@@ -3228,9 +3446,53 @@ function dgFinish(D) {
   banner('Hoàn thành phó bản', DG_N[d] + ' · ' + tm + ' giây');
   dialog('Cửu Long Cổ Mộ: hoàn thành', `Độ khó <b style="color:${DG_COL[d]}">${DG_N[d]}</b> · thời gian <b>${tm}s</b>${first ? ' · <span class="up">lần đầu hoàn thành!</span>' : ''}<br>Nhận: +${fmt(e)} Tu Vi, +${fmt(gold)} 💰, +${tok} 🏆, +${sh} 💠<div class="sep"></div>` + (items.length ? items.map(it => `<span style="color:${RAR[it.rar].c}">${esc(it.name)}</span> (${RAR[it.rar].n})`).join('<br>') : 'Hành trang đầy, không nhận được trang bị.'), [{ t: 'Rời phó bản', pri: 1, fn: () => { closePanel(); travelTo('V'); } }, { t: 'Ở lại', fn: closePanel }]);
 }
+function plaque(c, text, w) { c.save(); c.fillStyle = '#7a1f1f'; c.fillRect(-w / 2, -8, w, 15); c.strokeStyle = '#e8c860'; c.lineWidth = 1.4; c.strokeRect(-w / 2, -8, w, 15); c.fillStyle = '#ffe9a0'; c.font = 'bold 9px "Noto Serif",serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(text, 0, 0); c.restore(); }
+function roofArt(c, w, y, h, col) {
+  c.fillStyle = col; c.beginPath(); c.moveTo(-w / 2 - 20, y + 4); c.quadraticCurveTo(-w / 2 - 6, y - 2, -w / 2 + 8, y - h * .25); c.lineTo(-w * .12, y - h); c.lineTo(w * .12, y - h); c.lineTo(w / 2 - 8, y - h * .25); c.quadraticCurveTo(w / 2 + 6, y - 2, w / 2 + 20, y + 4); c.quadraticCurveTo(0, y + 14, -w / 2 - 20, y + 4); c.closePath(); c.fill(); c.strokeStyle = 'rgba(0,0,0,.3)'; c.lineWidth = 2; c.stroke();
+  c.strokeStyle = 'rgba(255,255,255,.18)'; c.lineWidth = 1; for (let i = 1; i < 6; i++) { c.beginPath(); c.moveTo(-w / 2 + i * w / 6 - 10, y); c.lineTo(-w * .12 + i * w * .24 / 6, y - h); c.stroke(); }
+  c.fillStyle = '#e8c860'; c.fillRect(-w * .12, y - h - 5, w * .24, 6); for (const sg of [-1, 1]) { c.beginPath(); c.arc(sg * w * .12, y - h - 7, 3, 0, TAU); c.fill(); }
+}
+function buildingArt(c, d, w, stories) {
+  const col = d.col || '#2f6a6a', wallH = 46; c.fillStyle = '#b8b2a0'; c.fillRect(-w / 2 - 10, -8, w + 20, 10); c.fillStyle = '#9a9484'; c.fillRect(-w / 2 - 10, -2, w + 20, 4);
+  let y = -8;
+  for (let st = 0; st < stories; st++) {
+    const ww = w * (1 - st * .22), n = Math.max(3, Math.round(ww / 34));
+    c.fillStyle = '#efe3c8'; c.fillRect(-ww / 2, y - wallH, ww, wallH);
+    for (let i = 1; i < n; i++) { const px = -ww / 2 + i * (ww - 7) / n; if (st === 0 && Math.abs(px + 3) < 22) continue; c.fillStyle = '#7ec8d8'; c.fillRect(px + 9, y - 34, Math.max(8, Math.min(18, (ww - 7) / n - 14)), 18); }
+    c.fillStyle = '#7a1f1f'; for (let i = 0; i <= n; i++) c.fillRect(-ww / 2 + i * (ww - 7) / n, y - wallH, 7, wallH); c.fillRect(-ww / 2, y - wallH, ww, 6);
+    if (st === 0) { c.fillStyle = '#4a2a14'; c.fillRect(-12, y - 34, 24, 34); c.fillStyle = '#e8c860'; c.fillRect(-1, y - 34, 2, 34); }
+    roofArt(c, ww, y - wallH + 2, 34, col); y = y - wallH - 22;
+  }
+  return y;
+}
+function drawBuilding(c, d, t) {
+  const k = d.k; c.save();
+  if (k === 'sect') { const w = d.w || 110; c.fillStyle = 'rgba(0,0,0,.26)'; c.beginPath(); c.ellipse(0, 0, w * .62, 14, 0, 0, TAU); c.fill(); buildingArt(c, d, w, d.st || 1); glow(c, -w / 2 - 6, -34, 28, '#ff9a4a', .35); glow(c, w / 2 + 6, -34, 28, '#ff9a4a', .35); c.save(); c.translate(0, -44); plaque(c, d.t || '', Math.max(58, (d.t || '').length * 6.4 + 12)); c.restore(); }
+  else if (k === 'hall') {
+    c.fillStyle = 'rgba(0,0,0,.28)'; c.beginPath(); c.ellipse(0, 0, 190, 22, 0, 0, TAU); c.fill();
+    for (let i = 0; i < 4; i++) { c.fillStyle = i % 2 ? '#c8c2ae' : '#d8d2bc'; c.fillRect(-150 + i * 8, -i * 8 - 2, 300 - i * 16, 9); }
+    c.save(); c.translate(0, -30); buildingArt(c, { col: d.col }, 230, 2); c.restore();
+    c.save(); c.translate(0, -62); plaque(c, d.t || '', 104); c.restore(); glow(c, -118, -62, 34, '#ff9a4a', .4); glow(c, 118, -62, 34, '#ff9a4a', .4);
+    for (const sg of [-1, 1]) { c.fillStyle = '#7a1f1f'; c.fillRect(sg * 158 - 2, -140, 4, 120); const sw = Math.sin(t * 2 + sg) * 6; c.fillStyle = '#2f6a6a'; c.beginPath(); c.moveTo(sg * 158, -138); c.quadraticCurveTo(sg * 158 + sg * 22 + sw, -126, sg * 158 + sg * 36 + sw, -104); c.lineTo(sg * 158, -104); c.closePath(); c.fill(); c.fillStyle = '#ffe9a0'; c.fillRect(sg * 158 + sg * 8 - 2, -124, 4, 10); }
+  } else if (k === 'gate') {
+    c.fillStyle = 'rgba(0,0,0,.26)'; c.beginPath(); c.ellipse(0, 0, 110, 14, 0, 0, TAU); c.fill();
+    for (const sg of [-1, 1]) { c.fillStyle = '#b8b2a0'; c.fillRect(sg * 70 - 14, -14, 28, 14); c.fillStyle = '#7a1f1f'; c.fillRect(sg * 70 - 8, -104, 16, 92); c.fillStyle = '#e8c860'; c.fillRect(sg * 70 - 9, -104, 18, 5); glow(c, sg * 70, -64, 26, '#ff9a4a', .3); }
+    c.fillStyle = '#7a1f1f'; c.fillRect(-84, -112, 168, 14); c.fillStyle = '#e8c860'; c.fillRect(-84, -113, 168, 3); roofArt(c, 190, -108, 30, d.col || '#2f6a6a'); c.save(); c.translate(0, -105); plaque(c, d.t || '', 110); c.restore();
+  } else if (k === 'statue') {
+    c.fillStyle = 'rgba(0,0,0,.26)'; c.beginPath(); c.ellipse(0, 0, 36, 9, 0, 0, TAU); c.fill(); c.fillStyle = '#b8b2a0'; c.fillRect(-26, -16, 52, 16); c.fillStyle = '#9a9484'; c.fillRect(-20, -26, 40, 10);
+    c.fillStyle = '#d8d4c8'; c.beginPath(); c.moveTo(-14, -26); c.quadraticCurveTo(-18, -60, -8, -80); c.lineTo(8, -80); c.quadraticCurveTo(18, -60, 14, -26); c.closePath(); c.fill(); c.strokeStyle = 'rgba(0,0,0,.35)'; c.lineWidth = 1.4; c.stroke(); c.beginPath(); c.arc(0, -90, 10, 0, TAU); c.fill(); c.stroke();
+    c.strokeStyle = '#eef6ff'; c.lineWidth = 3; c.beginPath(); c.moveTo(16, -40); c.lineTo(34, -112); c.stroke(); glow(c, 28, -90, 30, '#9fe8ff', .4 + .1 * Math.sin(t * 3)); glow(c, 0, -60, 46, '#9fe8ff', .12);
+  } else if (k === 'incense') {
+    c.fillStyle = 'rgba(0,0,0,.26)'; c.beginPath(); c.ellipse(0, 0, 26, 7, 0, 0, TAU); c.fill(); c.fillStyle = '#8a5a2b'; for (const sx of [-12, 0, 12]) c.fillRect(sx - 3, -10, 6, 12); c.fillStyle = '#a8742f'; c.beginPath(); c.ellipse(0, -22, 20, 15, 0, 0, TAU); c.fill(); c.fillStyle = '#6a4420'; c.beginPath(); c.ellipse(0, -34, 21, 6, 0, 0, TAU); c.fill(); glow(c, 0, -36, 16, '#ff8a3a', .5);
+    for (let i = 0; i < 4; i++) { const h = (t * .4 + i / 4) % 1; c.fillStyle = 'rgba(220,230,240,' + (.4 * (1 - h)) + ')'; c.beginPath(); c.arc(Math.sin(h * 5 + i) * 7, -38 - h * 46, 4 + h * 7, 0, TAU); c.fill(); }
+  } else if (k === 'flag') {
+    c.fillStyle = '#7a1f1f'; c.fillRect(-2, -100, 4, 100); const sw = Math.sin(t * 2 + d.x) * 5; c.fillStyle = d.col || '#2f6a6a'; c.beginPath(); c.moveTo(2, -98); c.quadraticCurveTo(20 + sw, -88, 34 + sw, -66); c.lineTo(2, -66); c.closePath(); c.fill(); c.fillStyle = '#ffe9a0'; c.fillRect(12 + sw * .6, -90, 4, 16);
+  }
+  c.restore();
+}
 function drawTowerFloor(c, t) {
   c.save(); const R = 340;
-  c.fillStyle = '#1e1a2c'; c.beginPath(); c.arc(TX, TY, R, 0, TAU); c.fill();
+  c.fillStyle = '#2c2648'; c.beginPath(); c.arc(TX, TY, R, 0, TAU); c.fill();
   const g = c.createRadialGradient(TX, TY, 20, TX, TY, R); g.addColorStop(0, 'rgba(120,90,200,.35)'); g.addColorStop(1, 'rgba(40,30,70,0)'); c.fillStyle = g; c.beginPath(); c.arc(TX, TY, R, 0, TAU); c.fill();
   c.strokeStyle = 'rgba(160,130,230,.55)'; c.lineWidth = 2; for (const r of [120, 220, 310]) { c.beginPath(); c.arc(TX, TY, r, 0, TAU); c.stroke(); }
   c.translate(TX, TY); c.rotate(t * .1); c.globalCompositeOperation = 'lighter'; c.strokeStyle = hexA('#b08aff', .5 + .2 * Math.sin(t * 2)); c.lineWidth = 2;
@@ -3332,10 +3594,23 @@ function renderSettings() {
     + row('Chất lượng đồ họa', 'Tự động sẽ giảm hiệu ứng khi máy yếu. Đang dùng: ' + Q_NAMES[QN], 'q', Q_NAMES[SET.q])
     + row('Âm thanh hiệu ứng', 'Tiếng đánh, chiêu thức, nhặt đồ', 'sfx', SET.sfx ? 'Bật' : 'Tắt') + row('Nhạc nền', 'Giai điệu theo từng bản đồ', 'music', SET.music ? 'Bật' : 'Tắt')
     + row('Âm lượng', 'Bấm để tăng, hết mức thì quay về nhỏ', 'vol', Math.round(SET.vol * 100) + '%') + row('Rung màn hình', 'Khi dùng tuyệt chiêu', 'shake', SET.shake ? 'Bật' : 'Tắt')
+    + row('Giao diện', 'Đầy đủ, Gọn (mặc định) hoặc Tối giản cho màn hình thoáng', 'ui', { full: 'Đầy đủ', compact: 'Gọn', mini: 'Tối giản' }[SET.ui]) + row('Mức hiệu ứng kỹ năng', 'Rõ ràng: bớt hạt và lớp phủ, nhìn chiêu thức dễ hơn', 'fx', { clear: 'Rõ ràng', full: 'Đầy đủ' }[SET.fx]) + row('Hiệu ứng làm tối màn hình', 'Ban đêm, hang tối, vùng u ám. Mặc định Tắt để màn hình luôn rõ', 'dark', { off: 'Tắt', soft: 'Nhẹ', real: 'Thật' }[SET.dark]) + row('Toàn màn hình, xoay ngang', 'Chơi rộng rãi hơn trên điện thoại', 'land', 'Bật')
     + row('Hiện số sát thương', 'Số bay trên đầu quái', 'dmgnum', SET.dmgnum ? 'Bật' : 'Tắt') + row('Cần điều khiển ảo', 'Dành cho điện thoại', 'joy', JOY_NAMES[SET.joy]);
+}
+function applyUI() {
+  const h = $('#hud'); if (!h) return; h.classList.toggle('ui-compact', SET.ui === 'compact'); h.classList.toggle('ui-mini', SET.ui === 'mini');
+  if (SET.ui === 'full') $('#menu').classList.remove('open');
+}
+function goLandscape() {
+  const hint = () => toast('Hãy xoay ngang điện thoại để chơi rộng rãi hơn');
+  try { const el = document.documentElement, p = el.requestFullscreen ? el.requestFullscreen() : null; Promise.resolve(p).then(() => { try { if (screen.orientation && screen.orientation.lock) return screen.orientation.lock('landscape'); } catch (e) { /* bỏ qua */ } }).catch(hint); } catch (e) { hint(); }
 }
 function setAct(k) {
   if (k === 'q') { const o = ['auto', 'high', 'mid', 'low']; SET.q = o[(o.indexOf(SET.q) + 1) % 4]; applyQuality(SET.q === 'auto' ? initialQ() : SET.q); }
+  else if (k === 'ui') { SET.ui = { full: 'compact', compact: 'mini', mini: 'full' }[SET.ui] || 'compact'; applyUI(); }
+  else if (k === 'fx') { SET.fx = SET.fx === 'full' ? 'clear' : 'full'; }
+  else if (k === 'dark') { SET.dark = { off: 'soft', soft: 'real', real: 'off' }[SET.dark] || 'off'; }
+  else if (k === 'land') { goLandscape(); return; }
   else if (k === 'vol') { SET.vol = SET.vol >= 1 ? .2 : Math.round((SET.vol + .2) * 10) / 10; if (AU.master) AU.master.gain.value = SET.vol; }
   else if (k === 'joy') { const o = ['auto', 'on', 'off']; SET.joy = o[(o.indexOf(SET.joy) + 1) % 3]; updateJoy(); }
   else SET[k] = !SET[k];
@@ -3441,7 +3716,7 @@ function hud() {
   G.dc = (G.dc || 0) + 1; if (G.dc % 40 === 1) { const cl = dailyClaimable(); if (G.dotLast !== cl) { G.dotLast = cl; $('#dailyBtn').classList.toggle('dot', cl); } }
   if (G.panel === 'bag') drawBagPreview();
   setT('#zoneT', (nightAmt() > .5 ? '🌙 ' : '☀️ ') + ZONES[G.zone].n + (ON.ghosts.size ? ' · 🌐' + onlineCount() : '') + (G.map === 'P' && G.dg ? ' · Phòng ' + (G.dg.room + 1) + '/3' + (G.dg.state === 'fight' ? ' (còn ' + (G.dg.alive || 0) + ')' : '') : '') + (G.map === 'T' && G.tower ? ' · Tầng ' + G.tower.floor + (G.tower.state === 'fight' ? ' (còn ' + G.tower.alive + ')' : '') : ''));
-  setT('#meName', P.name + ' · ' + CLASSES[P.cls].n); setT('#meRealm', realmOf(P.lv) + ' (Lv.' + P.lv + ') · ' + (realmIdx(P.lv) + 1) + ' hồn hoàn · CL ' + fmt(power()));
+  setT('#meName', P.name + ' · ' + CLASSES[P.cls].n + (SET.ui !== 'full' ? ' Lv.' + P.lv : '')); setT('#meRealm', realmOf(P.lv) + ' (Lv.' + P.lv + ') · ' + (realmIdx(P.lv) + 1) + ' hồn hoàn · CL ' + fmt(power()));
   setW('#hpB', P.hp / P.maxhp); setW('#mpB', P.mp / P.maxmp); setW('#xpB', P.lv >= MAXLV ? 1 : P.exp / expNeed(P.lv));
   setT('#hpT', Math.ceil(P.hp) + '/' + P.maxhp); setT('#mpT', Math.ceil(P.mp) + '/' + P.maxmp); setT('#goldT', fmt(P.gold));
   const t = P.target && !P.target.dead ? P.target : null; const tf = $('#tf'); tf.hidden = !t;
@@ -3464,7 +3739,7 @@ function buildSkillBar() {
   const box = $('#sks'); box.innerHTML = ''; skEls = [];
   SKILL_META[P.cls].forEach((s, i) => {
     const b = document.createElement('button'); b.className = 'sk'; b.title = s.n + ': ' + s.d; b.setAttribute('aria-label', s.n);
-    b.innerHTML = `${s.ic}<span class="k">${i + 1}</span><span class="mpc">${s.mp}</span><div class="cd"></div><div class="ct"></div><div class="lk">Lv.${s.lv}</div>`;
+    b.innerHTML = `${s.ic}<span class="nm">${s.n}</span><span class="k">${i + 1}</span><span class="mpc">${s.mp}</span><div class="cd"></div><div class="ct"></div><div class="lk">Lv.${s.lv}</div>`;
     b.addEventListener('pointerdown', e => { e.preventDefault(); e.stopPropagation(); castSkill(i); });
     box.appendChild(b); skEls[i] = { b, cd: b.querySelector('.cd'), ct: b.querySelector('.ct'), lk: b.querySelector('.lk') };
   });
@@ -3482,15 +3757,15 @@ function doBasic() {
    BẢNG GIAO DIỆN
    ===================================================================== */
 function closePanel() { G.panel = null; $('#panel').hidden = true; }
-function openPanel(name) { G.panel = name; $('#panel').hidden = false; if (name === 'bag') renderBag(); else if (name === 'quest') renderQuest(); else if (name === 'map') renderMap(); else if (name === 'online') renderOnline(); else if (name === 'settings') renderSettings(); else if (name === 'dex') renderDex(); else if (name === 'daily') renderDaily(); }
+function openPanel(name) { G.panel = name; $('#panel').hidden = false; if (name === 'bag') renderBag(); else if (name === 'quest') renderQuest(); else if (name === 'map') renderMap(); else if (name === 'online') renderOnline(); else if (name === 'settings') renderSettings(); else if (name === 'dex') renderDex(); else if (name === 'bank') renderBank(); else if (name === 'daily') renderDaily(); }
 function togglePanel(name) { if (G.panel === name) closePanel(); else openPanel(name); }
 function statLines(it) { return Object.entries(it.st).map(([k, v]) => `<div>+${k === 'crit' ? (v * (1 + .12 * (it.plus || 0))).toFixed(1) : Math.round(v * (1 + .12 * (it.plus || 0)))}${k === 'crit' ? '%' : ''} ${STN[k]}</div>`).join(''); }
 function renderBag() {
   const sel = G.sel; let selIt = null, from = '';
   if (sel) { if (sel.src === 'inv') { selIt = P.inv[sel.i] || null; from = 'inv'; } else { selIt = P.eq[sel.slot]; from = 'eq'; } }
-  const cell = (it, attr, selected) => `<button class="slot ${selected ? 'sel' : ''}" ${attr} style="${it ? 'border-color:' + RAR[it.rar].c + ';box-shadow:inset 0 0 10px ' + hexA(RAR[it.rar].c, .25) : ''}">${it ? '<img class="ico" alt="" src="' + itemIcon(it) + '"><small style="color:' + RAR[it.rar].c + '">Lv' + it.lv + (it.plus ? ' +' + it.plus : '') + '</small>' : ''}</button>`;
+  const cell = (it, attr, selected) => `<button class="slot ${selected ? 'sel' : ''}" ${attr} style="${it ? 'border-color:' + RAR[it.rar].c + ';box-shadow:inset 0 0 10px ' + hexA(RAR[it.rar].c, .25) : ''}">${it ? '<img class="ico" alt="" src="' + itemIcon(it) + '"><small style="color:' + RAR[it.rar].c + '">Lv' + it.lv + (it.plus ? ' +' + it.plus : '') + (it.lock ? ' 🔒' : '') + '</small>' : ''}</button>`;
   let h = `<div class="ph"><b>🎒 Hành Trang</b><button class="x" data-act="close" aria-label="Đóng">✕</button></div><div class="cols"><div>`;
-  h += `<canvas id="bagPrev" width="160" height="190" style="display:block;margin:0 auto 6px;border-radius:12px;background:rgba(0,0,0,.25)"></canvas>`;
+  h += `<canvas id="bagPrev" width="200" height="230" style="display:block;margin:0 auto 6px;border-radius:12px;background:rgba(0,0,0,.25)"></canvas>`;
   h += `<div class="eqs">${['weapon', 'armor', 'head', 'charm'].map(s => { const it = P.eq[s]; return `<button class="slot ${sel && sel.src === 'eq' && sel.slot === s ? 'sel' : ''}" data-act="seleq" data-s="${s}" style="${it ? 'border-color:' + RAR[it.rar].c + ';box-shadow:inset 0 0 10px ' + hexA(RAR[it.rar].c, .25) : ''}">${it ? '<img class="ico" alt="" src="' + itemIcon(it) + '">' : SLOTI[s]}<small>${it ? '<span style="color:' + RAR[it.rar].c + '">Lv' + it.lv + '</span>' : SLOTN[s]}</small></button>`; }).join('')}</div>`;
   h += `<div class="stats">Sinh Lực <b>${P.maxhp}</b> · Linh Lực <b>${P.maxmp}</b><br>Công Kích <b>${Math.round(P.atk)}</b> · Phòng Ngự <b>${Math.round(P.def)}</b><br>Bạo Kích <b>${P.crit.toFixed(1)}%</b> · Tiêu diệt <b>${P.kills}</b><br>Tu Vi <b>${fmt(P.exp)}/${P.lv >= MAXLV ? '—' : fmt(expNeed(P.lv))}</b></div>`;
   h += `<div class="stats">Điểm tiềm năng: <b>${P.pts}</b><div class="btns" style="margin-top:4px">${[['hp', 'Căn Cốt'], ['mp', 'Linh Căn'], ['atk', 'Cường Lực'], ['def', 'Thân Pháp']].map(([k, n]) => `<button data-act="alloc" data-k="${k}" ${P.pts > 0 ? '' : 'disabled'}>${n} ${P.alloc[k]} +</button>`).join('')}</div></div>`;
@@ -3500,14 +3775,19 @@ function renderBag() {
   h += `<div class="info">`;
   if (selIt) {
     const cmp = from === 'inv' ? P.eq[selIt.slot] : null, ds = cmp !== undefined && cmp !== null ? Math.round(itemScore(selIt) - itemScore(cmp)) : (from === 'inv' ? Math.round(itemScore(selIt)) : 0);
-    h += `<img class="icolg" alt="" src="${itemIcon(selIt)}"><b style="color:${RAR[selIt.rar].c}">${esc(selIt.name)}${selIt.plus ? ' +' + selIt.plus : ''}</b><br><span style="color:var(--dim)">${RAR[selIt.rar].n} · ${SLOTN[selIt.slot]} · Yêu cầu Lv.${reqLv(selIt)}</span>${statLines(selIt)}`;
+    h += `<img class="icolg" alt="" src="${itemIcon(selIt)}"><b style="color:${RAR[selIt.rar].c}">${esc(selIt.name)}${selIt.plus ? ' +' + selIt.plus : ''}</b><br><span style="color:var(--dim)">${RAR[selIt.rar].n} · ${SLOTN[selIt.slot]} · Yêu cầu Lv.${reqLv(selIt)} · Kiểu ${SKIN_N[selIt.slot][skinOf(selIt)]}</span>${statLines(selIt)}`;
     if (from === 'inv' && cmp) { const ks = new Set([...Object.keys(selIt.st), ...Object.keys(cmp.st)]); h += '<div class="diff">'; ks.forEach(k => { const a = (selIt.st[k] || 0) * (1 + .12 * (selIt.plus || 0)), b = (cmp.st[k] || 0) * (1 + .12 * (cmp.plus || 0)), d = a - b; h += `<span class="${d >= 0 ? 'up' : 'dn'}">${d >= 0 ? '▲' : '▼'}${Math.abs(d).toFixed(k === 'crit' ? 1 : 0)} ${STN[k]}</span> `; }); h += '</div>'; }
     if (from === 'inv') h += `<div class="${ds >= 0 ? 'up' : 'dn'}">${cmp ? (ds >= 0 ? '▲ Mạnh hơn trang bị hiện tại ' : '▼ Yếu hơn trang bị hiện tại ') + Math.abs(ds) + ' điểm' : 'Ô trang bị đang trống'}</div>`;
-    h += `<div class="btns">${from === 'inv' ? `<button class="pri" data-act="equip">Trang bị</button><button data-act="sell">Bán ${fmt(sellVal(selIt))} 💰</button>` : `<button data-act="unequip">Tháo xuống</button>`}</div>`;
+    h += `<div class="btns">${from === 'inv' ? `<button class="pri" data-act="equip">Trang bị</button><button data-act="sell" ${selIt.lock ? 'disabled' : ''}>Bán ${fmt(sellVal(selIt))} 💰</button><button data-act="lock">${selIt.lock ? 'Mở khóa 🔓' : 'Khóa 🔒'}</button>` : `<button data-act="unequip">Tháo xuống</button>`}${selIt.rar >= 2 ? `<button data-act="reskin" ${P.shards < 30 ? 'disabled' : ''}>Đổi kiểu (30 💠)</button>` : ''}</div>`;
   } else h += `<span style="color:var(--dim)">Chọn một vật phẩm để xem chi tiết.</span>`;
   h += `</div></div><div>`;
   h += `<div class="grid">${Array.from({ length: 30 }, (_, i) => cell(P.inv[i], `data-act="selinv" data-i="${i}"`, sel && sel.src === 'inv' && sel.i === i)).join('')}</div>`;
-  h += `<div class="btns"><button data-act="autoequip">Mặc đồ tốt nhất</button><button data-act="sortinv">Sắp xếp</button><button data-act="sellwhite">Bán hết Phàm Phẩm</button><button data-act="autosell">${P.autoSell ? '✔ ' : ''}Tự bán Phàm Phẩm</button></div>`;
+  const cnt = [0, 0, 0, 0, 0, 0]; P.inv.forEach(it => { if (!it.lock) cnt[it.rar]++; }); G.sellSel = G.sellSel || { 0: true };
+  let sg = 0, sn = 0; P.inv.forEach(it => { if (!it.lock && G.sellSel[it.rar]) { sg += sellVal(it); sn++; } });
+  const rareSel = RAR.some((R, i) => i >= 3 && G.sellSel[i] && cnt[i] > 0);
+  h += `<div class="btns"><button data-act="autoequip">Mặc đồ tốt nhất</button><button data-act="sortinv">Sắp xếp</button></div>`;
+  h += `<div class="stats">Bộ trang bị yêu thích<div class="btns" style="margin-top:4px">${[0, 1, 2].map(i => `<button data-act="setsave" data-i="${i}">Lưu bộ ${i + 1}</button><button data-act="setwear" data-i="${i}" ${P.sets && P.sets[i] ? '' : 'disabled'}>Mặc bộ ${i + 1}</button>`).join('')}</div></div>`;
+  h += `<div class="stats">Bán theo độ hiếm (đồ khóa 🔒 không bị bán)<div class="btns" style="margin-top:4px">${RAR.map((R, i) => `<button data-act="selr" data-r="${i}" style="border-color:${R.c};${G.sellSel[i] ? 'background:' + hexA(R.c, .28) : ''}">${G.sellSel[i] ? '✔ ' : ''}${R.n} (${cnt[i]})</button>`).join('')}</div><div class="btns"><button data-act="sellsel" ${sn ? '' : 'disabled'} class="${sn ? 'pri' : ''}" style="${G.sellConfirm ? 'background:#c8302a;color:#fff' : ''}">${G.sellConfirm ? 'Xác nhận bán ' : 'Bán '}${sn} món (+${fmt(sg)} 💰)</button><button data-act="autosell">Tự bán khi nhặt: ${P.autoSellMax >= 0 ? RAR[P.autoSellMax].n + ' trở xuống' : 'Tắt'}</button></div>${rareSel ? '<div class="dn" style="font-size:12px">Lựa chọn có cả bảo vật hiếm (Địa Bảo trở lên). Bấm lần nữa để xác nhận.</div>' : ''}</div>`;
   h += `<div class="stats">🧪 Hồi Khí Đan <b>${P.pHP}</b> · 💧 Hồi Linh Đan <b>${P.pMP}</b><br>💰 Linh Thạch <b>${fmt(P.gold)}</b> · 🏆 Tháp Lệnh <b>${P.tokens}</b></div></div></div>`;
   $('#panel').innerHTML = h;
 }
@@ -3515,8 +3795,8 @@ function renderQuest() {
   let h = `<div class="ph"><b>📜 Nhiệm Vụ</b><button class="x" data-act="close" aria-label="Đóng">✕</button></div>`;
   if (P.b) h += `<div class="qrow cur"><b style="color:var(--gold)">Săn yêu:</b> diệt ${esc(MT[P.b.t].n)} ${P.b.prog}/${P.b.n} ${P.b.state === 'ready' ? '<span class="up">(đã xong, nhận thưởng tại bảng)</span>' : ''}<div class="btns"><button data-act="track">Đi tới</button></div></div>`;
   QUESTS.forEach((q, i) => {
-    const done = i < P.q.idx, cur = i === P.q.idx; const st = cur ? { none: 'Chưa nhận, gặp Trưởng Lão', active: 'Đang làm ' + P.q.prog + '/' + q.n, ready: 'Đã xong, về giao nhiệm vụ' }[P.q.state] : done ? 'Đã hoàn thành' : 'Chưa mở';
-    h += `<div class="qrow ${cur ? 'cur' : ''} ${done ? 'done' : ''}"><b style="color:${cur ? 'var(--gold)' : 'inherit'}">${done ? '✔ ' : ''}${esc(q.title)}</b> <span style="color:var(--dim)">(Lv ${q.lv})</span><br>${cur || done ? esc(q.txt) + '<br>' : ''}<span class="${cur ? 'up' : ''}">${st}</span>${cur ? '<div class="btns"><button data-act="track" class="pri">' + (P.q.state === 'active' ? 'Tự động săn' : 'Đi tới Trưởng Lão') + '</button></div>' : ''}</div>`;
+    const done = i < P.q.idx, cur = i === P.q.idx; const st = cur ? { none: 'Chưa nhận, gặp Tông Chủ', active: 'Đang làm ' + P.q.prog + '/' + q.n, ready: 'Đã xong, về giao nhiệm vụ' }[P.q.state] : done ? 'Đã hoàn thành' : 'Chưa mở';
+    h += `<div class="qrow ${cur ? 'cur' : ''} ${done ? 'done' : ''}"><b style="color:${cur ? 'var(--gold)' : 'inherit'}">${done ? '✔ ' : ''}${esc(q.title)}</b> <span style="color:var(--dim)">(Lv ${q.lv})</span><br>${cur || done ? esc(q.txt) + '<br>' : ''}<span class="${cur ? 'up' : ''}">${st}</span>${cur ? '<div class="btns"><button data-act="track" class="pri">' + (P.q.state === 'active' ? 'Tự động săn' : 'Đi tới Tông Chủ') + '</button></div>' : ''}</div>`;
   });
   $('#panel').innerHTML = h;
 }
@@ -3557,7 +3837,7 @@ function buildMask(z) {
   const n = parseInt(MAPACC[z].slice(1), 16), ar = n >> 16, ag = n >> 8 & 255, ab = n & 255;
   for (let y = 0; y < tw; y++) for (let x = 0; x < tw; x++) {
     const i = y * tw + x, o = i * 4;
-    if (!inside[i]) { d[o] = 4; d[o + 1] = 8; d[o + 2] = 10; d[o + 3] = 255; continue; }
+    if (!inside[i]) { d[o] = 28; d[o + 1] = 42; d[o + 2] = 38; d[o + 3] = 255; continue; }
     let dist = 99;
     for (let k = 1; k <= 4 && dist === 99; k++) if (x - k < 0 || x + k >= tw || y - k < 0 || y + k >= tw || !inside[i - k] || !inside[i + k] || !inside[i - k * tw] || !inside[i + k * tw]) dist = k;
     if (dist < 99) { d[o] = ar; d[o + 1] = ag; d[o + 2] = ab; d[o + 3] = Math.round((5 - dist) / 4 * 200); }
@@ -3609,11 +3889,26 @@ $('#panel').addEventListener('click', e => {
     const old = P.eq[it.slot]; P.eq[it.slot] = it; if (old) P.inv[G.sel.i] = old; else P.inv.splice(G.sel.i, 1); G.sel = null; recalc(); burst(P.x, P.y - 24, RAR[it.rar].c, 16, 110, .6, 4); renderBag(); save();
   }
   else if (a === 'unequip') { const it = P.eq[G.sel.slot]; if (!it) return; if (P.inv.length >= 30) { toast('Hành trang đã đầy'); return; } P.inv.push(it); P.eq[G.sel.slot] = null; G.sel = null; recalc(); renderBag(); save(); }
-  else if (a === 'sell') { const it = P.inv[G.sel.i]; if (!it) return; P.gold += sellVal(it); P.inv.splice(G.sel.i, 1); G.sel = null; renderBag(); }
+  else if (a === 'sell') { const it = P.inv[G.sel.i]; if (!it || it.lock) return; P.gold += sellVal(it); P.inv.splice(G.sel.i, 1); G.sel = null; renderBag(); }
   else if (a === 'sortinv') { P.inv.sort((x, y) => y.rar - x.rar || itemScore(y) - itemScore(x)); G.sel = null; renderBag(); }
   else if (a === 'autoequip') { let n = 0; for (const slot of ['weapon', 'armor', 'head', 'charm']) { let best = null; P.inv.forEach(it => { if (it.slot === slot && P.lv >= reqLv(it) && itemScore(it) > itemScore(P.eq[slot]) && (!best || itemScore(it) > itemScore(best))) best = it; }); if (best) { const old = P.eq[slot]; P.inv.splice(P.inv.indexOf(best), 1); if (old) P.inv.push(old); P.eq[slot] = best; n++; } } recalc(); G.sel = null; toast(n ? 'Đã mặc ' + n + ' món tốt hơn' : 'Không có món nào tốt hơn'); renderBag(); save(); }
   else if (a === 'sellwhite') { let g = 0; P.inv = P.inv.filter(it => { if (it.rar === 0) { g += sellVal(it); return false; } return true; }); P.gold += g; G.sel = null; toast('Bán Phàm Phẩm được ' + fmt(g) + ' Linh Thạch'); renderBag(); }
-  else if (a === 'autosell') { P.autoSell = !P.autoSell; renderBag(); }
+  else if (a === 'autosell') { P.autoSellMax = P.autoSellMax >= 2 ? -1 : (P.autoSellMax == null ? 0 : P.autoSellMax + 1); renderBag(); }
+  else if (a === 'selr') { const r = +bt.dataset.r; G.sellSel = G.sellSel || {}; G.sellSel[r] = !G.sellSel[r]; G.sellConfirm = false; renderBag(); }
+  else if (a === 'sellsel') {
+    G.sellSel = G.sellSel || {}; const rare = P.inv.some(it => !it.lock && G.sellSel[it.rar] && it.rar >= 3);
+    if (rare && !G.sellConfirm) { G.sellConfirm = true; renderBag(); }
+    else { let g = 0, n = 0; P.inv = P.inv.filter(it => { if (!it.lock && G.sellSel[it.rar]) { g += sellVal(it); n++; return false; } return true; }); P.gold += g; G.sel = null; G.sellConfirm = false; toast('Đã bán ' + n + ' món được ' + fmt(g) + ' Linh Thạch'); sfx('pickup', 1); save(); renderBag(); }
+  }
+  else if (a === 'reskin') {
+    const it = G.sel && G.sel.src === 'inv' ? P.inv[G.sel.i] : G.sel && G.sel.src === 'eq' ? P.eq[G.sel.slot] : null, mx = it ? clamp(it.rar - 1, 0, 3) : 0;
+    if (it && mx > 0 && P.shards >= 30) { P.shards -= 30; it.sk = (skinOf(it) + 1) % (mx + 1); visCache.delete(it.id); iconCache.delete(it.id); iconUrl.delete(it.id); toast('Đã đổi sang kiểu ' + SKIN_N[it.slot][it.sk]); sfx('level'); save(); renderBag(); }
+  }
+  else if (a === 'setsave') { const i = +bt.dataset.i; P.sets = P.sets || [null, null, null]; P.sets[i] = {}; for (const k in P.eq) if (P.eq[k]) P.sets[i][k] = P.eq[k].id; toast('Đã lưu bộ ' + (i + 1)); save(); renderBag(); }
+  else if (a === 'setwear') {
+    const st = (P.sets || [])[+bt.dataset.i]; if (st) { let n = 0; for (const slot in st) { const id = st[slot], cur = P.eq[slot]; if (cur && cur.id === id) continue; const ix = P.inv.findIndex(x => x.id === id); if (ix < 0) continue; const it = P.inv[ix]; if (P.lv < reqLv(it)) continue; P.inv.splice(ix, 1); if (cur) P.inv.push(cur); P.eq[slot] = it; n++; } recalc(); G.sel = null; toast(n ? 'Đã mặc ' + n + ' món của bộ ' + (+bt.dataset.i + 1) : 'Bộ này đã mặc hoặc thiếu món'); save(); renderBag(); }
+  }
+  else if (a === 'lock') { const it = G.sel && G.sel.src === 'inv' ? P.inv[G.sel.i] : null; if (it) { it.lock = !it.lock; renderBag(); save(); } }
   else if (a === 'track') { closePanel(); trackQuest(); }
   else if (a === 'alloc') { if (P.pts > 0) { P.pts--; P.alloc[bt.dataset.k]++; recalc(); renderBag(); } }
   else if (a === 'fxaura') { P.fx.aura = !P.fx.aura; renderBag(); }
@@ -3622,6 +3917,8 @@ $('#panel').addEventListener('click', e => {
   else if (a === 'fxupload') pickFace();
   else if (a === 'fxshape') { P.fx.shape = (shapeOf(P.cls, P.fx) + 1) % AURA_SHAPES.length; renderBag(); }
   else if (a === 'fxstyle') { P.fx.style = (P.fx.style + 1) % AURAS.length; renderBag(); }
+  else if (a === 'bkdep') { P.bank = P.bank || []; const i = +bt.dataset.i; if (P.bank.length >= 40) toast('Kho đã đầy'); else if (P.inv[i]) { P.bank.push(P.inv.splice(i, 1)[0]); save(); renderBank(); } }
+  else if (a === 'bkwd') { P.bank = P.bank || []; const i = +bt.dataset.i; if (P.inv.length >= 30) toast('Hành trang đã đầy'); else if (P.bank[i]) { P.inv.push(P.bank.splice(i, 1)[0]); save(); renderBank(); } }
   else if (a === 'ptab') { G.petTab = bt.dataset.t; renderPets(null); }
   else if (a === 'gp') doGacha(+bt.dataset.n, bt.dataset.m);
   else if (a === 'petsel') { G.petSel = bt.dataset.id; renderPets(null); }
@@ -3730,6 +4027,9 @@ function toggleAuto() { G.auto = !G.auto; if (!G.auto) { G.huntType = null; P.mo
 function updateAutoBtn() { $('#autoBtn').classList.toggle('on', G.auto); }
 $('#menu').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return; sfx('ui'); const m = b.dataset.m;
+  if (m === 'more') { $('#menu').classList.toggle('open'); return; }
+  if (m === 'ui') { SET.ui = { full: 'compact', compact: 'mini', mini: 'full' }[SET.ui] || 'compact'; saveSet(); applyUI(); toast('Giao diện: ' + { full: 'Đầy đủ', compact: 'Gọn', mini: 'Tối giản' }[SET.ui]); return; }
+  $('#menu').classList.remove('open');
   if (m === 'auto') toggleAuto(); else if (m === 'aq') toggleAQ(); else if (m === 'home') teleport('V'); else if (m === 'switch') switchChar(); else if (m === 'online') togglePanel('online'); else if (m === 'settings') togglePanel('settings'); else if (m === 'dex') togglePanel('dex'); else if (m === 'daily') togglePanel('daily'); else togglePanel(m);
 });
 $('#qt').addEventListener('click', trackQuest);
@@ -3788,6 +4088,27 @@ $('#slots').addEventListener('click', e => {
     const i = sl.findIndex(x => x && x.cid === b.dataset.del); if (i >= 0) { sl[i] = null; writeSlots(sl); } buildSlots();
   }
 });
+$('#expBtn').addEventListener('click', () => {
+  const sl = readSlots().filter(Boolean), b = $('#expBtn'); if (!sl.length) { b.textContent = 'Chưa có nhân vật để xuất'; setTimeout(() => { b.textContent = 'Xuất file lưu'; }, 2200); return; }
+  try { const blob = new Blob([JSON.stringify({ app: 'thanhvan', v: 2, slots: sl })], { type: 'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'thanh-van-tu-tien-luu.json'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); b.textContent = 'Đã tải file (' + sl.length + ' nhân vật)'; } catch (e) { b.textContent = 'Trình duyệt chặn tải file'; }
+  setTimeout(() => { b.textContent = 'Xuất file lưu'; }, 2600);
+});
+$('#impBtn').addEventListener('click', () => {
+  const b = $('#impBtn'), inp = document.createElement('input'); inp.type = 'file'; inp.accept = '.json,application/json';
+  inp.onchange = () => {
+    const f = inp.files && inp.files[0]; if (!f) return; const rd = new FileReader();
+    rd.onload = () => {
+      try {
+        const o = JSON.parse(rd.result); if (!o || !Array.isArray(o.slots)) throw new Error('x'); const cur = readSlots(); let n = 0;
+        for (const x of o.slots) { if (!x || !CLASSES[x.cls] || typeof x.lv !== 'number' || typeof x.name !== 'string') continue; if (!x.cid) x.cid = Math.random().toString(36).slice(2); let i = cur.findIndex(y => y && y.cid === x.cid); if (i < 0) { i = cur.findIndex(y => !y); if (i < 0) i = cur.length; if (i >= MAXSLOT) continue; } cur[i] = x; n++; }
+        writeSlots(cur); buildSlots(); b.textContent = 'Đã nhập ' + n + ' nhân vật';
+      } catch (e) { b.textContent = 'File không hợp lệ'; }
+      setTimeout(() => { b.textContent = 'Nhập file lưu'; }, 2600);
+    };
+    rd.readAsText(f);
+  };
+  inp.click();
+});
 function switchChar() {
   dialog('Đổi nhân vật', 'Lưu tiến trình và quay về màn chọn nhân vật? Bạn có thể tạo nhân vật mới ở lớp khác (tối đa ' + MAXSLOT + ') hoặc chơi lại nhân vật cũ.', [{ t: 'Đổi nhân vật', pri: 1, fn: doSwitch }, { t: 'Ở lại', fn: closePanel }]);
 }
@@ -3808,12 +4129,13 @@ function begin(p, isNew) {
   G.on = true; G.auto = false; G.huntType = null; G.zone = zoneAt(P.x, P.y); G.map = G.zone; G.travel = false; G.afterTravel = null; buildMask(G.map); G.lastZone = G.zone; G.zoneInit = false; G.panel = null; G.sel = null;
   cam.x = P.x; cam.y = P.y; prevRun = false;
   $('#start').classList.add('off'); $('#hud').hidden = false; $('#panel').hidden = true; $('#log').innerHTML = '';
-  buildSkillBar(); renderTracker(); updateAutoBtn(); updateAQBtn(); makePet(); makeMount(); dailyEnsure(); updateJoy();
+  buildSkillBar(); renderTracker(); updateAutoBtn(); updateAQBtn(); makePet(); makeMount(); dailyEnsure(); updateJoy(); applyUI();
+  if (isCoarse() && H > W) setTimeout(() => { if (G.on) toast('Xoay ngang màn hình để chơi rộng rãi hơn (hoặc vào Cài đặt, Toàn màn hình)'); }, 1500);
   chat('[Hệ Thống] Chào mừng đạo hữu ' + P.name + ' đến Thanh Vân Tu Tiên Lục.', '#ffd27a');
-  chat('[Hệ Thống] Gặp Trưởng Lão ở giữa làng để nhận nhiệm vụ đầu tiên.', '#9dd8ff');
-  banner('Thanh Vân Thôn', 'Hành trình tu tiên bắt đầu');
+  chat('[Hệ Thống] Gặp Tông Chủ tại Chính Điện để nhận nhiệm vụ đầu tiên.', '#9dd8ff');
+  banner('Thanh Vân Tông', 'Hành trình tu tiên bắt đầu');
   if (isNew) { P.inv.push(Object.assign(genItem(1, 0, 0, 'weapon'), { rar: 0 })); } save();
-  window.__game = { P, G, castSkill, update, render, hud, strike, teleport, openPanel, openSmith, openPets, makePet, enhance, zoneAt, get monsters() { return monsters; }, get pet() { return pet; }, get drops() { return drops; }, PETS, MT, ZONES, dgEnter, openDungeon, drawChibi, drawFxBack, drawFxFront, CLASSES, EL, WEAK, MABIL, AFF, monAbility, applyTier, rollTier, renderDex, dexKill, drawBeast, mkMonster, BLOOK, sfx, musicStep, SET, applyQuality, perfTick, dailyEnsure, dailyClaimable, renderDaily, renderSettings, ACH, ON, onPeers, duel, doDuel, arenaFoes, renderOnline, sendWorldChat, towerEnter, openTower, toggleRide, makeMount, openMounts, MOUNTS, hk };
+  window.__game = { P, G, castSkill, update, render, hud, strike, teleport, openPanel, openSmith, openPets, makePet, enhance, zoneAt, get monsters() { return monsters; }, get pet() { return pet; }, get drops() { return drops; }, PETS, MT, ZONES, openLibrary, openBank, drawBuilding, weaponArt, armorArt, headArt, charmArt, skinOf, baguaDraw, drawGoldenBell, swordShape, glyphDraw, dgEnter, openDungeon, drawChibi, drawFxBack, drawFxFront, CLASSES, EL, WEAK, MABIL, AFF, monAbility, applyTier, rollTier, renderDex, dexKill, drawBeast, mkMonster, BLOOK, sfx, musicStep, SET, applyQuality, perfTick, dailyEnsure, dailyClaimable, renderDaily, renderSettings, ACH, ON, onPeers, duel, doDuel, arenaFoes, renderOnline, sendWorldChat, towerEnter, openTower, toggleRide, makeMount, openMounts, MOUNTS, hk };
 }
 $('#goBtn').addEventListener('click', () => {
   const name = ($('#nameIn').value || '').trim() || 'Vô Danh'; begin(newPlayer(selCls, name), true);
